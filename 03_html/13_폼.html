@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+
+<!-- 
+양식요소
+
+form: 폼(양식)전체를 그룹핑
+
+fileset: 폼 양식 그룹피
+legend: 필드셋의 제목 
+
+
+datalist: 목록에서 선택과 입력도 가능
+
+select: 메일주소 중에서 목록 고를때, 혼자는 못 쓰고 option과 함께 씀, 
+목록에서 선택만 가능
+ex) @daum.net, naver.com ....
+
+optgroup: option을 여러개 만들 수 있지만, 너무 많을때 optgroup으로 묶어줌
+      
+input: 한 줄 입력, 라디오버튼 (수신, 수신안함 처럼 둘 중 하나만 고를때), 
+체크박스( 체크 눌렀다 껐다), 데이터전송용 버튼(button 태그와 같음) 
+
+button: 데이터 전송용 버튼
+
+label: 버튼옆에 글자가 있을때 글자만 눌러도 버튼이 눌리는 효과
+
+textarea: 여러 줄 입력할때 (만족한 점에 대해 써주세요)
+
+<a>태그와 구분할점 
+a 태그는 페이지 이동용 버튼이고 데이터 전송용 버튼이 아님 
+버튼 태그는 데이터가 전송되는 용도임 (회원가입이나 양식 제출)
+ form 태그는 웹페이지마다 깨질수도 있음 
+ 크로스브라우징 (모든 브라우저에서 깨지지않고 의도한 대로 나오게 하는 것) 을 잘 체크하자! 
+ 
+ 웹 서버 언어: php, jsp, asp -> 백엔드
+ 웹 클라이언트 언어: html, css, ,js -> 프론트엔드 
+ 
+ -->
+
+<body>
+  
+        <h1>폼</h1>
+        <H1>로그인 페이지</H1>  
+
+        <form action="*.php, *jsp, *asp">
+        <!-- for의 속성값과 id 속성값이 일치해야 글자 눌렀을때 상자도 같이 눌러짐 -->
+
+        <label for="user_id">아이디</label> 
+        <input type="text" id="user_id"> <br>
+
+        <label for="user_pw">비밀번호</label> <input type="password" id="user_pw"> <br>
+
+
+        <input type="checkbox" id="auto_login"> 
+        <label for="auto_login">자동로그인</label> <br>
+    </form>
+
+    <!-- 전송, 제출 태그 -->
+    <input type="submit" value="로그인"> <br>
+    <a href="#">회원가입</a> <br>
+    <a href="#">아이디/비밀번호찾기</a>
+
+</body>
+</html>
