@@ -19,17 +19,16 @@
     <h1>표(table, 테이블)</h1>
     <h2>1행1열</h2>
     <!-- 주로 공지사항 페이지 등 만들때 사용 -->
-     <table ">
+     <table>
         <tr><td>1행 1열의 표</td></tr>
      </table>
 
      <h2>1행 2열</h2>
-     <table ">
+     <table>
         <tr>
             <!-- tr(row)은 행, td는 열 -->
-            <td ">1행1열</td>
-            <td ">1행2열</td>
-        
+            <td>1행1열</td>
+            <td>1행2열</td>
         </tr>
 
     </table>
@@ -37,8 +36,8 @@
      <table  border-collapse: collapse;">
         <tr>
             <!-- tr(row)은 행, td는 열 -->
-            <td ">1행1열</td>
-            <td ">1행2열</td>
+            <td>1행1열</td>
+            <td>1행2열</td>
         
         </tr>
     </table>
@@ -49,8 +48,8 @@
          tr은 자식으로 하나 이상의 td가 있어야한다. -->
     <!-- 인라인스타일: html의 style 속성으로 기록하는 방식 -->
     <table  border-collapse: collapse;">
-        <tr><td ">1행1열</td></tr>
-        <tr><td ">2행1열</td></tr>
+        <tr><td>1행1열</td></tr>
+        <tr><td>2행1열</td></tr>
 
 
     </table>
@@ -61,7 +60,48 @@
         <tr><td>2행1열</td></tr> <tr><td>2행2열</td></tr>
 
     </table>
+ <h1>표</h1>              
+    <!-- 하나의 표에서는 table 태그는 하나
+         tr과 td는 여러 개 사용할 수 있다 -->
 
+    <table>
+        <tr>
+            <td> 기본 표 </td>
+        </tr>
+    </table>
+
+    <h2>확장 표</h2>
+        <colgroup>
+            <col class="cl">
+            <col class="c2">
+        </colgroup>
+
+        <!--th의 부모인 tr을 그룹핑-->
+        <thead>
+            <tr>
+                <td>교과목</td> <!-- 1행 1열 -->
+                <td>점수</td> <!-- 1행 2열 -->
+            </tr> <!-- 1행 끝 -->
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>html</td> <!-- 2행 1열 -->
+                <td>93</td> <!-- 2행 2열 -->
+            </tr><!-- 2행 끝 -->
+            <tr>
+                <td>css</td> <!-- 3행 1열 -->
+                <td>92</td> <!-- 3행 2열 -->
+            </tr><!-- 3행 끝 -->
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>평균</td> <!-- 4행 1열 -->
+                <td>92.5</td> <!-- 4행 2열 -->
+            </tr><!-- 4행 끝 -->
+        </tfoot>
+    </table>
 
 
 

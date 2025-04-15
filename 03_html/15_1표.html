@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 요소들의 위, 아래, 좌, 우 테두리선이 서로 겹쳤을때 하나의 테두리선으로 표현한다 */
+              }
+
+          th, td{border: 1px solid #000;} /* bd 누르면 기본적으로 1픽셀 검은실선이 나옴 */
+          
+          .cl{
+                background: #ff0;
+          }
+
+        .c2{
+            background: #0ff;
+        }
+
+        caption {margin-bottom: 20px;}
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+            <table>       : 표 정의
+            <tr>          : 행 정의, row=행
+            <td>          : 셀 정의
+            <th scope "row|col"> : 왼쪽의 th와 오른쪽의 th를 구분해줌
+                                   웹 접근성을 위해 기록하는 것이 좋음
+
+            여기부터는 필수 x
+            <th>          : 셀 제목 (테이블 헤더)
+            <caption>     : 표의 제목 -> 웹접근성을 위해 기록하는 것이 좋음
+            <col>         : 열 정의
+            <colgroup>    : 열 그룹핑
+
+            표 영역을 제목, 본문, 요약 부분으로 세분화하여 그룹핑할때 사용한다.
+            주로 데이터가 많은 큰 표를 만들 때 사용한다.
+            <thead>       : 제목영역
+            <tbody>       : 본문영역
+            <tfoot>       : 요약영역
+    --> 
+
+    <h1>표</h1>              
+    <!-- 하나의 표에서는 table 태그는 하나
+         tr과 td는 여러 개 사용할 수 있다 -->
+
+    <table>
+        <tr>
+            <td> 기본 표 </td>
+        </tr>
+    </table>
+
+    <h2>확장 표</h2>
+        <colgroup>
+            <col class="cl">
+            <col class="c2">
+        </colgroup>
+
+        <!--th의 부모인 tr을 그룹핑-->
+        <thead>
+            <tr>
+                <td>교과목</td> <!-- 1행 1열 -->
+                <td>점수</td> <!-- 1행 2열 -->
+            </tr> <!-- 1행 끝 -->
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>html</td> <!-- 2행 1열 -->
+                <td>93</td> <!-- 2행 2열 -->
+            </tr><!-- 2행 끝 -->
+            <tr>
+                <td>css</td> <!-- 3행 1열 -->
+                <td>92</td> <!-- 3행 2열 -->
+            </tr><!-- 3행 끝 -->
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>평균</td> <!-- 4행 1열 -->
+                <td>92.5</td> <!-- 4행 2열 -->
+            </tr><!-- 4행 끝 -->
+        </tfoot>
+    </table>
+
+
+
+    <table>
+        <CAption>2025년 상반기 웹디 필기 결과</CAption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+
+           <!-- th의 scope 속성은 선택 속성이지만 웹 접근성을 위해 반드시  -->
+            <tr>
+                <th scope="col">교과목</th> <!-- 1행 1열 -->
+                <th scope="col">점수</th> <!-- 1행 2열 -->
+            </tr> <!-- 1행 끝 -->
+    
+            <tr>
+                <th scope="col">html</th> <!-- 2행 1열 -->
+                <th scope="col">93</th> <!-- 2행 2열 -->
+            </tr><!-- 2행 끝 -->
+            <tr>
+                <th scope="col">css</th> <!-- 3행 1열 -->
+                <th scope="col">92</th> <!-- 3행 2열 -->
+            </tr><!-- 3행 끝 -->
+   
+            <tr>
+                <th scope="col">평균</th> <!-- 4행 1열 -->
+                <th scope="col">92.5</th> <!-- 4행 2열 -->
+            </tr><!-- 4행 끝 -->
+       
+    </table>
+
+
+</body>
+</html>
