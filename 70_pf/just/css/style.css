@@ -1,9 +1,14 @@
 @charset "utf-8";
 
 /* 전체 */
-*{margin: 0;}
+*{margin: 0 ;}
+
 body{background:#fff; color: #333;}
-.wrap{width: 1200px; margin: 0 auto;}
+
+.wrap{
+    width: 1200px; 
+    margin: 0 auto;
+}
 
 /* 헤더 */
 .header {display: flex; height: 100px;}
@@ -28,4 +33,4 @@ body{background:#fff; color: #333;}
 /* 주소 및 저작권 */
 .copy{width: 675px;}
 /* sns */
-.sns{width: 261px;}
+.sns{width: 261px;}}
