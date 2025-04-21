@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+    <style>
+        html{font-size: 24px;}
+        /* 
+            :root{font-size: 24px;}는
+             html{font-size: 24px;}와 같은 말임
+             선택자:root는 html과 같다.
+             글자속성은 상속개념이 있다.
+             최상위 부모인 html의 크기를 지정하면 body의 글자 크기도 변한다
+        */
+
+        ul{font-size: 12px;}
+
+        li{font-size: 1.5em;}
+        /* 
+            em의 기준은? 부모 (부모는 항상 바뀜)
+            1.5em은 li의 부모 ul의 1.5배로 적용됨 12px * 1.5 = 18px
+        */
+
+        li:nth-child(4) {font-size: 1.5rem;}
+        /* 
+            rem의 기준은? 최상위 부모인 html 태그
+            html태그의 글자 크기가 24px이므로 
+            24px * 1.5 = 36px
+        */
+    </style>
+</head>
+<body>
+    <h1>글자 단위</h1>
+    <p>글자 단위에는 px, %, em, rem등이 있다.</p>
+    <ul>
+        <li>px</li>
+        <li>%</li> <!-- %는 잘 쓰지 않음 -->
+        <li>em</li>
+        <li>rem</li>
+    </ul>
+</body>
+</html>
