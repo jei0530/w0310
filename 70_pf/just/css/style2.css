@@ -35,7 +35,6 @@ a{
 .contents{
     display: flex;
     height: 200px;
-    background: #efd918;
 }
 
 .notice, .banner, .shortcut {width: 400px;}
