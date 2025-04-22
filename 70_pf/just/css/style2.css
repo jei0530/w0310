@@ -1,11 +1,35 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 *{margin: 0 ;}
-body{background:#fff; color: #222328;}
+body {background:#fff; color: #222328;}
+
+body, h1, ul, h2 p{
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    /* font: 700 italic 15px/1.5 "Noto Sans KR", sans-serif; */
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    /* 목록의 블릿 기호 제거 */
+}
+
 
 a{
     color: #222328;
 }
+
+.main{
+    width: 600px;
+    display: flex;
+    line-height: 100px;
+    justify-content: space-between;
+    font-style: 18px;
+  
+}
+
 
 .wrap {
     width: 1200px;
@@ -19,12 +43,14 @@ a{
 
 .logo {
     width: 200px;
-    background: hsl(0, 74%, 73%);
+    margin-top: 31px;
 }
 
 .gnb {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 32px;
     width: 1000px; 
-    background: #96eb85;
 }
 
 .slide{
@@ -38,25 +64,52 @@ a{
 }
 
 .notice, .banner, .shortcut {width: 400px;}
-.notice{background: #8a7878;}
-.banner{background: #6c4848;}
-.shortcut{background: #691515;}
+.notice{
+    padding: 16px 0 0 16px;
+    line-height: 1.8;
+}
+
+.notice h2{
+    margin-bottom: 8px;
+
+}
+.notice span{
+    display: inline-block;
+    width: 290px;
+}
 
 .footer {
     display: flex;
     height: 100px;
+    background: #505050;
+    color: #626161;
 }
 
 .blogo, .sns {width: 200px;}
 
 .blogo{
-    background: #c5a0ce;
+    padding-top: 28px;
+
 }
 .copy{
-    background: #3e2c43; width: 800px;
+    padding: 24px;
+    text-align: center;
+    width: 800px;
 }
 .sns{
-    background: #380245;
+    width: 200px;
+    line-height: 100px;
+    /* line-height는 1줄일때만 가능하다 */
+    text-align: center;
+    font-size: 24px;
 }
 
+.sns li {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.sns a{
+    color: #818080;
+}
 
