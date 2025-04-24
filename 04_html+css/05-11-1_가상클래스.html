@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+
+        /* 
+            ~child
+            ::nth-child()
+            ::nth-last-child
+            ::first-child
+            ::last-child
+
+            ~of-type
+            ::nth-of-type()
+            ::nth-last-of-type()
+            ::first-of-type()
+            ::last-of-type()
+        
+        */
+
+        /* p의 첫번째 글자 */
+        p::first-letter {
+            font-size: 300%;
+        }
+
+        /* p의 첫번째 자식 */
+        p:first-child {
+            color: magenta;
+        }
+
+        /* body 태그 안의 모든 p */
+        p {
+            background: lightgray;
+        }
+
+        /* 
+            p의 마지막 자식
+            last-child와 nth-last-child(1)은 같다
+        
+        */
+        p:last-child {
+            background: palegoldenrod;
+        }
+
+        /* p의 세번째 자식 */
+        p:nth-child(3) {
+            color: red;
+        }
+
+        /* p태그 전에 ★표시 추가 */
+        p ::before {
+            content: "★"
+        }
+
+        /* box가 끝난 후 항목을 선택해주세요  */
+        .box::after {
+            content: "항목을 선택해주세요";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>div의 첫번째자식</p>
+        <p>div의 두번째자식</p>
+        <p>div의 세번째자식</p>
+        <p>div의 네번째자식</p>
+
+    </div>
+</body>
+
+</html>
