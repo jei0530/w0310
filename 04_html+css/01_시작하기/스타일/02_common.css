@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* common.css */
+body{
+    margin: 0;/*  모든 방향(상, 하, 좌, 우)의 마진을 0으로 설정. */
+    background: rgb(0, 55, 255);
+    }
+    
+    /* margin: 0 auto; -> 상하 마진은 0, 좌우 마진은 auto로 설정. */
+
