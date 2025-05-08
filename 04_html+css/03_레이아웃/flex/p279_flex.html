@@ -24,42 +24,40 @@
              order - 자식 요소의 순서 바꿈
         */
 
+    /* 부모 */
     .flexbox{
         display: flex;
-        height:200px;
-        background: #ccc;
-        /* 
-            블록레벨 요소의 width가 가로배치되면서 자식크기만큼됨 
-            height는 부모 크기의 100
-        */
+        /* display:-webkit-flex;
+        display: -ms-flexbox; */
+        flex-direction: column; /* 기본값이 row */
+        flex-wrap: nowrap; /* 기본값이 nowrap */
+        height: 200px;
+        background: #CCC;
     }
 
-    .flexbox > div{
+    /* 자식 */
+    .flexbox > 
+        div{
+        /* 개별속성 */
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        /* -webkit-flex:1px; 
+        -ms-flex: 1;*/
         background: darkcyan;
-        width: 200px;
-        margin: 10px;
-        /* flex: 1; flex: 1 1 0; flex: 1 1 auto; 모두 같음 */
-        /* 
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 0;
-
-            grow와 shrink가 1이면 basis는 어떤 값이든 같다
-            기본값은 flex:
-        */
-       
-    }
-
-   
+        margin: 10px; 
+        
+        /* 속기속성 */
+        flex: 1;
+        flex: 1 1 0;
+        flex: 0 0 100px;
+        flex: 1 1 auto;
+        /* 00은 수축과 팽창도 하지 않음 화면 크기 조절해도 안 바뀜 */
+        }
     </style>
 </head>
 <body>
     <div class="flexbox">
-        <!-- 
-            블록레벨요소는 줄바꿈되기 때문에 세로로 배치된다. 
-            블록레벨요소의 width는 부모 크기의 100%이며 
-            height는 자식 크기만큼 지정된다.
-        -->
        <div>flex-item</div>
        <div>flex-item</div>
        <div>flex-item</div>
