@@ -7,23 +7,24 @@
     <title>가상클래스선택자</title>
 
     <style>
-        a{
-            color: #777;
-            text-decoration: none;
+        p{
+            background: lightgray;
         }
-        a:hover{
-            color: #333;
-            text-decoration: underline;
+        p:first-child{
+            color: blue;
         }
+        
+        p:last-child{
+            background: palegoldenrod;
+        }
+
+        p:nth-child(3){
+            color: red;
+        }
+
+
     </style>
     <!-- 
-            가상클래스 (:)  - 사용자 인터랙션
-            a:link          -> 아직 방문하지 않은 링크에 적용 (기본색상 파란색)
-            a:visited       -> 사용자가 방문한 링크에 적용 (방문 후 기본색상 보라색)
-            선택자:hover    -> 마우스 커서를 요소 위에 올렸을때 (기본색상 파란색)
-            선택자:active   -> 요소가 활성화되었을때 (클릭 중인 상태 기본색상 빨강색)
-            선택자:focus    -> 요소에 포커스가 있을때(예: input 박스에 클릭한 상태)
-
             가상 요소 선택자 (::)
             ::first-letter -> 요소의 첫 글자
             ::first-line   -> 요소의 첫 줄
@@ -34,12 +35,11 @@
 </head>
 
 <body>
-    <ul>
-        <li><a href="#">company</a></li>
-        <li><a href="#">product</a></li>
-        <li><a href="#">service</a></li>
-        <li><a href="#">customer</a></li>
-        <li><a href="#">community</a></li>
-    </ul>
+        <div class="box">
+            <p>company</p>
+            <p>product</p>
+            <p>service</p>
+            <p>community</p>
+        </div>
 </body>
 </html>
