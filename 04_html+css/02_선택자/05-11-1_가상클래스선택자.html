@@ -1,0 +1,45 @@
+<html lang="ko">
+    <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자</title>
+
+    <style>
+        a{
+            color: #777;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+    <!-- 
+            가상클래스 (:)  - 사용자 인터랙션
+            a:link          -> 아직 방문하지 않은 링크에 적용 (기본색상 파란색)
+            a:visited       -> 사용자가 방문한 링크에 적용 (방문 후 기본색상 보라색)
+            선택자:hover    -> 마우스 커서를 요소 위에 올렸을때 (기본색상 파란색)
+            선택자:active   -> 요소가 활성화되었을때 (클릭 중인 상태 기본색상 빨강색)
+            선택자:focus    -> 요소에 포커스가 있을때(예: input 박스에 클릭한 상태)
+
+            가상 요소 선택자 (::)
+            ::first-letter -> 요소의 첫 글자
+            ::first-line   -> 요소의 첫 줄
+            ::before       -> 요소 안 맨 앞에 배치될 요소 
+            ::after        -> 요소 안 맨 뒤에 배치될 요소 
+            원칙상으로는 콜론이 2개 붙지만, 1개로도 쓸 수 있음 
+        -->
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">company</a></li>
+        <li><a href="#">product</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">customer</a></li>
+        <li><a href="#">community</a></li>
+    </ul>
+</body>
+</html>
