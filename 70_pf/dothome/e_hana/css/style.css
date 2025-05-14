@@ -78,6 +78,10 @@ nav a{
     background: lightgreen;
 }
 
+.banner{
+
+}
+
 .slide {
     width: calc(100% - 600px);
     background: lightpink;
@@ -87,8 +91,9 @@ nav a{
 
 footer {
     height: 120px;
-    background-color: yellow;
+    background-color: #333;
     display: flex;
+    align-items: center;
 }
 
 .blogo{
@@ -96,17 +101,8 @@ footer {
     
 }
 
-.bmenu{
+.cent_cont{
     height: 120px;
     width: calc(100% - 500px);
 }
 
-.cite{
-    height: 60px;
-    background: blue;
-}
-
-.copy{
-    height: 60px;
-    background: red;
-}
