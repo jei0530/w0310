@@ -3,11 +3,11 @@
 /* 공통 */
 * {
     margin: 0;
-    padding: 0;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 body {
@@ -92,21 +92,26 @@ footer {
 }
 
 .blogo{
-    text-align: center;
-    
+    width: 200px;
 }
 
-.bmenu{
+.center_cont{
     height: 120px;
     width: calc(100% - 500px);
+    background: darkcyan;
 }
 
 .cite{
     height: 60px;
-    background: blue;
+    /* background: blue; */
 }
 
 .copy{
     height: 60px;
-    background: red;
+    /* background: red; */
+}
+
+.fs {
+    width: 300px;.
+    background: darkorange;
 }
