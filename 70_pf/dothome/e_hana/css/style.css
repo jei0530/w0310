@@ -3,11 +3,11 @@
 /* 공통 */
 * {
     margin: 0;
+    padding: 0;
 }
 
 ul {
     list-style: none;
-    padding: 0;
 }
 
 body {
@@ -75,55 +75,75 @@ nav a{
 
 .contents {
     width: 400px;
-    background: lightgreen;
 }
 
 .banner{
+    height: 120px;
+    background: lightgoldenrodyellow;
+}
 
+.notice{
+    height: calc(100% - 600px);
+}
+
+.gallery{
+    height: 360px;
+    background: lightpink;
+}   
+
+.link{
+    height: 120px;
+    background: lightseagreen;
 }
 
 .slide {
     width: calc(100% - 600px);
-    background: lightpink;
     overflow: hidden;
     /* 이미지 사이즈 커서 넘칠때 사용 */
 }
 
 footer {
     height: 120px;
-    background-color: #333;
+    background-color: #4c4c4c;
     display: flex;
     align-items: center;
 }
 
+/* 하단로고 */
 .blogo{
+    text-align: center;
     width: 200px;
+    
 }
 
-<<<<<<< HEAD
-.cent_cont{
-=======
+/* 푸터 영역 중심 컨텐츠(하단메뉴와 저작권) */
 .center_cont{
->>>>>>> 17954fadf427c8ecd00440cc035c570cbce83507
-    height: 120px;
     width: calc(100% - 500px);
-    background: darkcyan;
+    padding-left: 60px;
+    color: #8b8b8b;
 }
 
-<<<<<<< HEAD
-=======
-.cite{
-    height: 60px;
-    /* background: blue; */
+/* 하단메뉴 */
+.bmenu{
+    height: 30px;
+    display: flex;
 }
 
-.copy{
-    height: 60px;
-    /* background: red; */
+.bmenu li{
+    margin-right: 16px;
 }
 
-.fs {
-    width: 300px;.
-    background: darkorange;
+/* 하단메뉴에서 마지막 마케팅제휴 빼고 */
+.bmenu li:not(:last-child):after{
+    content:"|";
+    margin-left: 16px;
 }
->>>>>>> 17954fadf427c8ecd00440cc035c570cbce83507
+
+.bmenu a{
+    color: #d2d2d2;
+}
+
+.fs{
+    width: 300px;
+}
+
