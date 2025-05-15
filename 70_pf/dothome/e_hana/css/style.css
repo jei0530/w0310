@@ -6,14 +6,14 @@
     padding: 0;
 }
 
-ul {
+ul {    
     list-style: none;
 }
 
 body {
     background: #ffffff;
     color: #333;
-    font: 15px/1.6 '굴림', sans-serif;
+    font: 15px/1.6 '굴림', sans-seri f;
 }
 
 a {
@@ -38,7 +38,7 @@ body {
 
 header {
     width: 200px;
-    background: lightblue;
+    background: rgb(218, 218, 218);
 }
 
 .logo {
@@ -77,25 +77,76 @@ nav a{
     width: 400px;
 }
 
-.banner{
-    height: 120px;
-    background: lightgoldenrodyellow;
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    height: 150px;
+    background: #dce0eb;
+}
+.banner .cont{
+    display: flex;
+}
+.banner .cont img {
+    margin-right: 16px;
 }
 
 .notice{
     height: calc(100% - 600px);
+    /* padding-left: 13px;
+    padding-top: 16px; */
+    background: lightblue;
 }
+
+.notice h2{
+    margin-bottom: 8px;
+}
+
+.notice li{
+    line-height: 2;
+
+}
+
+.notice a {
+    display: inline-block;
+    width: 300px;
+    line-height: 30px;
+}
+
+.notice li:hover{
+    border-bottom: 1px solid #3bacb4;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
 
 .gallery{
-    height: 360px;
-    background: lightpink;
+    height: 300px;
+    background: #e8dde8;
+    padding-top: 16px;
 }   
 
-.link{
-    height: 120px;
-    background: lightseagreen;
+.gallery h2{
+    margin-left:13px;          
+    margin-bottom: 16px;
 }
 
+.gallery .inner {
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+.link{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.link span{
+    display: block;
+}
 .slide {
     width: calc(100% - 600px);
     overflow: hidden;

@@ -85,15 +85,6 @@ nav a {
 }
 .noge h2 {
     margin-bottom: 16px;
-}
-.notice {
-    width: 670px;
-}
-.notice a {
-    display: inline-block;
-    width: 600px;
-}
-.gallery {
     width: 670px;
 }
 .gallery .inner {

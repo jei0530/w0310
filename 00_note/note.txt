@@ -1,0 +1,79 @@
+css 선택자에 무엇이 있는가?
+
+선택자{ 속성:값;}
+
+ 태그 
+ id - #
+ class - .
+ 전체 
+ 그룹 - ,(콤마)
+
+ 하위 - 선택자1 선택자2
+ 자식 - 선택자1>선택자2
+ 형제 - 선택자1~선택자2
+ 인접형제 -선택자1+선택자2
+
+ 속성 
+    [속성]
+    [속성=값]
+    [속성~=값]
+    [속성$=값]
+    [속성*=값]
+    [속성|=값]
+    [속성^=값]
+
+ 가상 요소 
+    ::after
+    ::before
+
+ 가상 클래스
+    :link
+    :visited
+    :hover
+    :action
+    :nth-child(n)
+    :first-of-type
+    :last-of-type
+
+
+CSS 속성에 무엇이 있는가?
+
+color
+letter-spacing
+
+<폰트 관련 속성>
+font-family
+font-size
+font-weight
+font-style
+line-height
+
+<박스모델 관련 속성>
+padding
+margin
+width
+height
+border
+
+dislpay
+jusify-content
+align-items
+
+align-content
+align-self
+flex-direction
+flex-wrap
+flex-flow
+flex-grow
+flex-shrink
+flex-basis
+order
+
+
+
+
+
+
+
+
+
