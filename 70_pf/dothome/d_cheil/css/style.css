@@ -1,5 +1,9 @@
 @charset "utf-8";
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     background: #fff;
@@ -16,11 +20,6 @@ ul{
 a{
     text-decoration: none;
     color: #333;
-}
-
-p{
-    margin: 0;
-    padding:0;
 }
 
 .container{
@@ -106,35 +105,33 @@ nav a:hover{
 
 
 footer{
-    background: rgb(230, 230, 230);
+    background: rgb(218, 218, 218);
     height: 120px;
     display: flex;
-}
-
-.blogo{
-    width: 200px;
-    margin-top: 35px;
+    align-items: center;
 }
 
 .coad{
-    height: 120px;
-    width: calc(100% - 200px);
+    padding-left: 60px;
 }
+
+
 
 .bmenu{
-    height: 60px;
-    background: rgb(199, 197, 180);
+    height: 30px;
+    display: flex;
 }
 
+.bmenu li:not(:last-child)::after{
+    content: '|';
+    margin: 8px;
+}
 .copy{
     height: 60px;
-    background: rgb(172, 181, 181);
-    text-align: center;
 }
 
-.copy p{
-    padding-top: 7px;
-}
+
+
 
 
 
