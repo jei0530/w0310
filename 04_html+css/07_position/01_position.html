@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* 
+            position: 요소의 위치를 지정
+                값: 
+                    -static(기본값)
+                    -relative: 자기 자신 기준
+
+                    -absolute:부모(조상) 기준
+                    -fixed: 뷰 포트 기준 (반응형)
+
+                fixed는 상단 고정 네비 제작시 사용된다
+
+                static과 relative의 차이는 left, top, right, bottom, z-index 5가지 추가 속성의 적용 유무에 있다.
+                둘은 다 같은데 적용되냐 안되냐만 차이가 있음
+
+                absolute도 부모(조상) 중에 position 값이 static이 아닌 요소가 없으면 fixed와 같이 창(뷰포트) 기준이다.
+
+                단위: px, %(부모), em(부모), rem(최상위부모:html, :root)
+
+                static을 제외하고 relative, absolute, fixed일 경우 left, top, right, bottom, z-index 5가지 추가 속성을 지정할 수 있다
+        */
+        p{
+            margin: 0;
+            width: 250px;
+            height: 100px;
+            padding: 10px;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .red{
+            background: crimson;
+        }
+    
+        .green{
+            background: lime;
+            position: absolute; /* 중간에 있는애가 뜨고 밑에 있는 애가 위로 올라와서 그 자리를 채움  */
+            left: 70px;
+            top: 50px;
+            z-index: 1;
+        }
+
+        .blue{
+            position: relative;
+            background: dodgerblue;
+            left: 100px;
+            top: 40px;
+        }
+        
+        .box{
+            width: 650px;
+            background: rgba(0,0,0,0.3);
+            position: relative;
+            left: 50px;
+        }
+
+        body{
+            margin: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+   <div class="box">
+    <p class="red">Lorem ipsum </p>
+    <p class="green">Lorem ipsum </p>
+    <p class="blue">Lorem ipsum </p>
+   </div>
+</html>
