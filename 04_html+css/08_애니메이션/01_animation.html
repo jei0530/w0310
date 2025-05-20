@@ -8,7 +8,7 @@
     <style>
         /* 
             개별속성 
-              animation-name: 이름;
+              animation-name: 사용자가 의미있는 이름으로 지정, none(없음);
 
             animation-duration: 동작시간;
                 값: 1s -> 단위: s(초)
@@ -26,7 +26,7 @@
                 값: 1s -> 단위:s (초)
 
             animation-timing-function: 속도곡선;
-                값: ease(기본값) - 처음에 느리고, 중간에 빠르고 끝에 느리기ㅔ 
+                값: ease(기본값) - 처음에 느리고, 중간에 빠르고 끝에 느리게 
                     ease in - 처음에 느리고 끝에 빠르게 
                     ease out - 처음에 빠르고 끝에 느리게 
                     ease-in-out - 처음과 끝이 느리고 중간은 빠르ㅏ게 
@@ -38,13 +38,13 @@
                 backwards - 애니메이션 시작 전 적용된 스타일 유지 
                 both - 애니메이션 시작 전과 후의 상태 모두 유지
 
-            animation-play-state: 일시정지/재개;
+            animation-play-state: 동작상태;
                 값: running(기본값) - 재개
                     paused - 일시정지
 
 
             속기속성
-            animation: 이름 동작시간 반복횟수;
+            animation: name duration [count] [direction] [delay] [timing-fuction] [fill-mode] [play-state]; []는 생략가능
 
             애니메이션의 작업 단위는 키프레임
             @keyframes 애니메이션 이름 {
@@ -60,11 +60,39 @@
             }
                 %를 사용하면 더 자세하게 동적인 표현 가능
         */
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            animation-name: rightMove2;
+            animation-duration: 5s;
+            -animation-direction: alternate; /* alternate는 최소 3이상부터 */
+            /* animation-timing-function: linear; */
+            animation-iteration-count: 3;
+            
+        }
+
+        @keyframes rightMove {
+            /* 시작 */
+            from {left:0}
+            /* 종료 */
+            to {left:1000px}
+            }
+
+
+
+        @keyframes rightMove2 {
+            0% {left:0}
+            50% {left:1000px}
+            100% {left:0px}
+            }
+        
     </style>
 </head>
 
 <body>
-
+    <div class="div1">박스</div>
 </body>
 
 </html>

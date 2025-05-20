@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-ul {    
+ul {
     list-style: none;
 }
 
@@ -60,12 +60,12 @@ nav li {
     margin-top: 8px;
 }
 
-nav li a:hover{
+nav li a:hover {
     color: #057122;
     background: #ffffff;
 }
 
-nav a{
+nav a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -85,25 +85,27 @@ nav a{
     height: 150px;
     background: #dce0eb;
 }
-.banner .cont{
+
+.banner .cont {
     display: flex;
 }
+
 .banner .cont img {
     margin-right: 16px;
 }
 
-.notice{
+.notice {
     height: calc(100% - 600px);
     /* padding-left: 13px;
     padding-top: 16px; */
     background: lightblue;
 }
 
-.notice h2{
+.notice h2 {
     margin-bottom: 8px;
 }
 
-.notice li{
+.notice li {
     line-height: 2;
 
 }
@@ -114,43 +116,90 @@ nav a{
     line-height: 30px;
 }
 
-.notice li:hover{
+.notice li:hover {
     border-bottom: 1px solid #3bacb4;
     font-size: 17px;
     transition: 0.2s;
 }
 
 
-.gallery{
+.gallery {
     height: 300px;
     background: #e8dde8;
     padding-top: 16px;
-}   
+}
 
-.gallery h2{
-    margin-left:13px;          
+.gallery h2 {
+    margin-left: 13px;
     margin-bottom: 16px;
 }
 
 .gallery .inner {
     display: flex;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
 }
 
-.link{
+.link {
     height: 150px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
 }
 
-.link span{
+.link span {
     display: block;
 }
 .slide {
     width: calc(100% - 600px);
     overflow: hidden;
     /* 이미지 사이즈 커서 넘칠때 사용 */
+}
+
+.slide ul {
+    position: relative;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slide 10s infinite
+}
+
+.slide li {
+    font-size: 100px;
+    width: 25%;
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+
+    10% {
+        left: -100%;
+    }
+
+    33% {
+        left: -100%;
+    }
+
+    43% {
+        left: -200%;
+    }
+
+    66% {
+        left: -200%;
+    }
+
+    76% {
+        left: -200%;
+    }
+
+    99.99999% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0%;
+    }
 }
 
 footer {
@@ -161,40 +210,39 @@ footer {
 }
 
 /* 하단로고 */
-.blogo{
+.blogo {
     text-align: center;
     width: 200px;
-    
+
 }
 
 /* 푸터 영역 중심 컨텐츠(하단메뉴와 저작권) */
-.center_cont{
+.center_cont {
     width: calc(100% - 500px);
     padding-left: 60px;
     color: #8b8b8b;
 }
 
 /* 하단메뉴 */
-.bmenu{
+.bmenu {
     height: 30px;
     display: flex;
 }
 
-.bmenu li{
+.bmenu li {
     margin-right: 16px;
 }
 
 /* 하단메뉴에서 마지막 마케팅제휴 빼고 */
-.bmenu li:not(:last-child):after{
-    content:"|";
+.bmenu li:not(:last-child):after {
+    content: "|";
     margin-left: 16px;
 }
 
-.bmenu a{
+.bmenu a {
     color: #d2d2d2;
 }
 
-.fs{
+.fs {
     width: 300px;
 }
-
