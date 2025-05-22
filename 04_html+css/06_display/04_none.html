@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:none</title>
+    <style>
+        .opacity{
+            opacity: 0;
+        }
+        .opacity:hover{
+            opacity: 1;
+            transition: 1s;
+        }
+        /* 
+            인터렉티브(상호작용) 가능 
+            예, 호버
+        */
+
+        .visibility{
+            visibility: hidden;
+        }
+           .visibility:hover{
+            opacity: 1;
+        }
+        /* 인터렉티브(상호작용) 불가능 */
+
+        .none{display: none;}
+        /* 없어지면서 공간도 사라짐 */
+    </style>
+</head>
+<body>
+    <div>난 아무것도 안함</div>
+    <div class="opacity">난 opacity 처리함</div>
+    <div>난 아무것도 안함</div>
+    <div class="visibility">난 visibility 처리함</div>
+    <div>난 아무것도 안함</div>
+    <div class="none">난 display:none;함</div>
+    <div>난 아무것도 안함</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+font-family:'돋움', dotum, arial, helvetica, sans-serif
+font-size: 12px 또는 150% 또는 1.5em 또는 1.5rem
+font-weight
+font-style
+font-variant
+line-height:1.4; ->부모 요소의 글자 크기 기준 
+font: weight|style|variant size|line-height family 순서이다
+@font-face {font-family: 이름; src:url('폰트');} 
+color:rgba(r,g,b,alpha); alpha는 0~1
+letter-spacing :자간(레 터 스 페 이 싱)
+word-spacing: 문자 자간(레터    스페이싱)
+text-decoration:none; (밑줄 제거하기)
+text-transform
+text-shadow: x위치 y위치 blur color;
+text-align: left, center, jusify; 블록요소에만 적용되는 속성으로 인라인 요소를 가운데, 왼쪽, 오른쪽, 양쪽 맞춤
+vartical-align : 인라인 요소의 수직 맞춤
+text-indent: 블록요소에만 적용, 문단의 첫머리 들여쓰기
+word-wrap
+word-break: 영문자에서 text-align:jusify할때 break-all을 같이 사용
+white-space
+text-overflow: ellipsis; -> ...말줄임표
+dislpay: inline|block|inline-block|none|flex;...
+overflow:hidden; 
+opacity
+background
+background-color
+background-image
+background-repeat
+background-position
+background-attachment
+background-size
+background-origin
+background-clip
+weight
+max-weight
+min-weight
+height
+min-height
+max-height
+padding: 안쪽여백
+margin: 일반적 여백으로 바깥 여백
+border: weight style color; -> 1px solid red;
+border-top
+border-left
+border-right
+border-bottom
+border-weight
+border-style
+border-color
+border-radius (왼쪽 상단, 오른쪽 상단, 왼쪽하단, 오른쪽 하단 순서로)
+border-image : (테두리를 이미지로 넣을 수 있음)
+outline: border바깥쪽 테두리를 그음, 테두리 2개 넣기
+box-sizing:border-box
+box-shadow: x위치 y위치 blur [spread] color [inset]; 순서있음
+resize:none; ->박스크기 조절 못하게 함 
+apperance
+transform: 변형;
+transition: 전환;
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+transition-name
+animation-name
+animation-delay
+animation-duration
+animation-timing-function
+animation-iteration-count
+animation-direction
+animation-fill-mode
+animation-play-state
+@keyframes 이름{}
+column-count
+column-gap
+column-rule
+column-span
+column-weight
+float:left|right;
+clear:left|right|both;
+position
+left
+right
+top
+bottom
+z-index
+@media
+@import url(파일명)
+flex-wrap
+flex-flow
+flex-direction
+jusify-content:space-between;
+align-items: center;
+align-content
+align-self
+flex-grow
+flex-shrink 
+flex-basis 
+order
+grid-template-color
+grid-template-rows
+grid-column-start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
