@@ -89,6 +89,7 @@ nav a {
 }
 .gallery .inner {
     display: flex;
+    justify-content: space-evenly
 }
 .gallery a {
     margin-right: 15px;

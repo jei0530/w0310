@@ -1,0 +1,198 @@
+ @charset "utf-8";
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background: #ffffff;
+     color: #333;
+     font: 16px/1.6 "Noto-Sans";
+ }
+
+ a {
+     text-decoration: none;
+     color: #333;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ img {
+     vertical-align: top;
+ }
+
+ header,
+ .contents,
+ .slide,
+ footer {
+     width: 1200px;
+     margin: 0 auto;
+ }
+
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100px;
+     background: lightblue;
+ }
+
+ nav {
+     width: 600px;
+     height: 60px;
+ }
+
+ nav li {
+     display: inline-block;
+     width: 120px;
+     line-height: 60px;
+ }
+
+ nav a {
+     font-size: 18px;
+ }
+
+ nav a:hover {
+     font-size: 20px;
+     color: darkgray;
+     transition: .3s;
+ }
+
+
+ .slide {
+     width: 1200px;
+     height: 300px;
+     overflow: hidden;
+ }
+
+ .slide ul {
+     position: relative;
+     height: 400%;
+     animation: slide 8s infinite;
+ }
+
+ .slide li {
+     height: 25%;
+ }
+
+ @keyframes slide {
+     0% {
+         top: 0%;
+     }
+
+     10% {
+         top: -100%;
+     }
+
+     33% {
+         top: -100%;
+     }
+
+     43% {
+         top: -200%;
+     }
+
+     66% {
+         top: -200%;
+     }
+
+     76% {
+         top: -300%;
+     }
+
+     99.999% {
+         top: -300%;
+     }
+
+     100% {
+         top: 0%;
+     }
+ }
+
+ .contents {
+     display: flex;
+     height: 200px;
+ }
+
+ .notice {
+     width: 400px;
+     background: lightsalmon;
+ }
+
+ .notice a {
+     color: #fff;
+     font-size: 14px;
+     margin-left: 10px;
+     display: inline-block;
+     width: 320px;
+     line-height: 30px;
+ }
+
+ .notice h2 {
+     color: #fff;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 10px;
+ }
+
+ .notice span {
+     color: #fff;
+     font-size: 14px;
+ }
+
+
+ .gallery .inner {
+     display: flex;
+     justify-content: space-evenly
+ }
+
+ .gallery {
+     width: 400px;
+     background: lightsteelblue color: #fff;
+ }
+
+ .gallery h2 {
+     margin-top: 10px;
+     margin-left: 10px;
+ }
+
+ .link {
+     width: 400px;
+ }
+
+ footer {
+     height: 100px;
+     width: 1200px;
+     display: flex;
+ }
+
+ footer p {
+     font-size: 12px;
+     color: darkgray;
+ }
+
+ .copy {
+     width: 1000px;
+     background: lightyellow;
+ }
+
+ .fmenu {
+     width: 200px;
+ }
+
+ .sns {
+     height: 50px;
+     background: lightgreen;
+     text-align: center;
+     line-height: 50px;
+ }
+
+
+ .fs {
+     height: 50px;
+     background: lightskyblue;
+ }
