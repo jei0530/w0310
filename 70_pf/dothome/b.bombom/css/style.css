@@ -34,16 +34,28 @@
  }
 
  header {
+     width: 100%;
+     height: 100px;
+     background: lightgoldenrodyellow;
+ }
+
+ .hi {
+     width: 1200px;
+     margin: 0 auto;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     height: 100px;
-     background: lightblue;
+
+ }
+
+ .logo {
+     padding-top: 30px;
  }
 
  nav {
      width: 600px;
      height: 60px;
+     padding-top: 30px;
  }
 
  nav li {
@@ -126,7 +138,7 @@
  .notice a {
      color: #fff;
      font-size: 14px;
-     margin-left: 10px;
+     margin-left: 25px;
      display: inline-block;
      width: 320px;
      line-height: 30px;
@@ -136,7 +148,7 @@
      color: #fff;
      margin-top: 10px;
      margin-bottom: 10px;
-     margin-left: 10px;
+     margin-left: 25px;
  }
 
  .notice span {
@@ -144,20 +156,31 @@
      font-size: 14px;
  }
 
+ .notice a:hover{
+    text-decoration:underline;
+    color: lightgrey;
+ }
+
 
  .gallery .inner {
      display: flex;
-     justify-content: space-evenly
+     justify-content: space-evenly;
  }
 
  .gallery {
      width: 400px;
-     background: lightsteelblue color: #fff;
+       background: lightsalmon; 
+       color: #fff;
  }
 
  .gallery h2 {
      margin-top: 10px;
      margin-left: 10px;
+     margin-bottom: 10px;
+ }
+
+ .gallery a:hover {
+     opacity: 0.5;
  }
 
  .link {
@@ -166,8 +189,16 @@
 
  footer {
      height: 100px;
+     width: 100%;
+     background: lightgray;
+
+ }
+
+ .f1 {
      width: 1200px;
+     margin: 0 auto;
      display: flex;
+     padding: 0 20px;
  }
 
  footer p {
@@ -177,7 +208,12 @@
 
  .copy {
      width: 1000px;
-     background: lightyellow;
+     text-align: center;
+ }
+
+ .copy p {
+     display: inline-block;
+     margin-top: 10px;
  }
 
  .fmenu {
@@ -186,13 +222,17 @@
 
  .sns {
      height: 50px;
-     background: lightgreen;
-     text-align: center;
-     line-height: 50px;
+     color: darkgray;
+ }
+
+ .sns a {
+    display: inline-block;
+     color: darkgray;
+     font-size: 12px;
+     margin-top:23px;
  }
 
 
  .fs {
      height: 50px;
-     background: lightskyblue;
  }
