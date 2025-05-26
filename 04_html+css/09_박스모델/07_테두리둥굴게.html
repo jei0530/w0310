@@ -5,16 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>border-radius</title>
     <style>
+        /* 
+            개별속성 (모서리 각각 네군데)
+            border-top-left-radius
+            border-top-right-radius
+            border-bottom-left-radius
+            border-bottom-right-radius
+        
+            속기속성
+            border-radius: 10px 20px 30px 40px    
+                    (왼쪽상단) (오른쪽상단) (왼쪽하단) (오른쪽하단)
+        */
+
+        
         div{
-            width: 200px;
-            height: 200px;
-            border-radius: 100px;
-            /* 가로 세로 크기의 절반 이상이 되면 동그라미가 된다 */
+            width: 100px;
             background: forestgreen;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px 20px 30px 40px   
+        }
+
+        div:nth-of-type(1){
+            border-radius: 10px;
+        }
+        div:nth-of-type(2){
+            border-radius: 50px;
+        }
+        div:nth-of-type(3){
+            border-radius: 10px 20px 30px 40px; 
+        }
+        div:nth-of-type(4){
+            border-radius: 10px 20px 30px;
+        }
+        div:nth-of-type(5){
+            width: 100px;
+            border-radius: 10px 20px;
+        }
+        div:nth-of-type(6){
+            width: 100px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+        }
+        div:nth-of-type(7){
+            width: 100px;
+            height: 100;
+            border-radius: 200px 0 0 0;
+        }
+        div:nth-of-type(8){
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div>박스</div>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+    <div>박스6</div>
+    <div>박스7</div>
+    <div>박스8</div>
 </body>
 </html>

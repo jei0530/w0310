@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모서리 둥글게</title>
+    <style>
+        .radius{
+            display: block;
+            background: green;
+            text-align: center;
+            padding: 40px 0;
+            margin: 10px;
+        }
+
+        #radius1{
+            width: 230px;
+            border-radius: 15px / 70px;
+            /* 
+                가로반지름 / 세로반지름
+                즉, 4개의 꼭짓점에서 원을 그려서 표현할 수 있음
+            */
+        }
+
+        #radius2{
+            width: 490px;
+            border-radius:15px 70px 15px 70px;
+            border-radius: 15px 70px / 70px 15px;
+        }
+    </style>
+</head>
+<body>
+    <span class="radius radius1" id="radius1">
+        border-radius:20px / 70px;
+    </span>
+    
+    <span class="radius radius2" id="radius2">
+        border-radius:15px 70px 15px 70px / 15px 70px 15px 70px;
+    </span>
+
+</body>
+</html>
