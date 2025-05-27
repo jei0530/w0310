@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div{
+            background: orange;
+            margin: 10px;
+            padding: 16px;
+            width: 199x;
+            height: 132px;
+            border: 1px solid orange;
+        }
+
+        .none{
+            padding: 0;
+            border: none;
+        }
+
+        .div1{
+            /* padding이 바깥쪽으로 적용 계속 크기 달라져서 계산해야함*/
+            /* 
+                가로: 199+16*2+1*2=233
+                세로: 132+16*2+1*2=166
+            */
+            box-sizing: content-box;
+        }
+
+        .div2{
+            /* padding가 안쪽으로 적용 */
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="none">padding 지정 x</div>
+    <div class="div1">content-box(기본값)</div>
+    <div class="div2">border-box</div>
+</body>
+</html>

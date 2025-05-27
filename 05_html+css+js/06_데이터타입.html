@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터타입</title>
 </head>
+
 <body>
     <script>
         /* 
             데이터 타입
-                1. 숫자(number)
-                2.  
+                1. 원시(primitive) 데이터
+                    1. 숫자(number):10
+                    2. 문자열(string):'javascript'
+                    3. 불(Boolean) : true, false -> 예약어
+                    4. undefined - 선언만 하고 값을 할당하지 않았을 때
+                    5. null - 비어있는 값
+                    ...
+
+                2. 참조(Reference) -> 객체(object) 데이터
+                    1. 객체(object) : {}
+                    2. 배열(array): []
+                    3. 함수(function): function(){}
+                    ...
 
         */
 
@@ -21,6 +34,69 @@
         console.log(num1);
         console.log(num2);
         console.log(num3);
+
+        var str1 = '문자';
+        var str2 = "문자";
+        var str3 = "10"; /* 숫자가 아니라 문자임 */
+
+        /* 
+            +는 문자열을 나열함을 의미
+            1+2 -> 3
+            "일"+"이"->"일이" -> 문자열 연결 연산자
+            1+"이"->1+이
+        */
+
+        console.log("str1= " + str1);
+        console.log("str2= " + str2);
+        console.log("str3= " + str3);
+
+        // "",''을 화면에 표시하고 싶을때 
+        var str4 = '문자는 "문자"';
+        var str5 = "문자는 '문자'";
+
+        // 이스케이프 문자 
+        var str6 = "문자는\t '문자'";
+        var str7 = "문자는\\ \ '문자\'";
+        var str8 = "문자는\n \'문자'";
+
+        document.write(str4 + '<br>');
+        document.write(str5 + '<br>');
+        document.write(str6 + '<br>');
+        document.write(str7 + '<br>');
+        document.write(str8 + '<br>');
+
+        var boo1 = (5 > 4);
+        var boo2 = false;
+
+        document.write(boo1);
+        document.write('<br>');
+        document.write(boo2);
+        document.write('<br>');
+
+        var boo3 = 0;
+        var boo4 = 1;
+
+        // 객체 지향 프로그래밍 언어: java, javscript, python, c++, ...
+        // 객체, 클래스, 생성자, 함수, 메서드, 속성,....
+        // Boolean(데이터) -> 데이터를 불 값으로 생성한다.
+        // 0만 false,
+        document.write(Boolean(boo3));
+        document.write('<br>');
+        document.write(Boolean(boo4));
+
+        // 변수 선언 후 값을 할당하지 않았을때
+        var temp1;
+        document.write('<br>');
+        document.write(temp1);
+
+        // 객체 데이터는 {}로 표기한다.
+        var obj = {};
+        obg.name = '홍길동';
+        obg.age;
+        document.write('<br>');
+        document.write(obj);
+
     </script>
 </body>
+
 </html>
