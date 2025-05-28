@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        ul{
+            list-style: none;
+        }
+        
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        
+        /* gnb */
+        /* 폰트 위계 속성 */
+        /* 메인메뉴 */
+        .gnb .main > li> a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #999;
+        }
+
+        /* 서브메뉴 */
+        .gnb .sub a {
+            font-size: 14px;
+        }
+
+        .main{
+            display: flex;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">한양소개</a>
+                    <ul class="sub">
+                        <li><a href="#">건학정신</a></li>
+                        <li><a href="#">학칙</a></li>
+                        <li><a href="#">윤리헌장</a></li>
+                        <li><a href="#">조직도</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서울캠퍼스</a>
+                <ul class="sub">
+                        <li><a href="#">학사일정</a></li>
+                        <li><a href="#">수강신청</a></li>
+                        <li><a href="#">계절학기</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ERICA캠퍼스</a>
+                <ul class="sub">
+                        <li><a href="#">학사일정</a></li>
+                        <li><a href="#">수강신청</a></li>
+                        <li><a href="#">계절학기</a></li>
+                        <li><a href="#">학점교류</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">입학/교육</a>
+                <ul class="sub">
+                        <li><a href="#">상담신청</a></li>
+                        <li><a href="#">국제교육원</a></li>
+                        <li><a href="#">국제처</a></li>
+                        <li><a href="#">출판부</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
