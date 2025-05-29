@@ -42,6 +42,10 @@ nav li {
 nav a {
     font-size: 18px;
 }
+/* 1depth 메인메뉴 */
+.main{
+    display: flex;
+}
 .slide {
     height: 350px;
     overflow: hidden;
@@ -61,6 +65,10 @@ nav a {
     align-items: center;
     height: 120px;
     background: #1b3b86;
+}
+
+.link a:hover{
+    opacity: 0.5;
 }
 .banner {
     display: flex;
@@ -92,7 +100,16 @@ nav a {
     justify-content: space-evenly
 }
 .gallery a {
-    margin-right: 15px;
+    margin-right: 50px;
+}
+
+.gallery img{
+    height: 120px;
+    width: 170px;
+}
+
+.gallery a:hover {
+    opacity: 0.5;
 }
 
 footer {

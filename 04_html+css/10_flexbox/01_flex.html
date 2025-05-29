@@ -19,7 +19,29 @@
 
         }
 
+        /* 
+            개별속성 
+            flex-grow 0;  
+                값: 1이면 늘어나고 0이면 늘어나지않음
+            flex-shrink:1
+                값: 1이면 줄어들고 0이면 줄어들지 않음
+            flex-basis:auto
+                값: 가로 크기의 초기값
+    
+            속기속성
+            flex: grow shrink basis; -> 순서가 있음
+
+            flex:200px; -> flex: 1 1 200px;
+            flex:200; -> flex: 200 1 0%;
+            width: 200px; -> flex 0 1 auto;
+            flex: 0; -> flex 0 1 0%;
+            flex: 1; -> flex 1 1 0%;
+            
+        */
+
         .flexbox div {
+            flex: 1;
+            /* flex-basis:0, flex-grow,shrink:1 */
             background: darkcyan;
             margin: 10px;
             height: 200px;
