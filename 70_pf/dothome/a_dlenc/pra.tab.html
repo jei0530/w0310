@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab-pra</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        img{
+            vertical-align: top;
+        }
+
+        .tabs{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background: #e8e8e8;
+        }
+
+        input{
+            display: none;
+        }
+
+        label{
+            display: inline-block;
+            padding: 2px 16px;
+            background: darkgray;
+            color: lightgray;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .tabs input:checked+label{
+            background: #000;
+            color: #fff;
+        }
+
+        .tab-con{
+            padding: 16px;
+            position: absolute;
+            display: none;
+            border-top: 1px solid #000;
+        }
+        
+        .tabs input:checked+label+.tab-con{
+            display: block;
+        }
+        .tab1 a{
+            display: inline-block;
+            width: 270px;
+            line-height: 30px;
+        }
+
+        .tab1 a:hover{
+            text-decoration: underline;
+        }
+
+        .tab2 img{
+            width: 110px;
+
+        }
+
+        .tab2 img:hover{
+            opacity: 0.5;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">공지사항</label>
+            <div class="tab1 tab-con" >
+                <ul>
+                    <li><a href="#">지속가능경영 보고서(국문)</a><span>2025-06-04</span></li>
+                    <li><a href="#">주요환경 데이터</a><span>2025-06-04</span></li>
+                    <li><a href="#">친환경 현장관리</a><span>2025-06-04</span></li>
+                    <li><a href="#">평가보상 및 복리후생</a><span>2025-06-04</span></li>
+                </ul>
+            </div>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">갤러리</label>
+            <div class="tab2 tab-con">
+                <a href="#"><img src="./asset/gal1.jpg" alt="사진1"></a>
+                <a href="#"><img src="./asset/gal2.jpg" alt="사진1"></a>
+                <a href="#"><img src="./asset/gal3.jpg" alt="사진1"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

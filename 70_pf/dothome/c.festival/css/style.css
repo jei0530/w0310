@@ -1,7 +1,7 @@
  @charset "utf-8";
 
  * {
-     margin: 0;
+     margin: 0 auto;
      padding: 0;
      box-sizing: border-box;
  }
@@ -91,45 +91,77 @@
      width: 800px;
  }
 
+ .slide{
+    overflow: hidden;
+    height: 350px;
+ }
+
+ .slide ul{
+    position: relative;
+    height: 400%;
+    animation: slide 8s infinite;
+ }
+
+ @keyframes slide {
+    0%{top:0%}
+    10%{top:-100%}
+    33%{top:-100%}
+    43%{top:-200%}
+    66%{top:-200%}
+    76%{top:-300%}
+    99.99%{top:-300%}
+    0%{top:0%}
+ }
+
  .contents {
      display: flex;
      height: 200px;
  }
 
- .tab {
+ .tabs {
      width: 400px;
-     background: rgb(255, 255, 255);
+     height: 200px;
+     background: rgb(219, 219, 219);
      position: relative;
  }
 
- input {
+ .tabs input {
      display: none;
  }
 
- .tab label {
+ .tabs label {
      display: inline-block;
      background: darkslategray;
      color: lightgray;
      cursor: pointer;
-     font-size: 15px;
+     font-size: 17px;
      padding: 2px 8px;
  }
 
- .tab input:checked+label {
+ .tabs input:checked+label {
      background: #000;
      color: #fff;
  }
 
  .tab1 {
-     font-size: 12px;
+     font-size: 14px;
  }
 
  .tab1 a {
      display: inline-block;
-     width: 290px;
+     width: 270px;
+     line-height: 30px;
  }
 
- input:checked+label+.tab-con {
+ .tab1 a:hover{
+    text-decoration: underline;
+ }
+
+ .tab2 img:hover{
+    opacity: 0.5;
+ }
+
+ .tabs input:checked+label+.tab-con {
      display: block;
  }
 
@@ -139,7 +171,6 @@
      padding: 16px;
      border-top: 1px solid #000;
  }
-
 
  .banner {
      width: 200px;
@@ -154,11 +185,26 @@
      height: 200px;
  }
 
- .footer {
+ footer {
      display: flex;
      height: 100px;
      background: lightslategray;
      align-items: center;
+     text-align: center;
+ }
+
+ footer p{
+    font-size: 12px;
+ }
+
+ .fme{
+    color: #ffffff;
+ }
+ .fme a{
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #fff;
  }
 
 

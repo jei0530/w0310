@@ -160,11 +160,10 @@ nav a {
     width: 400%;
     height: 100%;
     display: flex;
-    animation: slide 10s infinite
+    animation: slide 10s infinite;
 }
 
 .slide li {
-    font-size: 100px;
     width: 25%;
 }
 
@@ -190,14 +189,14 @@ nav a {
     }
 
     76% {
-        left: -200%;
-    }
-
-    99.99999% {
         left: -300%;
     }
 
-    100% {
+    99.99% {
+        left: -300%;
+    }
+
+    0% {
         left: 0%;
     }
 }
