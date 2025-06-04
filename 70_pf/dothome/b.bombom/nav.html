@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 봄봄</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* 기본 레이아웃 */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            z-index: 1;
+            background: #f0f0f0;
+            height: 100px;
+        }
+
+        header .inner {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            background: lightgoldenrodyellow;
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 20px;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+            align-self: flex-end;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .gnb .main {
+            display: flex;
+        }
+
+        /* 가상요소로 배경바 삽입 */
+        .gnb .main::before {
+            content: "";
+            background: lightsalmon;
+            z-index: -1;
+            position: absolute;
+            right: -20px;
+            top: 30px;
+            width: 1200px;
+            height: 0px;
+            transition: .3s;
+        }
+
+        .gnb .main:hover::before {
+            height: 150px;
+        }
+
+        .gnb .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: lightskyblue;
+        }
+
+        .gnb .main>li>a:hover {
+            background: lightcoral;
+            color: #fff;
+        }
+
+        .gnb .main:hover .sub {
+            height: 150px;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .gnb .sub {
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .gnb .sub::before {
+            display: block;
+            content: '';
+            padding-top: 10px;
+        }
+
+        .gnb .sub>li>a {
+            display: block;
+            font-size: 14px;
+        }
+
+        .gnb .sub>li>a:hover {
+            background: lightcoral;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">브랜드</a>
+                            <ul class="sub">
+                                <li><a href="#">브랜드BI </a></li>
+                                <li><a href="#">브랜드스토리 </a></li>
+                                <li><a href="#">회사연혁 </a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴소개</a>
+                            <ul class="sub">
+                                <li><a href="#">신제품 </a></li>
+                                <li><a href="#">커피 </a></li>
+                                <li><a href="#">라떼 </a></li>
+                                <li><a href="#">스무디 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">가맹안내</a>
+                            <ul class="sub">
+                                <li><a href="#">경쟁력 </a></li>
+                                <li><a href="#">인테리어 </a></li>
+                                <li><a href="#">창업비용</a></li>
+                                <li><a href="#">창업문의 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">사업소개</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항 </a></li>
+                                <li><a href="#">게시판 </a></li>
+                                <li><a href="#">고객의소리 </a></li>
+                                <li><a href="#">로그인 </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+</body>
+
+</html>

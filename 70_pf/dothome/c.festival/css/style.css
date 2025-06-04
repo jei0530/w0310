@@ -1,0 +1,167 @@
+ @charset "utf-8";
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ a {
+     color: #333;
+     text-decoration: none;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ img {
+     vertical-align: top;
+ }
+
+ body {
+     background: #fff;
+     color: #333;
+     font: 15px/1.6 '돋움';
+ }
+
+ .container {
+     width: 1000px;
+     display: flex;
+ }
+
+ header {
+     width: 200px;
+     height: 650px;
+     background: #d4d4d4;
+ }
+
+ .gnb {
+     width: 160px;
+     margin: 30px auto;
+     text-align: center;
+     margin-top: 30px;
+ }
+
+ /* 1depth: 메인메뉴 */
+ .gnb .main>li>a {
+     display: block;
+     width: 160px;
+     height: 60px;
+     line-height: 60px;
+     font-size: 18px;
+     font-weight: bold;
+     background: rgb(183, 215, 234);
+ }
+
+ .gnb .main>li>a:hover {
+     background: #1A4975;
+     color: #fff;
+ }
+
+ .gnb .main>li:hover .sub {
+     height: 150px;
+ }
+
+ /* 2depth: 서브메뉴 */
+ .gnb .sub {
+     height: 0;
+     overflow: hidden;
+     transition: .3s;
+     background: rgba(107, 160, 234, 0.5);
+ }
+
+ .gnb .sub::before {
+     display: block;
+     content: '';
+     padding-top: 10px;
+ }
+
+ .gnb .sub>li>a {
+     display: block;
+     font-size: 14px;
+ }
+
+ .gnb .sub>li>a:hover {
+     background: #474ead;
+     color: #fff;
+ }
+
+ .wrap {
+     width: 800px;
+ }
+
+ .contents {
+     display: flex;
+     height: 200px;
+ }
+
+ .tab {
+     width: 400px;
+     background: rgb(255, 255, 255);
+     position: relative;
+ }
+
+ input {
+     display: none;
+ }
+
+ .tab label {
+     display: inline-block;
+     background: darkslategray;
+     color: lightgray;
+     cursor: pointer;
+     font-size: 15px;
+     padding: 2px 8px;
+ }
+
+ .tab input:checked+label {
+     background: #000;
+     color: #fff;
+ }
+
+ .tab1 {
+     font-size: 12px;
+ }
+
+ .tab1 a {
+     display: inline-block;
+     width: 290px;
+ }
+
+ input:checked+label+.tab-con {
+     display: block;
+ }
+
+ .tab-con {
+     position: absolute;
+     display: none;
+     padding: 16px;
+     border-top: 1px solid #000;
+ }
+
+
+ .banner {
+     width: 200px;
+ }
+
+ .link {
+     width: 200px;
+ }
+
+ .link img {
+     width: 200px;
+     height: 200px;
+ }
+
+ .footer {
+     display: flex;
+     height: 100px;
+     background: lightslategray;
+     align-items: center;
+ }
+
+
+ .fme {
+     width: 600px;
+ }

@@ -143,6 +143,41 @@ header {
     }
 }
 
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* 팝업이 타겟을 가지면 즉, 팝업 누르면 */
+#popup:target {
+    display: block;
+}
+
+/* 팝업창 */
+.pop-con {
+    margin: 10% auto;
+    padding: 20px;
+    background: #e8d2d2;
+    width: 500px;
+}
+
+.out {
+    text-align: right;
+}
+
+/* 닫기버튼 */
+.close {
+    background: #333;
+    color: #fff;
+    padding: 4px 12px;
+    }
+
 .contents {
     display: flex;
     height: 200px;
@@ -173,45 +208,39 @@ header {
     color: #d5d5d5;
 }
 
-.tabs .tab-content {
+.tab-content {
     position: absolute;
     display: none;
-    width: 100%;
     padding: 16px;
     border-top: 1px solid #000;
 }
 
-.tabs input:checked+label+.tab-content {
+input:checked+label+.tab-content {
     display: block;
 }
 
 /* 공지사항 */
-.tabs .tab1 {
+.tab1 {
     line-height: 2;
 }
 
-.tabs .tab1 a {
+.tab1 a {
     display: inline-block;
     width: 280px;
 }
 
-.tabs .tab1 a:hover {
+.tab1 a:hover {
     text-decoration: underline;
 }
 
-.tabs .tab2 {
-    text-align: center;
-}
-
-.tabs .tab2 img {
+.tab2 img {
     width: 110px;
     height: 110px;
     margin-top: 13px;
     margin-right: 8px;
-
 }
 
-.tabs .tab2 img:hover {
+.tab2 img:hover {
     opacity: 0.5;
 }
 

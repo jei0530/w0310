@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 15px/1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        header {
+            position: relative;
+            height: 100px;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            background: #605863;
+        }
+
+        .gnb {
+            position: absolute;
+            z-index: 1;
+            right: 0px;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .gnb ul {
+            width: 150px;
+            height: 134px;
+        }
+
+        .sub a {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        /* 1depth */
+        .gnb .main>li>a {
+            display: block;
+            font-size: 18px;
+            background: #000;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .gnb .main>li:hover .sub {
+            height: 110px;
+            transition: .5s;
+        }
+
+        /* 2depth */
+        .sub a {
+            color: #fff;
+
+        }
+
+        .gnb .sub {
+            height: 0;
+            overflow: hidden;
+            background: rgba(26, 73, 117, 0.5);
+        }
+
+        .gnb .sub>li>a {
+            font-size: 14px;
+        }
+
+        .gnb .sub>li>a:hover {
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+
+        .main {
+            display: flex;
+        }
+    </style>
+</head>
+<div class="wrap">
+    <header>
+        <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업정보 </a></li>
+                        <li><a href="#">기업연혁 </a></li>
+                        <li><a href="#">CEO인사말 </a></li>
+                        <li><a href="#">그룹사현황 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">지속가능경영</a>
+                    <ul class="sub">
+                        <li><a href="#">정도경영 </a></li>
+                        <li><a href="#">상생경영 </a></li>
+                        <li><a href="#">품질경영 </a></li>
+                        <li><a href="#">안전보건경영 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">투자정보</a>
+                    <ul class="sub">
+                        <li><a href="#">재무정보 </a></li>
+                        <li><a href="#">IR자료실 </a></li>
+                        <li><a href="#">기업지배구조 </a></li>
+                        <li><a href="#">ESG </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업소개</a>
+                    <ul class="sub">
+                        <li><a href="#">사업개요 </a></li>
+                        <li><a href="#">건축 </a></li>
+                        <li><a href="#">주택 </a></li>
+                        <li><a href="#">토목 </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+
+    </body>
+
+</html>
