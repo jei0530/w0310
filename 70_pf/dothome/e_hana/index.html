@@ -6,104 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script src="./script/script.js"> </script>
 </head>
 
 <body>
     <div class="wrap">
         <!-- 헤더 -->
         <header>
-            <h1 class="logo"><a href="#"><img src="./esset/logo.jpg" alt="상단로고"></a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#">해외여행 </a></li>
-                    <li><a href="#">국내여행</a></li>
-                    <li><a href="#">항공</a></li>
-                    <li><a href="#">호텔</a></li>
-
+            <h1 class="logo">
+                <a href="#"><img src="./esset/logo.jpg" alt="상단로고"></a>
+            </h1>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">해외여행</a>
+                        <ul class="sub">
+                            <li><a href="#">일본</a></li>
+                            <li><a href="#">유럽/아프리카</a></li>
+                            <li><a href="#">동남아/대만</a></li>
+                            <li><a href="#">미주/하와이</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">국내여행</a>
+                        <ul class="sub">
+                            <li><a href="#">제주여행</a></li>
+                            <li><a href="#">내륙여행</a></li>
+                            <li><a href="#">울릉도</a></li>
+                            <li><a href="#">섬여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">테마여행</a>
+                        <ul class="sub">
+                            <li><a href="#">해외골프</a></li>
+                            <li><a href="#">허니문</a></li>
+                            <li><a href="#">크루즈</a></li>
+                            <li><a href="#">밍글링투어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">호텔</a>
+                        <ul class="sub">
+                            <li><a href="#">해외호텔</a></li>
+                            <li><a href="#">국내숙박</a></li>
+                            <li><a href="#">프로모션</a></li>
+                            <li><a href="#">추천숙소</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-
         </header>
 
-        <!-- 컨텐츠 -->
-        <div class="contents">
-            <div class="banner">
-                <div class="cont">
-                    <img src="./esset/banner.jpg" alt="초특가 타임세일">
-                    <div>
-                        <h2>초특가 타임세일</h2>
-                        <p>매주 월요일 오전 10시, 쏟아지는 앱 전용 혜택을 놓치지 마세요!</p>
+        <div class="modal">
+            <div class="popup">
+                <h2>[여름휴가] 개막전 현지투어플러스 후기이벤트 당첨자 안내</h2>
+                <p>안녕하세요,하나투어 이벤트 담당자입니다. <br>
+                    먼저 [여름휴가 개막전] 현지투어플러스 후기이벤트 응모해주신 분들께 감사인사드립니다. <br>본 이벤트는 사전에 안내드린 응모 및 당첨 조건을 충족하신 분들을 대상으로 당첨자를
+                    선정할 예정이었으나,<br> 아쉽게도 이번 이벤트 기간 동안 해당 조건을 만족하는 응모자가 없어 부득이하게 당첨자를 선정하지 않게 되었습니다. <br> 기대해주신 분들께 아쉬운
+                    소식을 전하게되어 송구스러운 마음입니다. <br> 앞으로도 다른 이벤트로 찾아뵐 수 있도록 노력하겠습니다. <br> 감사합니다.</p>
+                <div class="out"><a href="#">닫기</a></div>
+            </div>
+        </div>
+
+            <!-- 컨텐츠 -->
+            <div class="contents">
+                <div class="banner">
+                    <div class="cont">
+                        <img src="./esset/banner.jpg" alt="초특가 타임세일">
+                        <div>
+                            <h2>초특가 타임세일</h2>
+                            <p>매주 월요일 오전 10시, 쏟아지는 앱 전용 혜택을 놓치지 마세요!</p>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <a href="#"><img src="./esset/button.png" alt="배너 버튼"></a>
                     </div>
                 </div>
-                <div class="btn">
-                    <a href="#"><img src="./esset/button.png" alt="배너 버튼"></a>
+
+                <div class="notice">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li>
+                            <a href="#">[호텔] 2025년 5월 휴무 안내</a>
+                            <span>2025.05.02</span>
+                        </li>
+                        <li>
+                            <a href="#">25년도 5월 휴무 안내</a>
+                            <span>2025.04.24</span>
+                        </li>
+                        <li>
+                            <a href="#">2025년 5월 유류할증료 공지</a>
+                            2025.04.23
+                        </li>
+
+                    </ul>
+                </div><!-- .notice -->
+                <div class="gallery">
+                    <h2>갤러리</h2>
+                    <div class="inner">
+                        <a href="#">
+                            <img src="esset/gallery1.jpg" alt="겔러리1"><br>
+                            <span>[공개 예정]
+                                나트랑 5/6일</span>
+                        </a>
+                        <a href="#">
+                            <img src="./esset/gallery2.jpg" alt="겔러리2"><br>
+                            <span>[관광+자유]
+                                발칸/동유럽</span>
+                        </a>
+                    </div> <!-- .inner end -->
+                </div><!-- .gallery -->
+
+
+                <div class="link">
+                    <a href="#">
+                        <img src="./esset/link1.jpg" alt="링크1">
+                        <span>맞춤여행</span>
+                    </a>
+                    <a href="#">
+                        <img src="./esset/link2.jpg" alt="링크2">
+                        <span>하나LIVE</span>
+                    </a>
+                    <a href="#">
+                        <img src="./esset/link3.jpg" alt="링크3">
+                        <span>마일리지클럽</span>
+                    </a>
+                    <a href="#">
+                        <img src="./esset/link4.jpg" alt="링크4">
+                        <span>외국인여행</span>
+                    </a>
                 </div>
-            </div>
-            <div class="notice">
-                <h2>공지사항</h2>
+
+            </div><!-- .contents -->
+
+            <!-- 슬라이드 -->
+            <div class="slide">
                 <ul>
-                    <li>
-                        <a href="#">[호텔] 2025년 5월 휴무 안내</a>
-                        <span>2025.05.02</span>
-                    </li>
-                    <li>
-                        <a href="#">25년도 5월 휴무 안내</a>
-                        <span>2025.04.24</span>
-                    </li>
-                    <li>
-                        <a href="#">2025년 5월 유류할증료 공지</a>
-                       2025.04.23
-                    </li>
-
+                    <li><a href="#"><img src="./esset/slide.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./esset/slide2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./esset/slide3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./esset/slide.jpg" alt=""></a></li>
                 </ul>
-            </div><!-- .notice -->
-            <div class="gallery">
-                <h2>갤러리</h2>
-                <div class="inner">
-                    <a href="#">
-                        <img src="esset/gallery1.jpg" alt="겔러리1"><br>
-                        <span>[공개 예정]
-                            나트랑 5/6일</span>
-                    </a>
-                    <a href="#">
-                        <img src="./esset/gallery2.jpg" alt="겔러리2"><br>
-                        <span>[관광+자유]
-                            발칸/동유럽</span>
-                    </a>
-                </div> <!-- .inner end -->
-            </div><!-- .gallery -->
-
-
-            <div class="link">
-                <a href="#">
-                    <img src="./esset/link1.jpg" alt="링크1">
-                    <span>맞춤여행</span>
-                </a>
-                <a href="#">
-                    <img src="./esset/link2.jpg" alt="링크2">
-                    <span>하나LIVE</span>
-                </a>
-                <a href="#">
-                    <img src="./esset/link3.jpg" alt="링크3">
-                    <span>마일리지클럽</span>
-                </a>
-                <a href="#">
-                    <img src="./esset/link4.jpg" alt="링크4">
-                    <span>외국인여행</span>
-                </a>
             </div>
-
-        </div><!-- .contents -->
-
-        <!-- 슬라이드 -->
-        <div class="slide">
-        <ul>
-            <li><a href="#"><img src="./esset/slide.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./esset/slide2.png" alt=""></a></li>
-            <li><a href="#"><img src="./esset/slide3.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./esset/slide.jpg" alt=""></a></li>
-        </ul>
-    </div>
         </div><!-- .slide -->
     </div><!-- .wrap -->
 

@@ -157,6 +157,12 @@
     text-decoration: underline;
  }
 
+ .tab2 img{
+    height: 110px;
+    margin-top: 10px;
+    margin-right: 9px;
+ }
+
  .tab2 img:hover{
     opacity: 0.5;
  }
