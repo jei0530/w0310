@@ -66,7 +66,7 @@ header {
     font-weight: bold;
 }
 
-.gnb .main>li:hover .sub {
+.gnb .main:hover .sub {
     height: 110px;
     transition: .5s;
 }
