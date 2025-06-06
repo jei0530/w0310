@@ -94,11 +94,14 @@
         .gnb .main:hover::before {
             height: 150px;
         }
-
+        
         .gnb .main>li>a {
             display: block;
+
+            /* 메인메뉴 각각 이름의 크기 설정 */
             width: 160px;
             height: 30px;
+            
             font-size: 18px;
             font-weight: bold;
             background: lightskyblue;
@@ -120,19 +123,11 @@
             transition: .3s;
         }
 
-        .gnb .sub::before {
-            display: block;
-            content: '';
-            padding-top: 10px;
-        }
-
         .gnb .sub>li>a {
-            display: block;
             font-size: 14px;
         }
 
         .gnb .sub>li>a:hover {
-            background: lightcoral;
             color: #fff;
             text-decoration: underline;
         }

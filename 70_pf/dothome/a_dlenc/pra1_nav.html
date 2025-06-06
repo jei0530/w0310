@@ -37,16 +37,16 @@
             height: 700px;
         }
 
-        header {
-            background: lightslategray;
+        header{
             display: flex;
             height: 100px;
             position: relative;
+            background: lightslategray;
             align-items: center;
             justify-content: space-between;
         }
 
-        .gnb {
+        .gnb{
             position: absolute;
             z-index: 1;
             top: 60px;
@@ -56,69 +56,142 @@
             text-align: center;
         }
 
-        .main {
+        .main{
             display: flex;
         }
 
-        .main ul {
+        .main ul{
             width: 150px;
         }
 
-        .main>li>a {
-            font-weight: bold;
-            font-size: 18px;
-            background: #09042c;
+        .main>li>a{
+            background: darkblue;
             display: block;
+            font-size: 18px;
+            font-weight: bold;
             color: #fff;
         }
 
-        .gnb .sub {
-            background: #d3d3d3;
+        .gnb .sub{
+            background: #000;
             height: 0;
             overflow: hidden;
         }
 
-        .main>li:hover .sub {
+        .gnb .sub a{
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .main>li:hover .sub{
             height: 135px;
             transition: .5s;
         }
 
-        .gnb .sub a {
+        .gnb .sub li:hover{
+            background: darkblue;
+        }
+
+        .slide{
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .slide ul{
+            position: relative;
+            height: 400%;
+            animation: slide 8s infinite;
+        }
+
+        @keyframes slide {
+            0%{top:0%}
+            10%{top:-100%}
+            33%{top:-100%}
+            43%{top:-200%}
+            66%{top:-200%}
+            76%{top:-300%}
+            99.99%{top:-300%}
+            0%{top:0%}
+        }
+
+        .contents{
+            display: flex;
+            height: 200px;
+        }
+
+        .tabs{
+            width: 400px;
+            background: #e5e5e5;
+            position: relative;
+        }
+
+        input{
+            display: none;
+        }
+
+        .tabs label{
+            background: darkgray;
             display: inline-block;
-            margin-bottom: 10px;
+            padding: 2px 10px;
+            cursor: pointer;
         }
 
-        .gnb .sub li:hover {
-            background: #190222;
-        }
-
-        .gnb .sub a:hover {
+        .tabs input:checked+label{
+            background: #000;
             color: #fff;
         }
 
-       .slide{
-            height: 300px;
-            overflow: hidden;
-       }
+        .tab-con{
+            position: absolute;
+            display: none;
+            padding: 16px;
+            border-top: 1px solid #000;
+        }
 
-       .slide ul{
-            height: 400% ;
-            position: relative;
-            animation: slide 8s infinite;
-       }
+        .tabs input:checked+label+.tab-con{
+            display: block;
+        }
 
-       @keyframes slide {
-            0% {top:0%}
-            10% {top:-100%}
-            33% {top:-100%}
-            43% {top:-200%}
-            66% {top:-200%}
-            76% {top:-300%}
-            99.99% {top:-300%}
-            0% {top:0%}
-       }
+        .tab1 a{
+            display: inline-block;
+            width: 285px;
+            line-height: 2;
+        }
 
+        .tab1 a:hover{
+            text-decoration: underline;
+        }
 
+        .tab2 img:hover{
+            opacity: 0.5;
+        }
+
+        
+
+        .footer{
+            height: 100px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background: darkgrey;
+        }
+
+        .copy{
+            width: 1000px;
+            font-size: 12px;
+            color: #5e5e5e;
+        }
+
+        .sns {
+            width: 200px;
+        }
+
+        .sns a{
+            margin-right: 10px;
+        }
+
+    
     </style>
 </head>
 
@@ -172,7 +245,47 @@
             <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
             <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
         </ul>
-    </div>  
+    </div>
+    
+    <div class="contents">
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">공지사항</label>
+            <div class="tab1 tab-con">
+                <ul>
+                    <li><a href="#">지속가능경영 보고서(국문)</a><span>2025-06-06</span></li>
+                    <li><a href="#">주요환경 데이터</a><span>2025-06-06</span></li>
+                    <li><a href="#">친환경 현장관리</a><span>2025-06-06</span></li>
+                    <li><a href="#">평가보상 및 복리후생</a><span>2025-06-06</span></li>
+                </ul>
+            </div>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">갤러리</label>
+            <div class="tab2 tab-con">
+                <a href="#"><img src="./asset/gal1.jpg" alt="사진1"></a>
+                <a href="#"><img src="./asset/gal2.jpg" alt="사진1"></a>
+                <a href="#"><img src="./asset/gal3.jpg" alt="사진1"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <a href="#"><img src="./asset/banner.jpg" alt="배너"></a>
+        </div>
+        <div class="link"><a href="#"><img src="./asset/lick.jpg" alt="바로가기"></a></div>
+    </div>
+
+    <div class="footer">
+        <h1 class="blogo"><a href="#"><img src="./asset/B.logo.png" alt="하단로고"></a></h1>
+        <div class="copy">
+            <p>서울 종로구 통일로 134 D타워 돈의문</p> 
+            <p>COPYRIGHT (c) 2021 DL이앤씨 All RIGHTS RESERVED.</p>
+        </div>
+        <div class="sns">
+            <a href="#"><img src="./asset/instargram.png" alt="sns"></a>
+            <a href="#"><img src="./asset/youtube.png" alt="sns"></a>
+            <a href="#"><img src="./asset/facebook.png" alt="sns"></a>
+        </div>
+    </div>
 </div>
 </body>
 
