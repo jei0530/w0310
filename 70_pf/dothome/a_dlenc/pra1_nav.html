@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>한줄 네비게이션 연습</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 '굴림';
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 1200px;
+            height: 700px;
+        }
+
+        header {
+            background: lightslategray;
+            display: flex;
+            height: 100px;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gnb {
+            position: absolute;
+            z-index: 1;
+            top: 60px;
+            right: 0;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main ul {
+            width: 150px;
+        }
+
+        .main>li>a {
+            font-weight: bold;
+            font-size: 18px;
+            background: #09042c;
+            display: block;
+            color: #fff;
+        }
+
+        .gnb .sub {
+            background: #d3d3d3;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .main>li:hover .sub {
+            height: 135px;
+            transition: .5s;
+        }
+
+        .gnb .sub a {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .gnb .sub li:hover {
+            background: #190222;
+        }
+
+        .gnb .sub a:hover {
+            color: #fff;
+        }
+
+       .slide{
+            height: 300px;
+            overflow: hidden;
+       }
+
+       .slide ul{
+            height: 400% ;
+            position: relative;
+            animation: slide 8s infinite;
+       }
+
+       @keyframes slide {
+            0% {top:0%}
+            10% {top:-100%}
+            33% {top:-100%}
+            43% {top:-200%}
+            66% {top:-200%}
+            76% {top:-300%}
+            99.99% {top:-300%}
+            0% {top:0%}
+       }
+
+
+    </style>
 </head>
+
 <body>
-    
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">기업정보</a>
+                        <ul class="sub">
+                            <li><a href="#">기업정보</a></li>
+                            <li><a href="#">기업연혁</a></li>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">그룹사현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업소개</a>
+                        <ul class="sub">
+                            <li><a href="#">사업개요</a></li>
+                            <li><a href="#">건축</a></li>
+                            <li><a href="#">주택</a></li>
+                            <li><a href="#">토목</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">지속가능경영</a>
+                        <ul class="sub">
+                            <li><a href="#">정도경영 </a></li>
+                            <li><a href="#">상생경영 </a></li>
+                            <li><a href="#">품질경영 </a></li>
+                            <li><a href="#">안전보건경영</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">투자정보</a>
+                        <ul class="sub">
+                            <li><a href="#">재무정보 </a></li>
+                            <li><a href="#">IR자료실 </a></li>
+                            <li><a href="#">기업지배구조</a></li>
+                            <li><a href="#">ESG</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+  
+
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
+            <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+        </ul>
+    </div>  
+</div>
 </body>
+
 </html>
