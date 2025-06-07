@@ -31,165 +31,160 @@
             vertical-align: top;
         }
 
-        .wrap {
-            margin: 0 auto;
-            width: 1200px;
-            height: 700px;
-        }
+      .wrap{
+        width: 1200px;
+        height: 700px;
+        margin: 0 auto;
+      }
 
-        header{
-            display: flex;
-            height: 100px;
-            position: relative;
-            background: lightslategray;
-            align-items: center;
-            justify-content: space-between;
-        }
+      header{
+        height: 100px;
+        display: flex;
+        background: lightpink;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-        .gnb{
-            position: absolute;
-            z-index: 1;
-            top: 60px;
-            right: 0;
-            width: 640px;
-            height: 30px;
-            text-align: center;
-        }
+      .gnb{
+        position: absolute;
+        right: 0;
+        top: 60px;
+        z-index: 1;
+        text-align: center;
+      }
 
-        .main{
-            display: flex;
-        }
+      .main{
+        display: flex;
+      }
 
-        .main ul{
-            width: 150px;
-        }
+      .main ul{
+        width: 150px;
+      }
 
-        .main>li>a{
-            background: darkblue;
-            display: block;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-        }
+      .main>li>a{
+        display: block;
+        background: 
+        cadetblue;
+        font-size: 18px;
+        color: #fff;
+      }
 
-        .gnb .sub{
-            background: rgba(0, 0, 0,0.5);
-            height: 0;
-            overflow: hidden;
-        }
+      .gnb .sub{
+        background: lightgrey;
+        height: 0;
+        overflow: hidden;
+      }
 
-        .gnb .sub a{
-            display: inline-block;
-            margin-bottom: 10px;
-            color: #fff;
-        }
+      .main:hover .sub{
+        height: 135px;
+        display: block;
+        transition: .5s;
+      }
 
-        .main:hover .sub{
-            height: 135px;
-            transition: .5s;
-        }
+      .sub a{
+        display: inline-block;
+        margin-bottom: 10px;
+      }
 
-        .gnb .sub li:hover{
-            background: rgba(0, 0, 139,0.5);
-        }
+      .sub li:hover{
+        background: #fff;
+      }
 
-        .slide{
-            height: 300px;
-            overflow: hidden;
-        }
-        
-        .slide ul{
-            position: relative;
-            height: 400%;
-            animation: slide 8s infinite;
-        }
+      .slide{
+        height: 300px;
+        overflow: hidden;
+      }
 
-        @keyframes slide {
-            0%{top:0%}
-            10%{top:-100%}
-            33%{top:-100%}
-            43%{top:-200%}
-            66%{top:-200%}
-            76%{top:-300%}
-            99.99%{top:-300%}
-            0%{top:0%}
-        }
+      .slide ul{
+        height: 400%;
+        position: relative;
+        animation: slide 8s infinite;
+      }
 
-        .contents{
-            display: flex;
-            height: 200px;
-        }
+      @keyframes slide {
+        0% {top:0%}
+        10% {top:-100%}
+        33% {top:-100%}
+        43% {top:-200%}
+        66% {top:-200%}
+        76% {top:-300%}
+        99.99% {top:-300%}
+        0% {top:0%}
+      }
 
-        .tabs{
-            width: 400px;
-            background: #e5e5e5;
-            position: relative;
-        }
+      .contents{
+        display: flex;
+        height: 200px;
+      }
 
-        input{
-            display: none;
-        }
+      .tabs{
+        width: 400px;
+        background: #ededed;
+      }
 
-        .tabs label{
-            background: darkgray;
-            display: inline-block;
-            padding: 2px 10px;
-            cursor: pointer;
-        }
+      input{
+        display: none;
+      }
 
-        .tabs input:checked+label{
-            background: #000;
-            color: #fff;
-        }
+      .tabs label{
+        background: darkgrey;
+        padding: 2px 10px;
+        font-size: 17px;
+        cursor: pointer;
+      }
 
-        .tab-con{
-            position: absolute;
-            display: none;
-            padding: 16px;
-            border-top: 1px solid #000;
-        }
+      input:checked+label{
+        background: #000;
+        color: #fff;
+      }
 
-        .tabs input:checked+label+.tab-con{
-            display: block;
-        }
+      .tab-con{
+        position: absolute;
+        display: none;
+        padding: 16px;
+        border-top: 1px solid #000;
+      }
 
-        .tab1 a{
-            display: inline-block;
-            width: 285px;
-            line-height: 2;
-        }
+      input:checked+label+.tab-con{
+        display: block;
+      }
 
-        .tab1 a:hover{
-            text-decoration: underline;
-        }
+      .tab1 a{
+        display: inline-block;
+        width: 290px;
+        line-height: 2;
+      }
 
-        .tab2 img:hover{
-            opacity: 0.5;
-        }
+      .tab1 a:hover{
+        text-decoration: underline;
+      }
 
-        .footer{
-            height: 100px;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            background: darkgrey;
-        }
+      .tab2 img:hover{
+        opacity: 0.5;
+      }
 
-        .copy{
-            width: 1000px;
-            font-size: 12px;
-            color: #5e5e5e;
-        }
+      .footer{
+        display: flex;
+        background: #bdbdbd;
+        height: 100px;
+        text-align: center;
+        align-items: center;
+      }
 
-        .sns {
-            width: 200px;
-        }
+      .copy{
+        width: 800px;
+        font-size: 12px;
+      }
 
-        .sns a{
-            margin-right: 10px;
-        }
+      .sns{
+        width: 200px;
+      }
 
-    
+      .sns a{
+        display: inline-block;
+        margin-right: 10px;
+      }
     </style>
 </head>
 
