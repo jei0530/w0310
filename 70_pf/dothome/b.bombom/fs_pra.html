@@ -31,76 +31,75 @@
             vertical-align: top;
         }
 
-        header {
-            width: 100%;
+        header{
             height: 100px;
+            width: 100%;
             background: lightgoldenrodyellow;
         }
 
-        .hi {
-            position: relative;
-            width: 1200px;
-            margin: 0 auto;
+        .hi{
             display: flex;
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
             justify-content: space-between;
+            align-items: center;
+            position: relative;
         }
 
-        .logo {
-            padding-top: 30px;
-        }
-
-        .gnb {
+        .gnb{
             position: absolute;
-            right: 0;
-            top: 60px;
             z-index: 1;
+            top: 60px;
+            right: 0;
             text-align: center;
         }
-
-        .main {
+        
+        .main{
             display: flex;
         }
 
-        .main ul {
+        .main li{
             width: 150px;
         }
 
-        .main>li>a {
-            font-size: 18px;
+        .main>li>a{
             font-weight: bold;
+            font-size: 18px;
             display: block;
-            background: lightgreen;
-            color: #fff;
+            background: darkseagreen;
+            color: #fff; 
         }
 
-        .gnb .sub {
+        .gnb .sub{
             background: lightblue;
-            overflow: hidden;
             height: 0;
+            overflow: hidden;
+            transition: .5s;
         }
 
-        .main:hover .sub {
-            display: block;
+        .main:hover .sub{
             height: 135px;
+            display: block;
         }
 
-        .sub a {
+        .gnb .sub a{
             display: inline-block;
             margin-bottom: 10px;
             color: #fff;
         }
 
-        .sub li:hover {
+        .sub li:hover{
             background: lightgreen;
         }
 
-        .slide {
+        .slide{
+            margin: 0 auto;
             width: 1200px;
             overflow: hidden;
-            margin: 0 auto;
         }
 
-        .slide ul {
+        .slide ul{
             display: flex;
             width: 400%;
             position: relative;
@@ -108,121 +107,89 @@
         }
 
         @keyframes slide {
-            0% {
-                left: 0%;
-            }
-
-            10% {
-                left: -100%;
-            }
-
-            33% {
-                left: -100%;
-            }
-
-            43% {
-                left: -200%;
-            }
-
-            66% {
-                left: -200%;
-            }
-
-            76% {
-                left: -300%;
-            }
-
-            99.99% {
-                left: -300%;
-            }
-
-            0% {
-                left: 0%;
-            }
+            0%{left:0%}
+            10%{left:-100%}
+            33%{left:-100%}
+            43%{left:-200%}
+            66%{left:-200%}
+            76%{left:-300%}
+            99.99%{left:-300%}
+            0%{left:0%}
         }
 
-        .contents {
+        .contents{
             width: 1200px;
-            height: 200px;
-            background: rgb(243, 215, 219);
             display: flex;
-            margin: 0 auto;
+            height: 200px;
+           margin: 0 auto;
+           background: lemonchiffon;
         }
-
-        .notice {
+        .notice{
             width: 400px;
-            color: #fff;
         }
 
-        .notice a {
+        .notice h2{
+            margin: 10px;
+        }
+
+        .notice a{
+            margin-left: 10px;
             display: inline-block;
             width: 320px;
-            margin-top: 10px;
-            margin-left: 15px;
-            color: #fff;
+            line-height: 2;
         }
-
-        .notice h2 {
-            margin-top: 10px;
-            margin-left: 15px;
-            color: #333;
-        }
-
-        .notice a:hover {
+        .notice a:hover{
             text-decoration: underline;
         }
 
-        .gal {
+        .gal{
             width: 400px;
         }
 
-        .gal h2 {
-            margin-top: 10px;
-            margin-left: 5px;
+        .gal h2{
+            margin: 10px;
         }
 
-        .gal a {
-            margin-left: 7px;
+        .gal a{
+            display: inline-block;
+            margin-right: 7px;
         }
 
-        .gal img:hover {
+        .gal img:hover{
             opacity: 0.5;
         }
 
-        .footer{
-            background: lightgray;
+        footer{
+            background: darkkhaki;
             height: 100px;
             width: 100%;
         }
 
         .fi{
-            margin: 0 auto;
             display: flex;
-            height: 100px;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+            color: #fff;
         }
 
         .copy{
             width: 1000px;
-            text-align: center;
             font-size: 12px;
             margin-top: 10px;
-            color: #a2a0a0;
-        }
-
-        .fmenu{
-            width: 200px;
-            text-align: center;
+            color: rgb(255, 255, 255);
         }
 
         .sns{
-            height: 50px;
-            font-size: 12px;
+            width: 200px;
         }
 
         .sns a{
-            display: inline-block;
-            margin-top: 25px;
-            margin-right: 8px;
+            font-size: 12px;
+            color: #fff;
+            margin-right: 5px;
+            
         }
     </style>
 </head>
@@ -273,9 +240,9 @@
     <div class="slide">
         <ul>
             <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
-            <a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a>
+            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
             <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
-            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드4"></a></li>
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
         </ul>
     </div>
 
@@ -303,17 +270,17 @@
 
         <div class="gal">
             <h2>갤러리</h2>
-            <a href="#"><img src="./asset/g1.jpg" alt="사진1"></a>
-            <a href="#"><img src="./asset/g2.jpg" alt="사진2"></a>
-            <a href="#"><img src="./asset/g3.jpg" alt="사진3"></a>
+            <a href="#"><img src="./asset/g1.jpg" alt="갤러리1"></a>
+            <a href="#"><img src="./asset/g2.jpg" alt="갤러리2"></a>
+            <a href="#"><img src="./asset/g3.jpg" alt="갤러리3"></a>
         </div>
 
         <div class="link">
-            <a href="#"><img src="./asset/link.jpg" alt="바로가기 사진"></a>
+            <a href="#"><img src="./asset/link.jpg" alt="바로가기"></a>
         </div>
     </div>
 
-    <div class="footer">
+    <footer>
         <div class="fi">
             <div class="copy">
                 <p>
@@ -323,25 +290,26 @@
                     copyright (c) bombom. all right reserved.
                 </p>
             </div>
+
             <div class="fmenu">
                 <div class="sns">
                     <a href="#">인스타그램</a>|
                     <a href="#">유튜브</a>|
-                    <a href="#">블로그</a>
+                    <a href="#">블로그</a>|
                 </div>
+
                 <div class="fs">
                     <form action="#">
                         <select name="fs" id="fs">
                             <option value="">--패밀리사이트--</option>
                             <option value="fs1">역전우동</option>
-                            <option value="fs2">홍콩반점</option>
-                            <option value="fs3">새마을식당</option>
+                            <option value="fs2">새마을식당</option>
+                            <option value="fs3">미정국수</option>
                         </select>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+    </footer>
 </body>
 
 </html>

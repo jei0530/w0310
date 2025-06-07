@@ -30,13 +30,14 @@
 
         header {
             width: 200px;
-            height: calc(100vh - 120px);
-            border: 1px solid;
+            height: 950px;
             text-align: center;
+            background: darkgrey;
         }
         
         /* 네비게이션 */
         .gnb {
+            /* 마진 안 주면 헤더 width 100% 크기를 가짐 */
             margin: 20px;
         }
 
@@ -53,16 +54,17 @@
             color: #ffffff;   
             border-bottom: 1px solid #ffffff;
             background: #0d6827;
-            padding: 8px 0;
+            padding: 8px;
             font-weight: bold;
         }
 
-        .main>li:hover>a {
+        .main>li>a:hover {
             color: #b1f4be;
         }
 
         .main:hover .sub {
             z-index: 1;
+            /* 마진 양옆으로 20을 주고 헤더 w 전체가 200이라서 160만큼 왼쪽으로 넘겨줌 */
             left: 160px;
             opacity: 1;
         }
@@ -70,20 +72,26 @@
         /* 2depth 서브 */
         .sub {
             display: flex;
-            z-index: -1;
             position: absolute;
             top: 0px;
             opacity: 0;
+
+            /* 100만큼 떨어진 곳에서 부터 나타남 */
             left: 100px;
+
+            /* 왼쪽 마진20이랑 네비게이션 160 더한 만큼 빼고 전체 크기를 가짐 */
             width:calc(100vw - 180px);
+            
             background: rgba(187, 244, 161, 0.5);
             transition:.5s;
+
+            /* 패딩을 주면 배경이  자연스럽게 채워짐 */
             padding: 4px; 
         }
 
         .sub li a {
             display: inline-block;
-            width: 160px;
+            width: 120px;
             font-size: 14px;
             color: #333;
         }
