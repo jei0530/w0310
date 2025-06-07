@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 만들어볼게요</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 '굴림';
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .wrap {
+            display: flex;
+        }
+
+        header {
+            width: 200px;
+            height: 650px;
+            background: darkgray;
+        }
+
+        .logo{
+            margin-top: 20px;
+        }
+
+        .gnb {
+            margin-top: 30px;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .main li {
+            width: 160px;
+        }
+
+        .main>li>a {
+            display: block;
+            background: darkslategray;
+            font-weight: bold;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .sub {
+            background: #fff;
+            height: 0;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .main>li:hover .sub {
+            height: 135px;
+            display: block;
+        }
+
+        .sub li:hover {
+            background: darkgray;
+        }
+
+        .sub a {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .slide {
+            width: 800px;
+            overflow: hidden;
+        }
+
+        .slide ul {
+            display: flex;
+            width: 400%;
+            position: relative;
+            animation: slide 8s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0%
+            }
+
+            10% {
+                left: -100%
+            }
+
+            33% {
+                left: -100%
+            }
+
+            43% {
+                left: -200%
+            }
+
+            66% {
+                left: -200%
+            }
+
+            76% {
+                left: -300%
+            }
+
+            99.99% {
+                left: -300%
+            }
+
+            0% {
+                left: 0%
+            }
+        }
+
+        .contents{
+            display: flex;
+        }
+
+        .tabs{
+            height: 200px;
+            width: 400px;
+            position: relative;
+            background: #000;
+            color: #fff;
+        }
+
+        input{
+           display: none;
+        }
+
+        .tabs label{
+            background: darkgray;
+            padding: 4px 12px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input:checked+label{
+            background: #000;
+            color: #fff;
+        }
+
+        .tab-con{
+            position: absolute;
+            display: none;
+            padding: 16px;
+            border-top: 1px solid #000;
+        }
+
+        input:checked+label+.tab-con{
+            display: block;
+        }
+
+        .tab1 a{
+            display: inline-block;
+            width: 290px;
+            line-height: 2;
+            color: #fff;
+        }
+
+        .tab1 a:hover{
+            text-decoration: underline;
+        }
+
+        .tab2 img:hover{
+            opacity: 0.5;
+        }
+        
+        .banner img{
+            width: 200px;
+        }
+
+        .link img{
+            width: 200px;
+            height: 200px;
+        }
+
+        footer{
+            background: rgb(18, 18, 18);
+            height: 100px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .fmenu{
+            height: 50px;
+            width: 600px;
+        }
+        
+        .fmenu a{
+            display: inline-block;
+            color: #fff;
+            margin-top: 15px;
+        }
+
+        .copy{
+            margin-bottom: 15px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+            <div class="gnb">
+                <ul class="main">
+                    <li><a href="#">축제소개</a>
+                        <ul class="sub">
+                            <li><a href="#">축제개요 </a></li>
+                            <li><a href="#">축제장소 </a></li>
+                            <li><a href="#">오시는길 </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">축제일정</a>
+                        <ul class="sub">
+                            <li><a href="#">전체일정 </a></li>
+                            <li><a href="#">5월일정 </a></li>
+                            <li><a href="#">6월일정 </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">상설프로그램</a>
+                        <ul class="sub">
+                            <li><a href="#">피크닉예약존</a></li>
+                            <li><a href="#">무소음디제잉</a></li>
+                            <li><a href="#">가면무도회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소식</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">SNS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="slide">
+                <ul>
+                    <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드1"></a></li>
+                    <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
+                    <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
+                    <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드1"></a></li>
+                </ul>
+            </div>
+
+            <div class="contents">
+                <div class="tabs">
+                    <input type="radio" name="tab" id="tab1" checked>
+                    <label for="tab1">공지사항</label>
+                    <div class="tab1 tab-con">
+                        <ul>
+                            <li><a href="#">보행(보행자, 자전거 포함) 통제 시간 안내</a><span>2025-05-19</span></li>
+                            <li><a href="#">차량 통제 시간 변경 안내</a><span>2025-05-18</span></li>
+                            <li><a href="#">2025 피크닉 힐링존 안내</a><span>2025-05-16</span></li>
+                            <li><a href="#">2025 뚜벅뚜벅축제 운영 관련 안내</a><span>2025-05-16</span></li>
+                        </ul>
+                    </div>
+                    <input type="radio" name="tab" id="tab2">
+                    <label for="tab2">갤러리</label>
+                    <div class="tab2 tab-con">
+                        <a href="#"><img src="./asset/gal1.png" alt="갤러리1"></a>
+                        <a href="#"><img src="./asset/gal2.png" alt="갤러리2"></a>
+                        <a href="#"><img src="./asset/gal3.png" alt="갤러리3"></a>
+                    </div>
+                </div>
+
+                <div class="banner">
+                    <a href="#"><img src="./asset/banner.png" alt="바로가기 사진"></a>
+                </div>
+
+                <div class="link">
+                    <a href="#"><img src="./asset/link.jpg" alt="바로가기2"></a>
+                </div>
+            </div>
+
+            <footer>
+                <h1 class="blogo">
+                    <a href="#"><img src="./asset/blogo.png" alt="하단로고"></a>
+                </h1>
+
+                <div class="fi">
+                    <div class="fmenu">
+                        <a href="#">개인정보처리방침</a> |
+                        <a href="#">이메일무단수집거부</a> |
+                        <a href="#">홈페이지의견접수</a>
+                    </div>
+                    <div class="copy">
+                            <p>COPYRIGHT(C) gwangalliMdrone. ALL RIGHT RESERVED.adm</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
