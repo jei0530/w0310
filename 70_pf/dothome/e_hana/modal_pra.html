@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달팝업창</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        body {
+            font: 15px/1.6 '굴림';
+            background: #fff;
+            color: #333;
+        }
+
+        .modal{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup{
+            background: rgb(212, 169, 169);
+            margin: 10% auto;
+            width: 500px;
+            height: 300px;
+            padding: 30px;
+            border-radius: 10px;
+            line-height: 2;
+        }
+
+        .button{
+            text-align: right;
+        }
+
+        .button a{
+            background: #fff;
+            border-radius: 3px;
+            padding: 4px 7px;
+        }
+
+        .popup h2{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .popup p{
+            margin-bottom: 15px;
+        }
+
+        .notice {
+            width: 400px;
+            height: calc(100% - 600px);
+            padding-left: 13px;
+            background: lightblue;
+            font-size: 18px;
+        }
+
+        .notice h2 {
+            margin-bottom: 8px;
+        }
+
+        .notice li {
+            line-height: 3;
+        }
+
+        .notice a {
+            display: inline-block;
+            width: 250px;
+        }
+
+        .notice li:hover {
+            border-bottom: 1px solid #3bacb4;
+            transition: 0.2s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="popup">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dignissimos laboriosam natus fuga ratione magnam, nostrum, deleniti culpa quo consequatur nobis quas voluptate reiciendis esse laborum sed consectetur obcaecati non?</p>
+            <div class="button"><a href="#">닫기</a></div>
+        </div>
+    </div>
+
+     <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li>
+                <a href="#">[호텔] 2025년 5월 휴무 안내</a>
+                <span>2025.05.02</span>
+            </li>
+            <li>
+                <a href="#">25년도 5월 휴무 안내</a>
+                <span>2025.04.24</span>
+            </li>
+            <li>
+                <a href="#">2025년 5월 유류할증료 공지</a>
+                2025.04.23
+            </li>
+
+        </ul>
+</body>
+</html>
