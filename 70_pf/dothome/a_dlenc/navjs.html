@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq로 네비게이션 만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 '굴림';
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        header {
+            background: lightcoral;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            text-align: center;
+            align-items: center;
+            height: 100px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main li {
+            width: 150px;
+        }
+
+        .gnb {
+            position: absolute;
+            right: 0;
+            top: 52px;
+        }
+
+        .main>li>a {
+            font-weight: bold;
+            font-size: 20px;
+            display: block;
+            background: darkgray;
+            color: #fff;
+            padding: 8px;
+        }
+
+        .main>li>a:hover {
+            background: #000;
+        }
+
+        .sub {
+            background: rgba(144, 238, 144, 0.5);
+            height: 158px;
+            display: none;
+        }
+
+        .sub a {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .sub li:hover {
+            background: darkorange;
+        }
+    </style>
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <script>
+        /* 
+            객체
+
+                <사용자 정의 객체>
+                {
+                    속성:값,
+                    속성:값,
+                    속성:값, ...
+                }
+
+                <제이쿼리 객체>
+                $(document)
+                $('jq선택자')
+                $('.main>li')
+                $('sub')
+        
+            이벤트메서드(매개변수)
+                ready(function(){}) -> 문서가 준비되면 
+                mouseover(function(){}) -> 마우스를 올리면
+                mouseout(function(){}) -> 마우스가 나가면
+                mouseenter(function(){})
+                mouseleave(function(){})
+
+            HTML/CSS 메서드
+                css('css속성','값') -> css를 적용시킨다
+                css({'css속성':"값", 'css속성':"값", 'css속성':"값" })
+                css({css속성:"값"}) -> 속성 ""로 안 묶어도 허용
+
+                addClass('클래스') -> 클래스를 추가
+                removeClass('클래스') -> 클래스를 추가
+
+            효과메서드
+                hide()
+                show()
+                slideDown(시간, 콜백함수) : 위에서 아래로 보인다
+                    단위: 밀리초 -> 1000ms=1s -> 기본값 400
+                slideUp() : 아래에서 위로 숨긴다
+                stop() :정지한다 -> 효과메서드 앞에만 쓸 수 있음
+
+            제이쿼리의 문장형식:
+                객체.메서드();
+                $(".sub").stop().slideDown();
+
+        */
+
+        $(function () {
+            $(".main>li").mouseenter(function () {
+                $(".sub").stop().slideDown();
+            });
+
+            $(".main>li").mouseleave(function () {
+                $(".sub").stop().slideUp();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt=""></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">메인메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인메뉴</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
