@@ -81,6 +81,43 @@
      color: #fff;
  }
 
+ .modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+ }
+
+ .popup {
+    margin: 10% auto;
+    width: 600px;
+    height: 400px;
+    background: darkkhaki;
+    left:calc(100% - 300px);
+    padding: 50px;
+    border-radius: 10px;
+ }
+
+ .popup p{
+    padding-top: 20px;
+ }
+
+ .button{
+    text-align: right;
+    padding-top: 30px;
+ }
+ .button a{
+    background: #fff;
+    padding: 6px;
+    border-radius: 4px;
+ }
+
+
+
  .wrap {
      width: 800px;
  }

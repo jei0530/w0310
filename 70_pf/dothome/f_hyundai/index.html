@@ -4,45 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한양대학교</title>
+    <title>현대자동차</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
 </head>
 
 <body>
     <header>
         <h1><a href="#"><img src="./asset/logo.png" alt="한양대학교 웹사이트 로고입니다"></a></h1>
-          <nav class="gnb">
+        <nav class="gnb">
             <ul class="main">
-                <li><a href="#">한양소개</a>
+                <li><a href="#">구매/이벤트</a>
                     <ul class="sub">
-                        <li><a href="#">건학정신</a></li>
-                        <li><a href="#">학칙</a></li>
-                        <li><a href="#">윤리헌장</a></li>
-                        <li><a href="#">조직도</a></li>
+                        <li><a href="#">진행중 이벤트 </a></li>
+                        <li><a href="#">차량 구매 절차 </a></li>
+                        <li><a href="#">상세모델 검색 </a></li>
+                        <li><a href="#">이달의 구매혜택</a></li>
                     </ul>
                 </li>
-                <li><a href="#">서울캠퍼스</a>
-                <ul class="sub">
-                        <li><a href="#">학사일정</a></li>
-                        <li><a href="#">수강신청</a></li>
-                        <li><a href="#">계절학기</a></li>
-                        <li><a href="#"></a></li>
+                <li><a href="#">서비스/멤버쉽</a>
+                    <ul class="sub">
+                        <li><a href="#">마이페이지 </a></li>
+                        <li><a href="#">블루멤버스 소개 </a></li>
+                        <li><a href="#">가맹사업 소개 </a></li>
+                        <li><a href="#">HI EV </a></li>
                     </ul>
                 </li>
-                <li><a href="#">ERICA캠퍼스</a>
-                <ul class="sub">
-                        <li><a href="#">학사일정</a></li>
-                        <li><a href="#">수강신청</a></li>
-                        <li><a href="#">계절학기</a></li>
-                        <li><a href="#">학점교류</a></li>
+                <li><a href="#">브랜드</a>
+                    <ul class="sub">
+                        <li><a href="#">철학 </a></li>
+                        <li><a href="#">모델 히스토리 </a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">국내 사업망 소개 </a></li>
                     </ul>
                 </li>
-                <li><a href="#">입학/교육</a>
-                <ul class="sub">
-                        <li><a href="#">상담신청</a></li>
-                        <li><a href="#">국제교육원</a></li>
-                        <li><a href="#">국제처</a></li>
-                        <li><a href="#">출판부</a></li>
+                <li><a href="#">디지털/고객지원</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항 </a></li>
+                        <li><a href="#">고객센터 </a></li>
+                        <li><a href="#">마이현대 </a></li>
+                        <li><a href="#">블루링크 </a></li>
                     </ul>
                 </li>
             </ul>
@@ -51,47 +53,57 @@
 
     <div class="slide">
         <ul>
-            <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드이미지1"></a></li>
-            <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드이미지2"></a></li>
-            <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드이미지3"></a></li>
-          
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드이미지1"></a></li>
+            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드이미지2"></a></li>
+            <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드이미지3"></a></li>
+
         </ul>
+    </div>
+
+    <div class="modal">
+        <div class="popup">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi consequatur repellendus. Ullam autem, quam rerum laboriosam vel alias ducimus.</p>
+            <div class="button">
+                <a href="#">닫기</a>
+            </div>
+        </div>
     </div>
 
     <div class="contents">
         <div class="link">
             <a href="#">
                 <img src="./asset/link1.png" alt="링크1">
-                <span>인터넷증명발급</span>
+                <span>유튜브</span>
             </a>
             <a href="#">
                 <img src="./asset/link2.png" alt="링크2">
-                <span>학생정보시스템</span>
+                <span>블로그</span>
             </a>
             <a href="#">
                 <img src="./asset/link3.png" alt="링크3">
-                <span>입시홈페이지</span>
+                <span>카카오톡</span>
             </a>
             <a href="#">
                 <img src="./asset/link4.png" alt="링크4">
-                <span>합격자발표</span>
+                <span>인스타그램</span>
             </a>
             <a href="#">
                 <img src="./asset/link5.png" alt="링크5">
-                <span>채용정보등록</span>
+                <span>페이스북</span>
             </a>
         </div>
 
         <div class="banner">
             <div class="cont">
-                <img src="./asset/banner.png" alt="배너">
-                <div>
-                    <h2>국제특허출원 세계 대학 중 15위</h2>
-                    <p>2024년 국제특허출원 상위 대학에서 세계 15위, 국내 2위 기록... 지식재산 분야 글로벌 경쟁력 입증</p>
+                <a href="#"><img src="./asset/banner.jpg" alt="배너"></a>
+                <div class="write">
+                    <h2>최근 한 달 동안 고객님이 가장 많이 구매하신 모델입니다 </h2>
+                    <p>2024년 1위 디 올 뉴 팰리세이드 Hybrid</p>
                 </div>
             </div>
             <div class="btn">
-                <a href="#"><img src="./asset/10001.png" alt="바로가기버튼"></a>
+                <a href="#"><img src="./asset/right.png" alt="바로가기버튼"></a>
             </div>
         </div>
 
@@ -101,20 +113,21 @@
                 <h2>공지사항</h2>
                 <ul>
                     <li>
-                        <a href="#">[창업대학원] 2025학년도 후기 신입생 모집 (05.07(수) ~ 05.22(목))</a>
-                        <span>2025.04.29</span>
+                        <a href="#">블루링크 시스템 개선 작업 안내</a>
+                        <span>2025.06.05
+                        </span>
                     </li>
                     <li>
-                        <a href="#">[서울캠퍼스 사회봉사팀] 2025학년도 여름계절학기 자율봉사</a>
-                        <span>2025.04.28</span>
+                        <a href="#">지니뮤직 시스템 개선 작업에 따른 이용 일시 불가 안내</a>
+                        <span>2025.06.05</span>
                     </li>
                     <li>
-                        <a href="#">[실습학생 모집안내] 2025-여름학기 현장실습 실습학생 신청안내</a>
-                        <span>2025.04.24</span>
+                        <a href="#">2025년 현대모터클럽 연말 Year End Party 운영 대행사 모집 공고</a>
+                        <span>2025.06.05</span>
                     </li>
                     <li>
-                        <a href="#">[보건대학원] 2025학년도 후기 신입생 모집 안내</a>
-                        <span>2025.04.22</span>
+                        <a href="#">상담시스템 DB 서버 작업 안내 공지</a>
+                        <span>2025.06.02</span>
                     </li>
                 </ul>
             </div>
@@ -122,16 +135,16 @@
                 <h2>겔러리</h2>
                 <div class="inner">
                     <a href="#">
-                        <img src="./asset/gallery1.png" alt="겔러리1"><br>
-                        <span>나노튜브 인공근육</span>
+                        <img src="./asset/gal1.jpg" alt="겔러리1"><br>
+                        <span>현대인증중고차 트레이드-인 6월 혜택</span>
                     </a>
                     <a href="#">
-                        <img src="./asset/gallery2.png" alt="겔러리2"><br>
-                        <span>나노퍼즐 코팅</span>
+                        <img src="./asset/gal2.jpg" alt="겔러리2"><br>
+                        <span>현대닷컴 온라인 견적 이벤트</span>
                     </a>
                     <a href="#">
-                        <img src="./asset/gallery3.png" alt="겔러리3"><br>
-                        <span>하이드로겔 섬유</span>
+                        <img src="./asset/gal3.jpg" alt="겔러리3"><br>
+                        <span>6월 전용카드 신차 구매 혜택</span>
                     </a>
                 </div> <!-- .inner end -->
             </div> <!-- .gallery end -->
@@ -140,9 +153,11 @@
 
 
     <footer>
+        <h1 class="blogo"><a href="#"><img src="./asset/blogo.png" alt=""></a></h1>
         <div class="left">
-            <p>(04763) 서울특별시 성동구 왕십리로 222 TEL. 02.2220.0114</p>
-            <p>COPYRIGHT 2025 HANYANG UNIVERSITY. ALL RIGHTS RESERVED.</p>
+            <p>고객센터 : 080-600-6000 <br>
+
+                COPYRIGHT ⓒ HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.</p>
         </div>
         <div class="right">
             <div class="sns">
@@ -154,17 +169,29 @@
             </div>
 
             <!-- 패밀리사이트 -->
-            <div class="fs">
-                <form action="#">
-                    <select name="fs" id="fs">
-                        <option value="">--- 패밀리 사이트 ---</option>
-                        <option value="fs1">교원양성지원센터 [서울]</option>
-                        <option value="fs2">국제처</option>
-                        <option value="fs3">국제교육원[서울]</option>
-                    </select>
-                </form>
+            <div class="family-site-wrapper" id="familySite">
+                <div class="family-site-button" id="toggleButton">
+                    패밀리 사이트 <span class="arrow">▼</span>
+                </div>
+                <ul class="family-site-list" id="siteList">
+                    <li><a href="#" target="_blank">자회사 1</a></li>
+                    <li><a href="#" target="_blank">자회사 2</a></li>
+                    <li><a href="#" target="_blank">파트너사</a></li>
+                </ul>
             </div>
         </div><!-- .footer.end -->
+
+        <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const siteList = document.getElementById('siteList');
+    const familyWrapper = document.getElementById('familySite');
+
+    toggleButton.addEventListener('click', () => {
+        const isVisible = window.getComputedStyle(siteList).display === 'block';
+        siteList.style.display = isVisible ? 'none' : 'block';
+        familyWrapper.classList.toggle('active');
+    });
+</script>
     </footer>
 </body>
 

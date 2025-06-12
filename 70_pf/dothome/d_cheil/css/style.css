@@ -33,6 +33,7 @@ header {
     background: rgb(230, 230, 230);
     height: 850px;
     width: 200px;
+    text-align: center;
 }
 
 .logo {
@@ -112,6 +113,41 @@ header {
 .wrap {
     height: 850px;
     width: calc(100% - 200px);
+}
+
+.modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+
+.popup{
+    background: darkorange;
+    width: 800px;
+    height: 400px;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 10% auto;
+}
+
+.popup p{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.right {
+    padding-top: 60px;
+    text-align: right;
+}
+
+.popup a{
+    background: #fff;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .slide {

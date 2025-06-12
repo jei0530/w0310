@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js로 네비 만들기-미완성</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".main").mouseenter(function () {
+                $('sub').stop().css({ visibility: visible });
+                $('sub').stop().animate({ left: 160, opacity: 1 });
+            });
+
+            $(".main").mouseleave(function () {
+                $('sub').stop().css({ visibility: visible });
+                $('sub').stop().animate({ left: 160, opacity: 1 });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        body {
+            font: 15px/1.5 "Noto Sans KR", sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            width: 200px;
+            height: 950px;
+            text-align: center;
+            background: darkgrey;
+        }
+
+        /* 네비게이션 */
+        .gnb {
+            /* 마진 안 주면 헤더 width 100% 크기를 가짐 */
+            margin: 20px;
+        }
+
+        /* 1depth 메인 */
+
+        .main li {
+            position: relative;
+        }
+
+        .main>li>a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            background: #0d6827;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .main>li>a:hover {
+            color: #b1f4be;
+        }
+
+        /* 2depth 서브 */
+        .sub {
+            display: flex;
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+
+            /* 100만큼 떨어진 곳에서 부터 나타남 */
+            left: 160px;
+
+            /* 왼쪽 마진20이랑 네비게이션 160 더한 만큼 빼고 전체 크기를 가짐 */
+            width: calc(100vw - 180px);
+
+            background: rgba(187, 244, 161, 0.5);
+            transition: .5s;
+
+            /* 패딩을 주면 배경이  자연스럽게 채워짐 */
+            padding: 4px;
+        }
+
+        .sub li a {
+            display: inline-block;
+            width: 120px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .sub li:hover a {
+            color: #fc5353;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="#"><img src="./asset/LOGO.png" alt="상단로고"></a>
+        </h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">브랜드</a>
+                    <ul class="sub">
+                        <li><a href="#">사업소개</a></li>
+                        <li><a href="#">제일제당 소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">DELIVERY</a>
+                    <ul class="sub">
+                        <li><a href="#">비비고</a></li>
+                        <li><a href="#">햇반</a></li>
+                        <li><a href="#">백설</a></li>
+                        <li><a href="#">고메</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">우리 이야기</a>
+                    <ul class="sub">
+                        <li><a href="#">기획칼럼</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">소셜미디어</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">멤버쉽</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">고객의소리</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
