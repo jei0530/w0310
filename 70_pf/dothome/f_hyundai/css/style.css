@@ -112,12 +112,6 @@ header {
     transition: .3s;
 }
 
-.gnb .sub::before {
-    display: block;
-    content: '';
-    padding-top: 10px;
-}
-
 .gnb .sub>li>a {
     display: block;
     font-size: 16px;

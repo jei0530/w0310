@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    font: 15px/1.6 '굴림';
+    color: #333;
+    background: #fff;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.wrap {
+    display: flex;
+}
+
+header {
+    width: 200px;
+    height: 850px;
+    background: darkgrey;
+}
+
+.gnb {
+    padding: 50px 20px;
+}
+
+.main li {
+    position: relative;
+}
+
+
+.main>li>a {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    background: darkkhaki;
+    color: #fff;
+    padding: 8px;
+}
+
+
+.sub {
+    top: 0;
+    left: 160px;
+    position: absolute;
+    width: calc(100vw - 160px);
+    padding: 9.6px;
+    display: flex;
+    z-index: 1;
+    background: rgba(255, 140, 0, 0.5);
+    opacity: 0;
+    transition: .5s;
+}
+
+.sub a {
+    width: 150px;
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.main:hover .sub {
+    opacity: 1;
+}
+
+.sub a:hover {
+    color: #fff;
+}
+
+.main>li>a:hover {
+    background: darkcyan;
+}
+
+.spotmenu {
+    text-align: center;
+    font-size: 18px;
+}
+
+.spotmenu a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: calc(100% - 200px);
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide ul {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slide li {
+    width: 25%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 300px;
+    background: darkkhaki;
+    text-align: center;
+}
+
+.link span {
+    display: block;
+    padding-top: 10px;
+}
+
+.banner {
+    display: flex;
+    height: 200px;
+    background: rgb(205, 202, 164);
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.bw {
+    display: flex;
+}
+
+.write {
+    padding-left: 40px;
+}
+
+.right {
+    padding-right: 200px;
+}
+
+.tabs {
+    height: 250px;
+    background: darkkhaki;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+label {
+    font-weight: bold;
+    font-size: 25px;
+    background: darkgray;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input:checked+label {
+    background: #000;
+    color: #fff;
+}
+
+.tab-con {
+    position: absolute;
+    border-top: 1px solid #000;
+    display: none;
+}
+
+input:checked+label+.tab-con {
+    display: block;
+}
+
+.tab1 {
+    font-size: 20px;
+    width: 100%;
+}
+
+.tab1 a {
+    padding-left: 20px;
+    line-height: 2.5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab1 h3 {
+    font-weight: normal;
+    font-size: 20px;
+    display: inline;
+}
+
+.tab1 span {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.tab1 a:hover {
+    text-decoration: underline;
+}
+
+.tab2 {
+    width: 100%;
+}
+
+.gi {
+    padding-left: 250px;
+    display: flex;
+    gap: 200px;
+}
+
+.tab2 img:hover {
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    height: 120px;
+    background: rgb(87, 86, 86);
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+.fmenu{
+    width: calc(100% - 200px);
+}
+
+.fi a{
+    color: #fff;
+}
