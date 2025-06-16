@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dl이엔씨</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -60,15 +61,15 @@
         </div>
 
         <!-- 팝업창 -->
-        <div id="popup" >
-            <div class="pop-con">
-                <h2>지속가능경영 보고서(국문)</h2>
-                <p>잡다 홈페이지(https://www.jobda.im/acca/test) 에서 역검 실전 응시 및 튜토리얼 연습이 모두 가능합니다! 실전 응시 기회는 월 5회 제공되며, 실전 응시로 충분한 경험을 쌓고 본 역량검사를 응시해보시는 것을 추천드립니다.</p>
-
-                <div class="out"><a href="#" class="close">닫기</a></div>
-            </div> <!-- .pop-con -->
+        <div class="popup">
+            <h2>지속가능경영 보고서(국문)</h2>
+            <p>잡다 홈페이지(https://www.jobda.im/acca/test) 에서 역검 실전 응시 및 튜토리얼 연습이 모두 가능합니다! 실전 응시 기회는 월 5회 제공되며, 실전 응시로 충분한
+                경험을 쌓고 본 역량검사를 응시해보시는 것을 추천드립니다.</p>
+            <div class="button">
+                <a href="#">닫기</a>
+            </div>
         </div><!-- .popup -->
-        
+
         <div class="contents">
             <!-- 탭 -->
             <div class="tabs">
@@ -117,6 +118,11 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        $('.tab1 li:first-of-type').click(() => $('.popup').show());
+        $('.popup a').click(() => $('.popup').hide());
+    </script>
 </body>
 
-</html>
+</html> 

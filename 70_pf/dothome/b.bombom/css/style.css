@@ -39,6 +39,42 @@
      background: lightgoldenrodyellow;
  }
 
+ .modal {
+     position: absolute;
+     z-index: 999;
+     display: none;
+     height: 100%;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     top: 0;
+     left: 0;
+ }
+
+ .popup {
+     margin: 10% auto;
+     background: darkgrey;
+     border-radius: 10px;
+     padding: 50px;
+     width: 600px;
+     height: 400px;
+ }
+
+ .popup h2 {
+     margin-bottom: 20px;
+ }
+
+ .popup a {
+     display: inline-block;
+     background: #fff;
+     padding: 6px;
+     border-radius: 4px;
+     margin-top: 20px;
+ }
+
+ .button{
+    text-align: right;
+ }
+
  .hi {
      width: 1200px;
      margin: 0 auto;
@@ -156,9 +192,9 @@
      font-size: 14px;
  }
 
- .notice a:hover{
-    text-decoration:underline;
-    color: lightgrey;
+ .notice a:hover {
+     text-decoration: underline;
+     color: lightgrey;
  }
 
 
@@ -169,8 +205,8 @@
 
  .gallery {
      width: 400px;
-       background: lightsalmon; 
-       color: #fff;
+     background: lightsalmon;
+     color: #fff;
  }
 
  .gallery h2 {
@@ -226,10 +262,10 @@
  }
 
  .sns a {
-    display: inline-block;
+     display: inline-block;
      color: darkgray;
      font-size: 12px;
-     margin-top:23px;
+     margin-top: 23px;
  }
 
 

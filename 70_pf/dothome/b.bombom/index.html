@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카페봄봄</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -14,16 +15,27 @@
             <div class="logo">
                 <a href="#"><img src="./asset/logo.png" alt="상단로고"></a>
             </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">브랜드</a></li>
-                        <li><a href="#">메뉴소개</a></li>
-                        <li><a href="#">매장안내 </a></li>
-                        <li><a href="#">가맹안내</a></li>
-                    </ul>
-                </nav>
+            <nav>
+                <ul>
+                    <li><a href="#">브랜드</a></li>
+                    <li><a href="#">메뉴소개</a></li>
+                    <li><a href="#">매장안내 </a></li>
+                    <li><a href="#">가맹안내</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
+    <div class="modal">
+        <div class="popup">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum culpa deserunt voluptate fuga nostrum
+                voluptatum dolorum beatae sit. Eaque itaque veniam reiciendis odit eius impedit praesentium. Eius, nam
+                repellat.</p>
+
+            <div class="button"><a href="#">닫기</a></div>
+        </div>
+    </div>
 
     <div class="slide">
         <ul>
@@ -46,11 +58,11 @@
                     <span>07-08</span>
                 </li>
                 <li><a href="#">
-                    카페봄봄 35초 영상제 (~ 6.30) </a>
+                        카페봄봄 35초 영상제 (~ 6.30) </a>
                     <span>05-16</span>
                 </li>
                 <li><a href="#">
-                    '아동이 안전한 세상을 그려 봄' 공모전 수상작 모음 </a>
+                        '아동이 안전한 세상을 그려 봄' 공모전 수상작 모음 </a>
                     <span>06-30</span>
                 </li>
             </ul>
@@ -87,7 +99,7 @@
                     <a href="#">트위터</a> |
                     <a href="#">유튜브</a> |
                 </div>
-                 <div class="fs">
+                <div class="fs">
                     <form action="#">
                         <select name="fs" id="fs">
                             <option value="">--- 패밀리 사이트 ---</option>
@@ -101,6 +113,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        $(function () {
+            $('.notice li:first-of-type').click(function () {
+                $('.modal').show();
+            });
+            $('.popup a').click(function () {
+                $('.modal').hide();
+            });
+        });
+
+    </script>
 </body>
 
 </html>
