@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url("./common.css");
+
+#section4{
+    height: 974px;
+}
+
+#section4 .tit{
+    height: 288px;
+    background: #015152;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#section4 h2{
+    margin-bottom: 10px;
+}
+
+#section4 .button img{
+    margin-left: 10px;
+}
+
+#section4 .cont{
+    display: flex;
+}
+
+#section4 .left{
+    width: 50%;
+    height: 680px;
+}
+
+#section4 .right{
+    width: 50%;
+    height: 680px;
+}
+
+#section4 .cont >div{
+    position: relative;
+}
+
+#section4 .write{
+    position: absolute;
+    top: 79px;
+    left: 372px;
+    width: 320px;
+}
+
+#section4 .bg{
+    overflow: hidden;
+    background: red;
+}
+
+#section4 .bg img{
+    transition: 1s ease-in-out;
+}
+
+#section4 .bg:hover img{
+    transform: scale(1.1);
+}
+
+
+
