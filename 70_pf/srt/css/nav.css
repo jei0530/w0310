@@ -50,6 +50,7 @@
 .lbtn {
     display: flex;
     gap: 15px;
+    cursor: pointer;
 }
 
 .language .language_btn {
