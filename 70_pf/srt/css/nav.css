@@ -15,12 +15,44 @@
     border-bottom: 1px solid #B5B5B6;
 }
 
-.language{
+.language {
+    position: relative;
+}
+
+.language_list {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+    width: 140px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 135px;
+    z-index: 999;
+    text-align: left;
+}
+
+.language_list a{
+    padding-top: 15px;
+    display: inline-block;
+    color: #737373;
+    margin-left: 30px;
+}
+
+.language_list span{
+    font-size: 8px;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.lbtn {
     display: flex;
     gap: 15px;
 }
 
-.language .language_btn{
+.language .language_btn {
     width: 11.49px;
     height: 5.75px;
     object-fit: cover;
@@ -36,6 +68,7 @@
     height: 70px;
     border-bottom: 1px solid #B5B5B6;
     padding: 0 360px;
+
 }
 
 .main {
@@ -62,14 +95,12 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -1px;
-    width: 0;
+    bottom: -2px;
+    width: 0px;
     height: 4px;
     background: #C8B158;
 
 }
-
-
 
 .main>li:hover>a::after {
     width: 100%;
@@ -82,20 +113,23 @@
     width: 180px;
     height: 0;
     overflow: hidden;
-    background: rgba(181, 181, 182, 0.15);
-    transition: height 0.4s ease;
+    transition: 0.4s;
+}
+
+.main:hover .sub {
+    height: 230px;
 }
 
 .main>li:hover .sub {
-    height: 230px;
+    background: rgba(181, 181, 182, 0.15);
 }
 
 .sub li a {
     display: block;
-    padding: 10px;
+    margin-top: 10px;
     text-align: center;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2.4;
 }
 
 .sub li a:hover {

@@ -6,16 +6,28 @@
     <title>SRT</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script/nav.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="first">
             <div class="language">
-                <img src="./image/language.png" alt="언어설정 아이콘">
-                <p>Language</p>
-                <img class="language_btn" src="./image/language_btn.png" alt="아래화살표">
+                <div class="lbtn" id="lbtn">
+                    <img src="./image/language.png" alt="언어설정 아이콘">
+                    <p>Language</p>
+                    <img class="language_btn" src="./image/language_btn.png" alt="아래화살표">
+                </div>
+
+                <ul class="language_list" id="language_list">
+                    <li><a href="#"> <span>KR</span> 한국어 </a></li>
+                    <li><a href="#"><span>EN</span> English</a></li>
+                    <li><a href="#"><span>JP</span> 日本語
+                    </a></li>
+                </ul>
             </div>
+
             <div class="logo">
                 <a href="#"><img src="./image/logo.png" alt="상단로고"></a>
             </div>
