@@ -60,12 +60,28 @@
 
                 6. 삼항: 피연산자1 ? 피연산자2 : 피연산자3 -> if문을 대신할 수 있음
                          항이 적을 수록 연산순위가 높음
+                         ? :
 
                 7. typeof
-        
-    
         */
+
         //1. 산술
+        // 숫자 데이터가 아닌 경우는 +는 연결 연산자
+        // 문자열 + 문자열 -> 문자열
+        // 숫자 + 문자열 -> 문자열
+        let subject = 'css';
+        let score = 100;
+        console.log(subject + '과목 성적은' + score);
+
+        // 템플릿 문자열
+        // 백틱/백쿼드(`)
+        // 형식: ${변수}
+        // 즉 템플릿 문자열을 이용하면 + 연산자를 사용하지 않고 문자나 변수 연결 ->  ES6버전 이후
+        /* 
+            console.log(subject + '과목 성적은' + score);
+            console.log(`${subject} + '과목 성적은' + ${score}`);
+        */
+
         var a = 5;
         var b = 2;
 
@@ -73,8 +89,10 @@
         document.write(a - b + '<br>');
         document.write(a * b + '<br>');
         document.write(a / b + '<br>');
+
         //나머지 연산 기호
         document.write(a % b + '<hr>');
+
         //1씩 증가(후위연산): 출력을 먼저 한 후 증가
         document.write(a++);
 
@@ -91,6 +109,53 @@
         //위에 다 주석처리해야함 6+7+8+9가 됨
         document.write(++a + ++a + ++a + ++a);
         document.write('<hr>');
+
+        // + - * /
+        let num1 = 20;
+        let num2 = 10;
+        let score10 = num1 + num2;
+        let score20 = num1 - num2;
+        let score30 = num1 * num2;
+        let score40 = num1 / num2;
+        console.log(score10 + ',' + score20 + ',' + score30 + ',' + score40 );
+
+        // %
+        let evenodd =8;
+        let result = evenodd % 2
+        let value;
+        if (result===0){
+            value = evenodd + "는 짝수 입니다"
+        } else{
+            value = evenodd + "는 홀수 입니다"
+        }
+        console.log(value);
+
+        // ++ --
+        let increase = 0;
+        let add = 0;
+        ++increase;
+        console.log(increase); //1
+        increase++;
+        console.log(increase); //2
+        add = ++increase;
+        console.log(add + ',' + increase); //3,3
+        add = increase++;
+        console.log(add + ',' + increase); //3,4
+
+
+
+        // %(나머지) 연산자
+        let dividend = 16;
+        let remainder = dividend % 3;
+        console.log(remainder);
+
+        let comment;
+        if (remainder === 0){
+            comment = '3의 배수'
+        } else{
+            comment = '3의 배수가 아닙니다';
+        }
+        document.write(comment);
 
         //2. 비교
         document.write('a =' + a + '<br>');

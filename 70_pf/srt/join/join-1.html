@@ -1,13 +1,177 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRT</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../nav/css/nav.css">
+    <link rel="stylesheet" href="./css/join-1.css">
+
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="../nav/image/language.png" alt="언어설정 아이콘">
+                        <p>Language</p>
+                        <img class="language_btn" src="../nav/image/language_btn.png" alt="아래화살표">
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li><a href="#"> <span>KR</span> 한국어 </a></li>
+                        <li><a href="#"><span>EN</span> English</a></li>
+                        <li><a href="#"><span>JP</span> 日本語
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="../nav/image//logo.png" alt="상단로고"></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="../nav/image/login.png" alt="로그인 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/guest.png" alt="회원가입 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/Search.png" alt="검색 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/hamburger_btn.png" alt="사이트맵 아이콘"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_out">
+            <div class="nav">
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="#">승차권예약</a></li>
+                                <li><a href="#">승차권확인</a></li>
+                                <li><a href="#">비회원승차권</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역안내</a></li>
+                                <li><a href="#">노선안내</a></li>
+                                <li><a href="#">운임안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">자주찾는질문</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">SRT베스트 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+        <div class="menu">
+            <h2>회원가입</h2>
+        </div>
+
+        <div class="menu_out">
+            <div class="menu_bt">
+                <div class="menu1">
+                    <a href="#"><img src="./image/home.png" alt="홈버튼 메뉴"></a>
+                    <p>홈</p> |
+                </div>
+                <div class="menu2">
+                    <p>SR회원 <img src="./image/bt.png" alt="메뉴 버튼"></p> |
+                </div>
+                <div class="menu3">
+                    <p>회원가입 <img src="./image/bt.png" alt="메뉴 버튼"> </p> |
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step1">
+                <img src="./image/step1.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 1</h3>
+                    <P>회원약관 동의/정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./image/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step2">
+                <img src="./image/step2.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 2</h3>
+                    <P>기본정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./image/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step3">
+                <img src="./image/step3.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 3</h3>
+                    <P>가입완료</P>
+                </div>
+            </div>
+        </div>
+
+        <div class="agree_out">
+            <div class="gueset_agree">
+                <h3>회원약관 동의</h3>
+            </div>
+            
+            <div class="agree_all">
+                <div class="agree" id="terms content">
+                    <h4>약관동의</h4>
+                    <div class="agree1">
+                        <h5>[필수] SRT 이용약관</h5>
+                        <a href="#">약관보기</a> 
+                    </div>
+                    <div class="agree2">
+                        <h5>[필수] 개인정보 수집 및 이용 동의</h5>
+                        <a href="#">약관보기</a>
+                    </div>
+                    <div class="agree3">
+                        <h5>[선택] 광고성 정보 수신 동의</h5>
+                        <a href="#">약관보기</a>
+                    </div>
+                </div>
+                <label>
+                    <input type="checkbox" id="agree-all"> 전체 동의
+                </label>
+                <label>
+                    <input type="checkbox" class="agree" required> [필수] SRT 이용약관 동의
+                </label>
+                <label>
+                    <input type="checkbox" class="agree" required> [필수] 개인정보 수집 및 이용 동의
+                </label>
+                <label>
+                    <input type="checkbox" class="agree"> [선택] 광고성 정보 수신 동의
+                </label>
+            </div>
+
+            <div class="agree_btn">
+                <a href="#">취소</a>
+                <a href="#">다음</a>
+            </div>
+        </div>
+       
+
 </body>
+
 </html>
