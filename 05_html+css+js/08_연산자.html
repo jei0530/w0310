@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연산자</title>
+    <style>
+        table {
+            border-collapse: collapse;
+
+            td {
+                border: 1px solid #000;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -117,15 +126,15 @@
         let score20 = num1 - num2;
         let score30 = num1 * num2;
         let score40 = num1 / num2;
-        console.log(score10 + ',' + score20 + ',' + score30 + ',' + score40 );
+        console.log(score10 + ',' + score20 + ',' + score30 + ',' + score40);
 
         // %
-        let evenodd =8;
+        let evenodd = 8;
         let result = evenodd % 2
         let value;
-        if (result===0){
+        if (result === 0) {
             value = evenodd + "는 짝수 입니다"
-        } else{
+        } else {
             value = evenodd + "는 홀수 입니다"
         }
         console.log(value);
@@ -142,43 +151,51 @@
         add = increase++;
         console.log(add + ',' + increase); //3,4
 
-
-
         // %(나머지) 연산자
         let dividend = 16;
         let remainder = dividend % 3;
         console.log(remainder);
 
         let comment;
-        if (remainder === 0){
+        if (remainder === 0) {
             comment = '3의 배수'
-        } else{
+        } else {
             comment = '3의 배수가 아닙니다';
         }
         document.write(comment);
+        document.write('<hr>');
 
         //2. 비교
+        //비교 연산자는 값을 비교하여 결과 값을 Boolean(논리) 값인 true 또는 false로 반환한다
+        //비교 연산의 결과는 true 또는 false이다
+        //a=15, b=2
+
         document.write('a =' + a + '<br>');
         document.write('b =' + b + '<br>');
         document.write((a > b) + '<br>');
         document.write((a < b) + '<br>');
         document.write((a >= b) + '<br>');
         document.write((a <= b) + '<br>');
-        document.write((a == b) + '<br>');
-        document.write((a === b) + '<br>');
+        document.write((a == b) + '<br>'); //데이터 타입은 달라도 된다 5와 '5' 같음
+        document.write((a === b) + '<br>');//데이터 타입도 같아야 true 즉 5와 '5'는 다름
         document.write((a != b) + '<br>');
         document.write((a !== b) + '<hr>');
 
         document.write((5 != 2) + '<br>'); //데이터 타입이 서로 같지 않니? 응 같지 않으므로 true
         document.write((5 !== 2) + '<hr>');
 
-        //3. 비교
-        document.write('a=' + a+ '<br>'); //15
-        document.write('b=' + b+ '<br>'); //2
+        //3. 논리
+        /* 
+            x의 값이 20보다 크고(그리고) 30보다 작다 
+            20 < x && x <30
+            x > 20 && x < 30
+        */
+        document.write('a=' + a + '<br>'); //15
+        document.write('b=' + b + '<br>'); //2
         document.write((b && a) + '<br>'); //15
         document.write((b || a) + '<br>'); //2
         document.write((a > b && a > b) + '<br>'); //true
-        document.write((a > b || a > b )+ '<br>'); //true
+        document.write((a > b || a > b) + '<br>'); //true
         document.write((!a > b) + '<br>'); //false
 
         document.write('<hr>');
@@ -186,17 +203,188 @@
         var c = true;
         var d = false;
 
-        document.write((c && c && c && c && d ) + '<br>'); //어느하나라도 false가 있으면 false가 됨 모두 true여야 true가 됨
+        document.write((c && c && c && c && d) + '<br>'); //어느하나라도 false가 있으면 false가 됨 모두 true여야 true가 됨
         document.write((c || d || d || d || d || d) + '<br>'); //어느하나라도 true가 있으면 true가 됨
-        document.write((!c) + '<hr>');
-        
+        document.write((!c) + '<hr>'); //false
+
         //4. 대입
+        /* 
+            대입연산자 = -> 같다의 의미가 아니라 변수에 대입을 의미한다, 연속 대입도 가능
+        */
+        let num = 10; //10을 num에 대입
+        let x = 0;
+        let y = 0;
+        //연산의 방향이 오른쪽에서 왼쪽으로 계싼된다 
+        x = y = num; // y=10 -> x=10
+        console.log(`${x},${y}`);
+
+        /*    복합대입연산자 
+           += i+=1 -> i=i+1
+           -= i-=1 -> i=i-1
+           *= i*=1 -> i=i*1
+           /= i/=1 -> i=i/1
+           %= i%=1 -> i=i%1
+           **= i**=1 -> i=i**1
+
+           ex) let i=5;, 
+               i**3; -> i= i**3 -> i=5**3 -> i*5*5*5
+               **는 (몇제곱인지를 의미함) 
+       */
+
+        let str = '자바스크립트';
+        str += '제이쿼리'; // str ='자바스크립트' + '제이쿼리'
+        console.log(str);
+
+        var a = 2;
+        var b = 2;
+
         document.write((a = b) + '<br>'); //a랑 b 각각 2
         document.write((a += b) + '<br>'); // a=a+b, a는 4, b는 2
         document.write((a -= b) + '<br>'); // a=a-b 4-2=2 a는 2 b는2
         document.write((a *= b) + '<br>'); // a=a*b 2*2=4, a는 4 b는 2
         document.write((a /= b) + '<br>'); // a=a/b 4/2=2  a는 2 b는 2
         document.write((a %= b) + '<hr>'); // a=a%b 2/2의 나머지는 0
+
+        let num10 = 5;
+        let num11 = 15;
+        let num12 = 5;
+        let num13 = 20;
+        let num14 = 10;
+        let num15 = 2;
+
+        num10 += 10;
+        num11 -= 10;
+        num12 *= 10;
+        num13 /= 10;
+        num14 %= 10;
+        num15 **= 10;
+
+        console.log(num10 + "," + num11 + "," + num12 + "," + num13 + "," + num14 + "," + num15);
+
+        // += 연산자를 이용한 문자연결
+        let table = '<table>';
+        table += '<tr>';
+        table += '<td>자바스크립트 </td> <td>제이쿼리</td>';
+        table += '</tr>';
+        table += '</table>';
+
+        // <table><tr><td>자바스크립트 </td> <td>제이쿼리</td></tr></table>
+        /* 
+            <table>
+                <tr>
+                    <td>자바스크립트 </td>
+                    <td>제이쿼리</td>
+                </tr>
+            </table>
+        */
+
+        document.write(table);
+
+        //5. 비트
+        /* 
+            & ->and 연산자
+            | -> or 연산자
+            ~ -> not 연산자
+            ^ -> xor 연산자
+            << -> left shift
+            >> -> right shift
+            >>> -> 부호 없는 right shift
+
+            10진수 4를 2진수로 표현하면? 0100
+
+            1 & 1 ->1
+            1 & 0 ->0
+            0 & 1 ->0
+            0 & 0 ->0
+
+            1 & 3
+            -> 0001 & 0011
+            = 0001 (서로 자릿수를 맞춰보는데 1이 같을때만 1이고 나머지는 다 0임)
+            = 1
+
+            1 | 1 ->1
+            1 | 0 ->1
+            0 | 1 ->1
+            0 | 0 ->0
+
+            1 | 3
+            -> 0001 | 0011
+            -> 0011 (1이 있기만해도 다 1로 처리됨)
+            -> 3
+
+            ~2 
+            -> ~0010
+            -> 0011 (부호를 음수로 바꾸기 위해 1을 더한다)
+            -> 3
+            -> -3 (다시 음수로 바꿔준다)
+
+            ^(xor 연산) -> 같으면 0, 다르면 1
+            1 ^ 1 ->0
+            1 ^ 0 ->1
+            0 ^ 1 ->1
+            0 ^ 0 ->0
+
+            1 ^ 3
+            -> 0001 ^ 0011
+            -> 0010
+            -> 2
+
+            1<<2
+            -> 왼쪽 숫자 1을 왼쪽 방향으로 2칸이동
+            -> 0001
+            -> 왼쪽으로 이동시 오른쪽 끝자리는 0이된다
+            -> 0100
+
+            8>>1
+            -> 왼쪽 숫자 1을 오른쪽 방향으로 2칸 이동
+            -> 1000
+            -> 오른쪽으로 이동시 왼쪽 끝자리는 0이 된다
+            -> 01000
+            -> 4
+         */
+
+        console.log(1 & 3); //1
+        console.log(1 | 3); //3
+        console.log(~2); //-3
+        console.log(1 ^ 3); //2
+        console.log(1 << 3); //4
+
+        //  >>와 >>>는 양수에서 차이가 없다
+        console.log(8 >> 1); //4
+        console.log(8 >> 1); //4
+        // >>는 부호 비트 유지
+        console.log(-8 >> 1); //-4
+        //>>>는 부호 비트 
+        console.log(-8 >>> 1); //2147483644
+
+        // 6. 삼항
+        /* 
+
+            리터럴
+                값 자체를 코드에 직접 써 넣은 것
+                있는 그대로의 고정된 값
+                프로그래머가 코드에 직접 써놓은 값
+
+            변수
+                값을 담는 이름표, 저장공간
+                
+            표현식 
+                값을 생성한다
+                실행되면 어떤 값을 반환하는 코드
+
+
+            삼항 연산자 형식
+                조건식 ? 실행문1 : 실행문2
+                -> 조건식이 true면 실행문1을 실행
+                -> 조건식이 false이면 실행문2를 실행
+        */
+
+        let num20 = 10;
+        let num30 = -10;
+        
+        console.log(num20 > 0 ? '양수' : '음수');//양수
+        console.log(num30 > 0 ? '양수' : '음수');//음수
+
     </script>
 </body>
 

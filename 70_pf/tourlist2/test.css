@@ -1,20 +1,47 @@
 @charset "utf-8";
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
 }
 
+/* 헤더 */
 header{
     background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
+/* 공통 */
 .box_inner{
     width: 1050px;
-    height: 123px;
+    height: 113px;
     margin: 0 auto;
     background: darkkhaki;
 }
 
+/* 섹션1 pc 메인 롤링*/
+.main_rolling_pc{
+    height: 550px;
+    background: lightgoldenrodyellow;
+}
+
+/* 섹션2 인기 여행지*/
+.about_area{
+    background: darkorange;
+    height: 678px;
+}
+
+/* 섹션3 */
+.appbbs_area{
+    height: 196px;
+    padding: 60px 0;
+    background: wheat;
+}
+
+/* 푸터 */
 footer{
     border-top: 1px solid #ddd;
 }

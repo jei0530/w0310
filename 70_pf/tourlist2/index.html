@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOURLIST IN TOUR</title>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- bx슬라이더 js라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script src="js/slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
     <link rel="stylesheet" href="test.css">
 </head>
+
 <body>
     <!-- 헤더 -->
-     <header id="header">
-        <div class="box_inner">
-            
+    <header id="header">
+        <div class="box_inner"></div>
+    </header>
+
+    <div id="container">
+        <!-- 섹션1 pc 메인 롤링-->
+        <div class="main_rolling_pc">
+            <div class="bxSlider">
+                <div><img src="https://picsum.photos/id/237/1903/600" alt="'이미지"></div>
+                <div><img src="https://picsum.photos/id/238/1903/600" alt="'이미지"></div>
+                <div><img src="https://picsum.photos/id/239/1903/600" alt="'이미지"></div>
+            </div>
         </div>
-     </header>
-        <div id="container">
-            <!-- 섹션1 -->
-            <div class="main_rolling_pc"></div>
-            <!-- 섹션2 -->
-             <div class="about_area"></div>
-             <!-- 섹션3 -->
-              <div class="appbbs_area"></div>
-        </div>
-        <!-- 푸터 -->
-        <footer></footer>
+        <!-- 섹션2 인기 여행지-->
+        <div class="about_area"></div>
+        <!-- 섹션3 상담 및 최근게시물 -->
+        <div class="appbbs_area"></div>
+    </div>
+    <!-- 푸터 -->
+    <footer>
+        <div class="box_inner"></div>
+    </footer>
 </body>
+
 </html>
