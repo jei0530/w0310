@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문:switch</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>조건문 switch</h1>
+    <input type="text" id="user_id">
+    <p><small>아이디는 영문자로 입력하세요</small></p>
+    <button class="login_btn">로그인</button>
+    <div> 출력은 여기에 </div>
+    <script>    
+
+        //제이쿼리로 만들기
+        $(document).ready(function(){
+        $('.login_btn').click(function(){
+            const user_id = $('#user_id').val();
+            console.log(user_id); 
+            switch(user_id){
+            case 'abc':
+            $('#output').text('abc가 입장하였습니다');
+            location.href = 'https://www.naver.com';
+            break;
+        case 'def':
+            $('#output').text('def가 입장하였습니다');
+            break;
+        default:
+            $('#output').text('회원가입을 하세요');
+        }
+        });
+      });
+
+      //자바스크립크로 만들기 
+
+      const user_id = document.getElementById('login_btn');
+      const login_btn = document.getElementsByClassName('login_btn');
+      const output = document.getElementsByTagName('div');
+
+        login_btn.onclick=function(){
+
+        switch(user_id.value){
+            case 'abc':
+            output.textContent = 'abc가 입장하였습니다';
+            location.href = 'https://www.naver.com';
+            break;
+        case 'def':
+             output.textContent = 'def가 입장하였습니다';
+             break;
+        default:
+            output.textContent = '회원가입을 하세요';
+        }
+      };
+
+     
+
+        /* 
+             switch문 형식:
+                 switch (값){
+                     case 값1:
+                         실행문;
+                         break;
+                     case 값2:
+                         실행문;
+                         break;
+                     ...
+                     default;
+                         실행문;
+                 }
+         */
+
+        /* let subject = 'react';
+        switch (subject) {
+            case 'html':
+                //subject=subject +은 1학점입니다;
+                subject += '은 1학점입니다';
+                break; // break를 만나면 switch문 탈출
+            case 'css':
+                subject += '은 2학점입니다';
+                break;
+            case 'javascript':
+                subject += '은 3학점입니다';
+                break;
+            case 'jQuery':
+                subject += '은 4학점입니다';
+                break;
+            case 'react':
+                subject += '은 5학점입니다';
+                break;
+            default:
+                subject = '해당과목이 없습니다';
+        }
+        console.log(subject); */
+
+        // let classification = prompt('아동, 청소년, 성인 중 선택 입력', '');
+
+    
+       
+
+        // switch (classification) {
+        //     case '아동':
+        //         classification += ':입장료 무료';
+        //         break;
+
+        //     case '청소년':
+        //         classification += ':입장료 2,000원';
+        //         break;
+
+        //     case '성인':
+        //         classification += ':입장료 5,000원';
+        //         break;
+
+        //     default:
+        //         classification = '입력 값을 다시 확인하세요.';
+        // }
+
+        // console.log(classification);
+
+    </script>
+</body>
+
+</html>

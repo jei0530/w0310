@@ -1,11 +1,52 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
 }
+
+:root{
+    --color-gray111:#111;
+    --color-gray333:#333;
+    --color-gray555:#555;
+}
+
 body{
+    margin: 0;
+    font: 15px/1.6 'Roboto';
+    color: var(--color-gray555);
+}
+
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    padding: 48px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 16px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p{
+    padding: 10px 0 24px 0;
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: var(--color-gray333);
+    font-size: 18px;
+}
 /* 헤더 */
 header{
     background: rgba(0, 0, 0, 0.5);
@@ -24,19 +65,36 @@ header{
 
 /* 섹션1 pc 메인 롤링*/
 .main_rolling_pc{
-    height: 550px;
+    height: 650px;
     background: lightgoldenrodyellow;
 }
 
 /* 섹션2 인기 여행지*/
 .about_area{
-    background: darkorange;
+    background: linear-gradient( #fff 30%, #f4f0e9 30%);
     height: 678px;
+    text-align: center;
+}
+
+.about_area ul{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.about_area li{
+    width: 340px;
+    height: 500px;
+}
+
+.about_area a{
+    border-top: 2px solid var(--color-gray333);
+    padding-top: 4px;
 }
 
 /* 섹션3 */
 .appbbs_area{
-    height: 196px;
+    height: 256px;
     padding: 60px 0;
     background: wheat;
 }
