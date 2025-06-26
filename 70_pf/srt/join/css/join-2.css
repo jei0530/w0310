@@ -26,7 +26,9 @@
     align-items: center;
 }
 
-.menu1 {
+.menu1,
+.menu2,
+.menu3 {
     display: flex;
 }
 
@@ -38,41 +40,23 @@
     margin-right: 14.37px;
 }
 
-.menu2 {
-    display: flex;
-}
-
-.menu3 {
-    display: flex;
-}
-
 .step {
     display: flex;
     width: 830px;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0;
     text-align: center;
     height: 50px;
 }
 
-.step1 {
-    display: flex;
-    margin: 0 20px;
-}
-
-.step2 {
-    display: flex;
-    margin: 0 20px;
-}
-
+.step1,
+.step2,
 .step3 {
     display: flex;
     margin: 0 20px;
 }
 
 .right {
-    margin: 0 40px;
-    margin-top: 10px;
+    margin: 10px 40px 0;
 }
 
 .write {
@@ -85,7 +69,7 @@
     color: #666;
 }
 
-.step2 h3 {
+.step3 h3 {
     color: #651E38;
 }
 
@@ -107,8 +91,7 @@
 .agree_out {
     width: 1200px;
     height: 500px;
-    margin: 0 360px;
-    margin-top: 30px;
+    margin: 30px auto 0;
 }
 
 .agree_out h3 {
@@ -119,70 +102,94 @@
 }
 
 .information {
-    width: 600px;
-    margin: 0 auto;
+  width: 600px;
+  height: 900px;
+  margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .form-group input,
 .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-inline {
-    display: flex;
-    gap: 10px;
-}
-
-.form-inline select,
-.form-inline input {
-    flex: 1;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .check-btn {
-    background-color: #C8B158;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-    white-space: nowrap;
+  display: block;
+  background-color: #C8B158;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+/* 휴대전화번호 가로 배치 */
+.phone-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.actions button {
+.phone-inputs select,
+.phone-inputs input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.phone-send-btn {
+  display: block;
+  background-color: #C8B158;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* 생년월일 가로 배치 */
+.birth-selects {
+  display: flex;
+  gap: 10px;
+}
+
+.birth-selects select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.agree_btn a {
+    display: inline-block;
+    border-radius: 50px;
     padding: 10px 60px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.cancel-btn {
-    background-color: #ccc;
-    color: #333;
-}
-
-.next-btn {
-    background-color: #C8B158;
+    background: #C8B158;
     color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.agree_btn {
+    text-align: center;
+    padding-top: 10px;
 }

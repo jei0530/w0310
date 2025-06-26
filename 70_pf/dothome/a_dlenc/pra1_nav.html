@@ -2,284 +2,307 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한줄 네비게이션 연습</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한줄 네비게이션 연습</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
 
-        ul {
-            list-style: none;
-        }
+    ul {
+      list-style: none;
+    }
 
-        body {
-            background: #fff;
-            color: #333;
-            font: 15px/1.6 '굴림';
-        }
+    body {
+      background: #fff;
+      color: #333;
+      font: 15px/1.6 '굴림';
+    }
 
-        img {
-            vertical-align: top;
-        }
+    img {
+      vertical-align: top;
+    }
 
-      .wrap{
-        width: 1200px;
-        height: 700px;
-        margin: 0 auto;
-      }
+    .wrap {
+      width: 1200px;
+      height: 700px;
+      margin: 0 auto;
+    }
 
-      header{
-        height: 100px;
-        display: flex;
-        background: lightpink;
-        position: relative;
-        align-items: center;
-        justify-content: space-between;
-      }
+    header {
+      height: 100px;
+      display: flex;
+      background: lightpink;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-      .gnb{
-        position: absolute;
-        right: 0;
-        top: 60px;
-        z-index: 1;
-        text-align: center;
-      }
+    .gnb {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      z-index: 1;
+      text-align: center;
+    }
 
-      .main{
-        display: flex;
-      }
+    .main {
+      display: flex;
+    }
 
-      .main ul{
-        width: 150px;
-      }
+    .main ul {
+      width: 150px;
+    }
 
-      .main>li>a{
-        display: block;
-        background: 
+    .main>li>a {
+      display: block;
+      background:
         cadetblue;
-        font-size: 18px;
-        color: #fff;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .gnb .sub {
+      background: lightgrey;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .main:hover .sub {
+      height: 135px;
+      display: block;
+      transition: .5s;
+    }
+
+    .sub a {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .sub li:hover {
+      background: #fff;
+    }
+
+    .slide {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .slide ul {
+      height: 400%;
+      position: relative;
+      animation: slide 8s infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        top: 0%
       }
 
-      .gnb .sub{
-        background: lightgrey;
-        height: 0;
-        overflow: hidden;
+      10% {
+        top: -100%
       }
 
-      .main:hover .sub{
-        height: 135px;
-        display: block;
-        transition: .5s;
+      33% {
+        top: -100%
       }
 
-      .sub a{
-        display: inline-block;
-        margin-bottom: 10px;
+      43% {
+        top: -200%
       }
 
-      .sub li:hover{
-        background: #fff;
+      66% {
+        top: -200%
       }
 
-      .slide{
-        height: 300px;
-        overflow: hidden;
+      76% {
+        top: -300%
       }
 
-      .slide ul{
-        height: 400%;
-        position: relative;
-        animation: slide 8s infinite;
+      99.99% {
+        top: -300%
       }
 
-      @keyframes slide {
-        0% {top:0%}
-        10% {top:-100%}
-        33% {top:-100%}
-        43% {top:-200%}
-        66% {top:-200%}
-        76% {top:-300%}
-        99.99% {top:-300%}
-        0% {top:0%}
+      0% {
+        top: 0%
       }
+    }
 
-      .contents{
-        display: flex;
-        height: 200px;
-      }
+    .contents {
+      display: flex;
+      height: 200px;
+    }
 
-      .tabs{
-        width: 400px;
-        background: #ededed;
-      }
+    .tabs {
+      width: 400px;
+      background: #ededed;
+    }
 
-      input{
-        display: none;
-      }
+    input {
+      display: none;
+    }
 
-      .tabs label{
-        background: darkgrey;
-        padding: 2px 10px;
-        font-size: 17px;
-        cursor: pointer;
-      }
+    .tabs label {
+      background: darkgrey;
+      padding: 2px 10px;
+      font-size: 17px;
+      cursor: pointer;
+    }
 
-      input:checked+label{
-        background: #000;
-        color: #fff;
-      }
+    input:checked+label {
+      background: #000;
+      color: #fff;
+    }
 
-      .tab-con{
-        position: absolute;
-        display: none;
-        padding: 16px;
-        border-top: 1px solid #000;
-      }
+    .tab-con {
+      position: absolute;
+      display: none;
+      padding: 16px;
+      border-top: 1px solid #000;
+    }
 
-      input:checked+label+.tab-con{
-        display: block;
-      }
+    input:checked+label+.tab-con {
+      display: block;
+    }
 
-      .tab1 a{
-        display: inline-block;
-        width: 290px;
-        line-height: 2;
-      }
+    .tab1 a {
+      display: inline-block;
+      width: 290px;
+      line-height: 2;
+    }
 
-      .tab1 a:hover{
-        text-decoration: underline;
-      }
+    .tab1 a:hover {
+      text-decoration: underline;
+    }
 
-      .tab2 img:hover{
-        opacity: 0.5;
-      }
+    .tab2 img:hover {
+      opacity: 0.5;
+    }
 
-      .footer{
-        display: flex;
-        background: #bdbdbd;
-        height: 100px;
-        text-align: center;
-        align-items: center;
-      }
+    .footer {
+      display: flex;
+      background: #bdbdbd;
+      height: 100px;
+      text-align: center;
+      align-items: center;
+    }
 
-      .copy{
-        width: 800px;
-        font-size: 12px;
-      }
+    .copy {
+      width: 800px;
+      font-size: 12px;
+    }
 
-      .sns{
-        width: 200px;
-      }
+    .sns {
+      width: 200px;
+    }
 
-      .sns a{
-        display: inline-block;
-        margin-right: 10px;
-      }
-    </style>
+    .sns a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
-            <nav class="gnb">
-                <ul class="main">
-                    <li><a href="#">기업정보</a>
-                        <ul class="sub">
-                            <li><a href="#">기업정보</a></li>
-                            <li><a href="#">기업연혁</a></li>
-                            <li><a href="#">CEO인사말</a></li>
-                            <li><a href="#">그룹사현황</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">사업소개</a>
-                        <ul class="sub">
-                            <li><a href="#">사업개요</a></li>
-                            <li><a href="#">건축</a></li>
-                            <li><a href="#">주택</a></li>
-                            <li><a href="#">토목</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">지속가능경영</a>
-                        <ul class="sub">
-                            <li><a href="#">정도경영 </a></li>
-                            <li><a href="#">상생경영 </a></li>
-                            <li><a href="#">품질경영 </a></li>
-                            <li><a href="#">안전보건경영</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">투자정보</a>
-                        <ul class="sub">
-                            <li><a href="#">재무정보 </a></li>
-                            <li><a href="#">IR자료실 </a></li>
-                            <li><a href="#">기업지배구조</a></li>
-                            <li><a href="#">ESG</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-  
+  <div class="wrap">
+    <header>
+      <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li><a href="#">기업정보</a>
+            <ul class="sub">
+              <li><a href="#">기업정보</a></li>
+              <li><a href="#">기업연혁</a></li>
+              <li><a href="#">CEO인사말</a></li>
+              <li><a href="#">그룹사현황</a></li>
+            </ul>
+          </li>
+          <li><a href="#">사업소개</a>
+            <ul class="sub">
+              <li><a href="#">사업개요</a></li>
+              <li><a href="#">건축</a></li>
+              <li><a href="#">주택</a></li>
+              <li><a href="#">토목</a></li>
+            </ul>
+          </li>
+          <li><a href="#">지속가능경영</a>
+            <ul class="sub">
+              <li><a href="#">정도경영 </a></li>
+              <li><a href="#">상생경영 </a></li>
+              <li><a href="#">품질경영 </a></li>
+              <li><a href="#">안전보건경영</a></li>
+            </ul>
+          </li>
+          <li><a href="#">투자정보</a>
+            <ul class="sub">
+              <li><a href="#">재무정보 </a></li>
+              <li><a href="#">IR자료실 </a></li>
+              <li><a href="#">기업지배구조</a></li>
+              <li><a href="#">ESG</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
 
     <div class="slide">
-        <ul>
-            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
-            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
-            <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
-            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
-        </ul>
+      <ul>
+        <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+        <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
+        <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
+        <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+      </ul>
     </div>
-    
-    <div class="contents">
-        <div class="tabs">
-            <input type="radio" name="tab" id="tab1" checked>
-            <label for="tab1">공지사항</label>
-            <div class="tab1 tab-con">
-                <ul>
-                    <li><a href="#">지속가능경영 보고서(국문)</a><span>2025-06-06</span></li>
-                    <li><a href="#">주요환경 데이터</a><span>2025-06-06</span></li>
-                    <li><a href="#">친환경 현장관리</a><span>2025-06-06</span></li>
-                    <li><a href="#">평가보상 및 복리후생</a><span>2025-06-06</span></li>
-                </ul>
-            </div>
 
-            <input type="radio" name="tab" id="tab2">
-            <label for="tab2">갤러리</label>
-            <div class="tab2 tab-con">
-                <a href="#"><img src="./asset/gal1.jpg" alt="사진1"></a>
-                <a href="#"><img src="./asset/gal2.jpg" alt="사진1"></a>
-                <a href="#"><img src="./asset/gal3.jpg" alt="사진1"></a>
-            </div>
+    <div class="contents">
+      <div class="tabs">
+        <input type="radio" name="tab" id="tab1" checked>
+        <label for="tab1">공지사항</label>
+        <div class="tab1 tab-con">
+          <ul>
+            <li><a href="#">지속가능경영 보고서(국문)</a><span>2025-06-06</span></li>
+            <li><a href="#">주요환경 데이터</a><span>2025-06-06</span></li>
+            <li><a href="#">친환경 현장관리</a><span>2025-06-06</span></li>
+            <li><a href="#">평가보상 및 복리후생</a><span>2025-06-06</span></li>
+          </ul>
         </div>
-        <div class="banner">
-            <a href="#"><img src="./asset/banner.jpg" alt="배너"></a>
+
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2">갤러리</label>
+        <div class="tab2 tab-con">
+          <a href="#"><img src="./asset/gal1.jpg" alt="사진1"></a>
+          <a href="#"><img src="./asset/gal2.jpg" alt="사진1"></a>
+          <a href="#"><img src="./asset/gal3.jpg" alt="사진1"></a>
         </div>
-        <div class="link"><a href="#"><img src="./asset/lick.jpg" alt="바로가기"></a></div>
+      </div>
+      <div class="banner">
+        <a href="#"><img src="./asset/banner.jpg" alt="배너"></a>
+      </div>
+      <div class="link"><a href="#"><img src="./asset/lick.jpg" alt="바로가기"></a></div>
     </div>
 
     <div class="footer">
-        <h1 class="blogo"><a href="#"><img src="./asset/B.logo.png" alt="하단로고"></a></h1>
-        <div class="copy">
-            <p>서울 종로구 통일로 134 D타워 돈의문</p> 
-            <p>COPYRIGHT (c) 2021 DL이앤씨 All RIGHTS RESERVED.</p>
-        </div>
-        <div class="sns">
-            <a href="#"><img src="./asset/instargram.png" alt="sns"></a>
-            <a href="#"><img src="./asset/youtube.png" alt="sns"></a>
-            <a href="#"><img src="./asset/facebook.png" alt="sns"></a>
-        </div>
+      <h1 class="blogo"><a href="#"><img src="./asset/B.logo.png" alt="하단로고"></a></h1>
+      <div class="copy">
+        <p>서울 종로구 통일로 134 D타워 돈의문</p>
+        <p>COPYRIGHT (c) 2021 DL이앤씨 All RIGHTS RESERVED.</p>
+      </div>
+      <div class="sns">
+        <a href="#"><img src="./asset/instargram.png" alt="sns"></a>
+        <a href="#"><img src="./asset/youtube.png" alt="sns"></a>
+        <a href="#"><img src="./asset/facebook.png" alt="sns"></a>
+      </div>
     </div>
-</div>
+  </div>
 </body>
 
 </html>
