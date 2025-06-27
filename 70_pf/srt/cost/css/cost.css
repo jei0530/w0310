@@ -45,15 +45,13 @@
     margin: 0 auto;
     width: 1200px;
     height: 500px;
-    /* background: darkcyan; */
 
 }
 
 .tabs {
+    width: 1200px;
     position: relative;
-    width: 400px;
-    height: 200px;
-    display: flex;
+    display: block;
 }
 
 input {
@@ -66,55 +64,60 @@ label {
     cursor: pointer;
     font-size: 22px;
     font-weight: bold;
-}
-
-.tabs input:checked+label {
     color: rgb(142, 142, 142);
 }
 
-.tab-con {
-    width: 1200px;
-    height: 1200px;
-    position: absolute;
-    /* display: none; */
+.tabs input:checked+label {
+    color: #4B2F48;
 }
 
-.back{
-    margin-top: 40px;
-    height: 250px;
+.tab-con {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.tabs input:checked+label+.tab-con {
+    display: block;
+}
+
+.back {
+    height: 230px;
     background: rgba(181, 181, 182, 0.2);
     border-radius: 0 0 20px 20px;
 }
 
-.back p{
+.back p {
     font-size: 18px;
     text-align: center;
     padding-top: 45px;
 }
 
-.cost h3{
+
+h3 {
     font-size: 23px;
     padding: 20px 0;
     margin-left: 40px;
 }
 
-.box1{
+.box1 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 30px;
     line-height: 6;
 }
 
-.box{
+.box {
     width: 350px;
     height: 350px;
     border: 1px solid #8E8E8E;
-    box-shadow:#8E8E8E;
+    box-shadow: #8E8E8E;
     border-radius: 25px;
     text-align: center;
 }
 
-.station{
+.station {
     line-height: 5;
     margin: 0 auto;
     width: 350px;
@@ -126,47 +129,77 @@ label {
 
 }
 
-.station_inner{
+.station_inner {
     width: 270px;
     margin: 0 auto;
 }
 
-.station img{
+.station img {
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-.cost1{
+.cost1 {
     margin: 0 auto;
     width: 350px;
     height: 116.6px;
     border-bottom: 1px solid #8E8E8E;
 }
 
-.cost2{
+.cost2 {
     margin: 0 auto;
     width: 350px;
     height: 116.6px;
 }
 
-.box1 .seat{
+.box1 .seat {
     font-size: 18px;
     font-weight: bold;
     color: #848484;
     margin-right: 100px;
 }
 
-.box1 .price{
+.box1 .price {
     font-size: 20px;
     font-weight: bold;
     color: #1d1d1d;
     margin-left: 30px;
 }
 
-.box1 .price2{
+.box1 .price2 {
     font-size: 20px;
     font-weight: bold;
     color: #1d1d1d;
     margin-left: 15px;
 }
+
+.notice {
+    width: 1200px;
+}
+
+.ticket p {
+    font-size: 15px;
+    line-height: 200%;
+
+}
+
+.ticket li{
+    list-style: disc;
+    margin-left: 60px;
+}
+
+.ticket span{
+    text-decoration: underline;
+}
+
+.refund li{
+    list-style: disc;
+    margin-left: 60px;
+}
+
+.refund p {
+    font-size: 15px;
+    line-height: 200%;
+}
+
