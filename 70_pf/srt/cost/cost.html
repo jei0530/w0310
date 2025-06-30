@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="../nav/css/nav.css">
     <link rel="stylesheet" href="./css/cost.css">
     <script src="../nav/script/nav.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
 
-    <head class="header">
+    <header class="header">
         <div class="header_inner">
             <div class="first">
                 <div class="language">
@@ -76,175 +77,346 @@
                 </nav>
             </div>
         </div>
-        </header>
+    </header>
 
-        <div class="menu">
-            <h2>운임안내</h2>
-        </div>
+    <div class="menu">
+        <h2>운임안내</h2>
+    </div>
 
-        <div class="menu_out">
-            <div class="menu_bt">
-                <div class="menu1">
-                    <a href="#"><img src="./image/home.png" alt="홈버튼 메뉴"></a>
-                    <p>홈</p> |
-                </div>
-                <div class="menu2">
-                    <p>SR회원 <img src="./image/bt.png" alt="메뉴 버튼"></p> |
-                </div>
-                <div class="menu3">
-                    <p>회원가입 <img src="./image/bt.png" alt="메뉴 버튼"> </p> |
-                </div>
+    <div class="menu_out">
+        <div class="menu_bt">
+            <div class="menu1">
+                <a href="#"><img src="./image/home.png" alt="홈버튼 메뉴"></a>
+                <p>홈</p> |
+            </div>
+            <div class="menu2">
+                <p>SR회원 <img src="./image/bt.png" alt="메뉴 버튼"></p> |
+            </div>
+            <div class="menu3">
+                <p>회원가입 <img src="./image/bt.png" alt="메뉴 버튼"> </p> |
             </div>
         </div>
+    </div>
 
-        <div class="contents">
-            <div class="tabs">
-                <input type="radio" name="tab" id="tab1" checked>
-                <label for="tab1">운임안내</label>
-                <div class="tab1 tab-con">
-                    <div class="back">
-                        <p>여행 경로를 선택하시면 운임을 확인하실 수 있습니다.</p>
+    <div class="contents">
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">운임안내</label>
+            <div class="tab1 tab-con">
+                <div class="back">
+                    <p>여행 경로를 선택하시면 운임을 확인하실 수 있습니다.</p>
+
+                    <div class="fare-search-bar">
+                        <div class="fare-search-item">
+                            <label for="departure">출발역</label>
+                            <input type="text" id="departure" placeholder="출발역 선택" readonly>
+                        </div>
+                        <div class="fare-search-item">
+                            <label for="arrival">도착역</label>
+                            <input type="text" id="arrival" placeholder="도착역 선택" >
+                        </div>
+                        <div class="fare-search-item">
+                            <label for="date">일정</label>
+                            <input type="date" id="date">
+                        </div>
+                        <button class="fare-search-btn">조회</button>
                     </div>
 
-                    <div class="cost">
-                        <h3>주요 노선 안내</h3>
-                        <div class="box1">
-                            <div class="box">
-                                <div class="station">
-                                    <div class="station_inner">
-                                        <span>수서</span>
-                                        <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                        <span>부산</span>
-                                    </div>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">76,500원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">76,500원</span>
-                                </div>
+                    <!-- 출발역 선택 모달 -->
+                    <div id="station-modal" class="station-modal">
+                        <div class="station-modal-content">
+                            <div class="station-modal-header">
+                                <span>출발역을 선택하세요.</span>
+                                <button id="close-modal" class="close-btn">&times;</button>
                             </div>
-                            <div class="box">
-                                <div class="station">
-                                    <div class="station_inner">
-                                        <span>수서</span>
-                                        <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                        <span>동대구</span>
-                                    </div>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">54,200원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">37,400원</span>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <div class="station">
-                                    <div class="station_inner">
-                                        <span>수서</span>
-                                        <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                        <span>광주송정</span>
-                                    </div>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">59,000원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">40,700원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="box">
-                                <div class="station">
-                                    <span>수서</span>
-                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                    <span>여수EXPO</span>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">63,500원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">43,800원</span>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <div class="station">
-                                    <span>수서</span>
-                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                    <span>울산</span>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">67,900원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">46,800원</span>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <div class="station">
-                                    <span>수서</span>
-                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
-                                    <span>창원</span>
-                                </div>
-                                <div class="cost1">
-                                    <span class="seat">특실</span>
-                                    <span class="price">67,400원</span>
-                                </div>
-                                <div class="cost2">
-                                    <span class="seat">일반실</span>
-                                    <span class="price2">46,500원</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="radio" name="tab" id="tab2">
-                <label for="tab2">변경/취소 수수료</label>
-                <div class="tab2 tab-con">
-                    <div class="notice">
-                        <div class="ticket">
-                            <h3>구입처</h3>
-                            <ul>
-                                <li><p>홈페이지 <span class="link"><a href="http://www.srail.or.kr">www.srail.or.kr</a></span> 또는 <span class="link"><a href="etk.srail.kr">etk.srail.kr</a></span></p></li>
-                                <li><p>SRT앱</p></li>
-                                <li><p>승차권 자동발매기</p></li>
-                                <li><p>역 (전용역, 공용역 포함)</p></li>
-                            </ul>
-                        </div>
-                        <div class="refund">
-                            <h3>환불</h3>
-                            <ul>
-                                <li><p>
-                                    인터넷(SR홈페이지), 모바일(SRT앱, SRTPlay)에서 발행 받은 승차권의 운임·요금 환불은 승차권에 기재된 출발역 출발 전까지 인터넷과 모바일로 직접 환불하실
-                                    수 있습니다.
-                                </p></li>
-                                <li><p>
-                                    승차권에 표기된 열차 출발시각 이후에는 역 창구에서만 환불이 가능합니다. (단, SRT앱에서 구매한 승차권의 경우 열차 출발 후 10분까지 SRT앱에서 환불
-                                    가능합니다.)
-                                </p></li>
-                                <li><p>승차권에 표기된 도착역 도착시각 이후에는 환불 하실 수 없습니다.</p></li>
-                                <li><p>구입한 승차권을 환불하는 경우 환불시점에 따른 위약금이 발생합니다.</p></li>
+                            <ul class="station-list">
+                                <li>수서</li>
+                                <li>동탄</li>
+                                <li>지제</li>
+                                <li>천안아산</li>
+                                <li>오송</li>
+                                <li>대전</li>
+                                <li>김천(구미)</li>
+                                <li>동대구</li>
+                                <li>신경주</li>
+                                <li>울산</li>
+                                <li>부산</li>
+                                <li>광주송정</li>
+                                <li>여수EXPO</li>
+                                <li>창원</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
+                <div class="cost">
+                    <h3>주요 노선 안내</h3>
+                    <div class="box1">
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                    <span>부산</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">76,500원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">76,500원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                    <span>동대구</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">54,200원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">37,400원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                    <span>광주송정</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">59,000원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">40,700원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                <span>여수EXPO</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">63,500원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">43,800원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                <span>울산</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">67,900원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">46,800원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="./image/Group.png" alt="왕복 노선 아이콘">
+                                <span>창원</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">67,400원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">46,500원</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        
 
-        </div>
+
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2">변경/취소 수수료</label>
+        <div class="tab2 tab-con">
+            <div class="notice">
+                <div class="ticket">
+                    <h3>구입처</h3>
+                    <ul>
+                        <li>
+                            <p>홈페이지 <span class="link"><a href="http://www.srail.or.kr">www.srail.or.kr</a></span>
+                                또는 <span class="link"><a href="etk.srail.kr">etk.srail.kr</a></span></p>
+                        </li>
+                        <li>
+                            <p>SRT앱</p>
+                        </li>
+                        <li>
+                            <p>승차권 자동발매기</p>
+                        </li>
+                        <li>
+                            <p>역 (전용역, 공용역 포함)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="refund">
+                    <h3>환불</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                인터넷(SR홈페이지), 모바일(SRT앱, SRTPlay)에서 발행 받은 승차권의 운임·요금 환불은 승차권에 기재된 출발역 출발 전까지 인터넷과
+                                모바일로 직접 환불하실
+                                수 있습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                승차권에 표기된 열차 출발시각 이후에는 역 창구에서만 환불이 가능합니다. (단, SRT앱에서 구매한 승차권의 경우 열차 출발 후 10분까지
+                                SRT앱에서 환불
+                                가능합니다.)
+                            </p>
+                        </li>
+                        <li>
+                            <p>승차권에 표기된 도착역 도착시각 이후에는 환불 하실 수 없습니다.</p>
+                        </li>
+                        <li>
+                            <p>구입한 승차권을 환불하는 경우 환불시점에 따른 위약금이 발생합니다.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="table-container">
+                    <!-- 일반 승차권 -->
+                    <div class="fare-box">
+                        <table class="custom-table">
+                            <h3>일반 승차권</h3>
+                            <tr class="fzbig">
+                                <th rowspan="2">구분</th>
+                                <th colspan="4">출발 전</th>
+                                <th colspan="3">출발 후</th>
+                            </tr>
+                            <tr>
+                                <th>1개월~ <br>출발 2일 전까지</th>
+                                <th>출발 1시간 전까지</th>
+                                <th>출발 당일<br>~ 3시간 전까지</th>
+                                <th>출발 3시간 전<br>~ 출발시간 전까지</th>
+                                <th>20분 경과</th>
+                                <th>20분 경과<br>~ 60분까지</th>
+                                <th>60분 경과<br>~ 도착시각 까지</th>
+                            </tr>
+
+
+                            <tr>
+                                <td class="fzbig2">주중 <br> ( 월 ~ 목 )</td>
+                                <td colspan="3">무료</td>
+                                <td>5%</td>
+                                <td>15%</td>
+                                <td>40%</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td class="fzbig2">주말<br>( 금 ~ 일, 공휴일 )</td>
+                                <td colspan="2">최저위약금 <br>( 구매일 포함 7일 이내 환불 시 감면 )</td>
+                                <td>5%</td>
+                                <td>20%</td>
+                                <td>30%</td>
+                                <td>40%</td>
+                                <td>70%</td>
+                            </tr>
+
+                        </table>
+                        <p class="money">*최저위약금: 400원</p>
+                    </div>
+                    <!-- 명절 승차권 -->
+                    <div class="fare-box">
+                        <h3>명절 승차권</h3>
+                        <table class="custom-table">
+                            <tr class="fzbig">
+                                <th rowspan="2">구분</th>
+                                <th colspan="4">출발 전</th>
+                                <th colspan="3">출발 후</th>
+                            </tr>
+                            <tr>
+                                <th>1개월 ~ <br>
+                                    출발 2일 전까지
+                                </th>
+                                <th>출발 1일 전까지</th>
+                                <th>출발 당일 <br> ~ 3시간 전까지</th>
+                                <th>출발 3시간 전 <br> ~ 출발시간 전까지</th>
+                                <th>20분까지</th>
+                                <th>20분 경과 <br> ~60분까지</th>
+                                <th>60분 경과 <br> ~도착시간까지</th>
+                            </tr>
+
+                            <tr>
+                                <td class="fzbig2">명절(설, 추석)</td>
+                                <td>400원 <br>
+                                    (구매일 포함 7일 <br> 이내 환불 시 감면)
+                                </td>
+                                <td>5% <br>
+                                    (구매일 포함 7일 <br> 이내 환불 시 감면)
+                                </td>
+                                <td>10%</td>
+                                <td>20%</td>
+                                <td>30%</td>
+                                <td>40%</td>
+                                <td>70%</td>
+                            </tr>
+
+                        </table>
+                        <p class="money">*최저위약금: 400원</p>
+                    </div>
+
+                    <div class="fare-box">
+                        <h3>단체 승차권</h3>
+                        <table class="custom-table">
+                            <tr class="fzbig">
+                                <th rowspan="2">구분</th>
+                                <th colspan="2">출발 전</th>
+                                <th colspan="3">출발 후</th>
+                            </tr>
+                            <tr>
+                                <th>출발 2일 전까지</th>
+                                <th>출발 1일 전부터 <br>~ 출발시각 전까지</th>
+                                <th>20분까지</th>
+                                <th>20분 경과 <br>~ 60분까지</th>
+                                <th>60분 경과 <br>~ 도착시간까지</th>
+                            </tr>
+
+                            <tr>
+                                <td class="fzbig2">월 ~ 일(전요일)</td>
+                                <td>400원X인원수</td>
+                                <td>10%</td>
+                                <td>15%</td>
+                                <td>40%</td>
+                                <td>70%</td>
+                            </tr>
+                        </table>
+                        <p class="money">*최저위약금: 400원</p>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+    </div>
 </body>
 
 </html>

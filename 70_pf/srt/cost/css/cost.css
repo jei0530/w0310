@@ -54,7 +54,7 @@
     display: block;
 }
 
-input {
+input[type="radio"] {
     display: none;
 }
 
@@ -83,6 +83,7 @@ label {
 }
 
 .back {
+    width: 100%;
     height: 230px;
     background: rgba(181, 181, 182, 0.2);
     border-radius: 0 0 20px 20px;
@@ -92,6 +93,50 @@ label {
     font-size: 18px;
     text-align: center;
     padding-top: 45px;
+}
+
+.fare-search-bar {
+    display: flex;
+    gap: 24px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fare-search-item {
+    display: flex;
+}
+
+.fare-search-item label {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.fare-search-item input[type="text"],
+.fare-search-item input[type="date"] {
+    padding: 10px 12px;
+    border: 1.5px solid #b5b5b6;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.fare-search-btn {
+    padding: 12px 32px;
+    background: #4B2F48;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 12px;
+    height: 44px;
+}
+
+.fare-search-btn:hover {
+    background: #6a3a67;
 }
 
 
@@ -140,6 +185,61 @@ h3 {
     margin-right: 50px;
 }
 
+.station-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.station-modal-content {
+    background: #fff;
+    width: 400px;
+    margin: 120px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    padding: 32px 24px 24px 24px;
+    position: relative;
+}
+
+.station-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.station-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.station-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.station-list li:hover {
+    background: #f3eaf5;
+    color: #4B2F48;
+}
+
 .cost1 {
     margin: 0 auto;
     width: 350px;
@@ -184,16 +284,16 @@ h3 {
 
 }
 
-.ticket li{
+.ticket li {
     list-style: disc;
     margin-left: 60px;
 }
 
-.ticket span{
+.ticket span {
     text-decoration: underline;
 }
 
-.refund li{
+.refund li {
     list-style: disc;
     margin-left: 60px;
 }
@@ -203,3 +303,46 @@ h3 {
     line-height: 200%;
 }
 
+.table-container {
+    height: 1300px;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1.5px solid #888;
+    padding: 18px 6px;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 40px;
+}
+
+.money {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.fare-box {
+    margin-top: 20px;
+}
+
+.fzbig th,
+td {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.custom-table td.fzbig2 {
+    font-size: 17px;
+    font-weight: bold;
+}
