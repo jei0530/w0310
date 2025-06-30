@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정의객체</title>
+</head>
+
+<body>
+    <script>
+        /*
+            객체
+                데이터 값을 필요한 대로 만들어 사용
+                데이터는 '이름:값'의 쌍으로 이루어져 있다
+                -> 이것을 속성이라고 한다
+
+            1. 사용자 정의 객체
+                객체 리터럴
+                객체 생성자 함수
+                클래스
+
+            2. 내장 객체 
+                window, document, console, ...
+
+                형식:
+                    {이름: 값, 이름: 값, 이름: 값, ...}
+                  = {변수: 값, 변수: 값, 변수: 값, ...}
+
+                //객체 리터럴 방식
+                    const 변수 = {
+                        이름: 값, 
+                        이름: 값, 
+                        메서드: fuction(){}
+                        ...
+                        }
+
+                객체생성 - person 객체
+                    const person = {
+                    name: '홍길동',
+                    age: 20,
+                    nationality: '한국',
+                    ...
+                    hello: fuction(){alert('헬로우');}
+                    }
+
+                객체 사용
+                    console.log(변수.속성);
+                    consloe.log(person.name); // 홍길동
+                    console.log(객체.메서드);
+                    console.log(person.hello()); //경고창 실행
+
+                객체 참조
+                    객체.속성;
+                    객체.메서드();
+        }
+        */
+
+        // 객체생성 - person 객체
+        const person = {
+            name: '홍길동',
+            age: 20,
+            nationality: '한국',
+            aboutme: function () { alert(`나는 ${person.age}살 ${person.name}입니다.`); }
+        }
+
+        // 객체 사용
+        // console.log(변수.속성);
+        console.log(person.name);
+        // console.log(객체.메서드);
+        person.aboutme(); //경고창 실행
+
+        //또 다른 예제
+        const info = {
+            subject: 'css',
+            credit: 1,
+            printout: function () {
+                // this란 자기자신 info를 말한다
+                return this.subject + ',' + info.credit + '학점';
+            }
+        };
+        console.log(info.subject); //css
+        console.log(info.credit); //1
+        console.log(info.printout()); //css, 1학점
+
+
+
+    </script>
+</body>
+
+</html>
