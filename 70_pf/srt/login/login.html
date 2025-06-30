@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRT</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./script/nav.js"></script>
+    <link rel="stylesheet" href="../nav/css/nav.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="../script/jquery-3.7.1.js"></script>
+    <script src="../nav/script/nav.js"></script>
 </head>
-
 <body>
     <header class="header">
         <div class="header_inner">
             <div class="first">
                 <div class="language">
                     <div class="lbtn" id="lbtn">
-                        <img src="./image/language.png" alt="언어설정 아이콘">
+                        <img src="../nav/image/language.png" alt="언어설정 아이콘">
                         <p>Language</p>
-                        <img class="language_btn" src="./image/language_btn.png" alt="아래화살표">
+                        <img class="language_btn" src="../nav/image/language_btn.png" alt="아래화살표">
                     </div>
                     <ul class="language_list" id="language_list">
                         <li><a href="#"> <span>KR</span> 한국어 </a></li>
@@ -29,13 +28,13 @@
                     </ul>
                 </div>
                 <div class="logo">
-                    <a href="#"><img src="./image/logo.png" alt="상단로고"></a>
+                    <a href="#"><img src="../nav/image/logo.png" alt="상단로고"></a>
                 </div>
                 <div class="icons">
-                    <a href="#"><img src="./image/login.png" alt="로그인 페이지 이동 아이콘"></a>
-                    <a href="#"><img src="./image/guest.png" alt="회원가입 페이지 이동 아이콘"></a>
-                    <a href="#"><img src="./image/Search.png" alt="검색 페이지 이동 아이콘"></a>
-                    <a href="#"><img src="./image/hamburger_btn.png" alt="사이트맵 아이콘"></a>
+                    <a href="#"><img src="../nav/image/login.png" alt="로그인 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/guest.png" alt="회원가입 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/Search.png" alt="검색 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/hamburger_btn.png" alt="사이트맵 아이콘"></a>
                 </div>
             </div>
         </div>
@@ -74,8 +73,31 @@
                 </nav>
             </div>
         </div>
-
     </header>
-</body>
 
+    <div class="menu">
+        <h2>로그인</h2>
+    </div>
+
+    <div class="menu_out">
+        <div class="menu_bt">
+            <div class="menu1">
+                <a href="#"><img src="../join/image/home.png" alt="홈버튼 메뉴"></a>
+                <p>홈</p> |
+            </div>
+            <div class="menu2">
+                <p>SR회원 <img src="../join/image/bt.png" alt="메뉴 버튼"></p> |
+            </div>
+            <div class="menu3">
+                <p>회원가입 <img src="../join/image/bt.png" alt="메뉴 버튼"> </p> |
+            </div>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="login">
+            <h3>회원로그인</h3>
+        </div>
+    </div>
+</body>
 </html>
