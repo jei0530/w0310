@@ -123,7 +123,7 @@ label {
 }
 
 .fare-search-btn {
-    padding: 12px 32px;
+    padding: 10px 32px;
     background: #4B2F48;
     color: #fff;
     border: none;
@@ -309,7 +309,7 @@ h3 {
 
 .custom-table th,
 .custom-table td {
-    border: 1.5px solid #888;
+    border: 1.5px solid #b9b7b7;
     padding: 18px 6px;
     text-align: center;
     vertical-align: middle;

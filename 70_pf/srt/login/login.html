@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link rel="stylesheet" href="./css/login.css">
     <script src="../script/jquery-3.7.1.js"></script>
     <script src="../nav/script/nav.js"></script>
+    <script src="./js/login.js"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="header_inner">
@@ -97,7 +100,56 @@
     <div class="contents">
         <div class="login">
             <h3>회원로그인</h3>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="member">회원번호</button>
+                <button class="tab-btn" data-tab="phone">휴대번호</button>
+                <button class="tab-btn" data-tab="email">이메일</button>
+            </div>
+
+            <div class="tab-content active" id="member">
+                <div class="input-group">
+                    <label>회원번호</label>
+                    <input type="text" />
+                </div>
+                <div class="input-group">
+                    <label>비밀번호</label>
+                    <input type="password" />
+                </div>
+            </div>
+
+            <div class="tab-content" id="phone">
+                <div class="input-group">
+                    <label>휴대번호</label>
+                    <input type="text" />
+                </div>
+                <div class="input-group">
+                    <label>비밀번호</label>
+                    <input type="password" />
+                </div>
+            </div>
+
+            <div class="tab-content" id="email">
+                <div class="input-group">
+                    <label>이메일</label>
+                    <input type="text" />
+                </div>
+                <div class="input-group">
+                    <label>비밀번호</label>
+                    <input type="password" />
+                </div>
+            </div>
+            <button class="login-btn">로그인</button>
+
+            <div class="option-row">
+                <input type="checkbox" id="save" />
+                <label for="save">회원정보저장</label>
+            </div>
+
+            <div class="links">
+                <a href="#">회원가입</a>
+                <a href="#">회원정보찾기</a>
+            </div>
         </div>
-    </div>
 </body>
+
 </html>
