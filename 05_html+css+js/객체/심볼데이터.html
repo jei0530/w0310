@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼데이터</title>
+</head>
+
+<body>
+    <script>
+        // 심볼데이터
+        // 같은 객체 이름이더라도 심볼데이터를 이용하면 각각 다른 값을 얻을 수 있음
+        const info2 = {
+            subjectname: '자바스크립트',
+            subjectname: '제이쿼리'
+        }
+        console.log(info2.subjectname);
+
+        //여기서 심볼데이터 선언을 하면 같은 이름이더라도 둘 다 값 출력가능
+        const subjectname = Symbol();
+        const info3 = {
+            [subjectname]: '자바스크립트',
+            subjectname: '제이쿼리'
+        }
+        console.log(info3[subjectname] + ',' + info3.subjectname);// 자바스크립트, 제이쿼리
+    </script>
+</body>
+
+</html>

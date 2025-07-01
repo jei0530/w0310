@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+</head>
+<body>
+    <script>
+        /* 
+            클래스 정의 방법
+                class 클래스명 {
+                    constructor(매개변수1, 매개변수2, ...){
+                        this.속성1 = 값1;
+                        this.속성2 = 값2;
+                    }
+
+                    메서드 (){}
+                    get 메서드 (){} //getter
+                    set 메서드 (매개변수){} //setter
+                }
+
+            객체(인스턴스) 생성
+                const 변수1 = new 클래스명(인자1, 인자2, ...);
+                const 변수2 = new 클래스명(인자1, 인자2, ...);
+        */
+
+        //클래스는 객체를 생성하는 설계도이다
+        class SubjectInfo {
+            constructor(subject, credit){
+                this.subject = subject;
+                this.credit = credit;
+                this.days = [80, 120, 140]; //0부터 시작 0,1,2
+                this.day = this.days[0];
+            }
+            printout(){
+                return '과목:' + this.subject + ', 학점:' + this.credit + ', 수업일:' +  this.day;
+            }
+
+            //get메서드: 가져오기
+            get lessonTime(){
+                return this.day;
+            }
+
+            //set메서드: 지정하기
+            set lessonTime(num){
+                this.day = this.days[num];
+            }
+        }
+
+        //객체 생성
+        const sub1 = new SubjectInfo('html', 1);
+        const sub2 = new SubjectInfo('css', 2);
+
+        //출력
+        console.log(sub1.subject);//html
+        console.log(sub1.printout());//과목:css, 학점:1, 수업일:80
+        console.log(sub1.lessonTime);
+
+        //지정하기:set
+        //lessontime 속성을 읽을때 get메서드를 자동 호출
+        sub1.lessonTime=1;
+        console.log(sub1.lessonTime);//120
+        console.log(sub2.subject);
+          
+        //지정하기:set
+        //lessontime 속성에 값을 대입하면 set메서드를 자동 호출
+        sub2.lessonTime=2;
+        console.log(sub2.printout());//140
+
+    </script>
+</body>
+</html>

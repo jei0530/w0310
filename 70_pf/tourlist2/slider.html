@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더</title>
+    <!-- // bxSlider 라이브러리-css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <!-- // jQuery 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- // bxSlider 라이브러리-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+
+    <style>
+        body {
+            background: darkkhaki;
+            margin: 0;
+        }
+
+        .bxSlider img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider_wrap">
+        <div class="bxSlider">
+            <div><img src="./img/mainslide01.jpg" alt="'이미지"></div>
+            <div><img src="./img/mainslide02.jpg" alt="'이미지"></div>
+            <div><img src="./img/mainslide03.jpg" alt="'이미지"></div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".bxSlider").bxSlider({
+                mode: "fade",
+
+                //자동슬라이드
+                auto: true,
+
+                // pause/play 버튼
+                autoControls: false,
+
+                //중앙 하단 동그라미 버튼을 누를때 사진이 잠시 멈춤
+                //auto:true를 할때 사용함
+                stopAutoOnClick: true,
+
+                // 하단 중앙의 동그란버튼 true로 해야 보임
+                pager: true,
+                
+                //멀티슬라이드의 하나의 슬라이드 크기 지정
+                slideWidth: 1920
+            });
+        });
+    </script>
+</body>
+
+</html>

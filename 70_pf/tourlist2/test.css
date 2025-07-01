@@ -31,6 +31,102 @@ body {
     color: var(--color-gray555);
 }
 
+header {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 8px;
+}
+
+header a {
+    color: #fff;
+}
+
+/* Util Nav */
+.util {
+    text-align: right;
+    font-size: 14px;
+}
+
+.util a:first-of-type::after {
+    content: '|';
+    margin: 0 8px;
+}
+
+
+/* logo+GNB common */
+.nav_outer_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo */
+.logo {
+    width: 270px;
+    height: 40px;
+}
+
+/* GNB */
+.gnb {
+    position: relative;
+}
+
+.nav_bg {
+    position: fixed;
+    left: 0;
+    top: 110px;
+    width: 100%;
+    height: 60px;
+    opacity: 0;
+    background: rgba(250, 100, 0, 0.85);
+    transition: .5s;
+}
+
+.nav_bg.active {
+    opacity: 1;
+}
+
+/* 1depth */
+.main>li {
+    display: inline-block;
+}
+
+.main>li>a {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 100px;
+    text-align: right;
+    font-size: 18px;
+}
+
+/* 2depth */
+.sub {
+    position: absolute;
+    width: 40%;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    text-align: center;
+}
+
+.sub.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li {
+    display: inline-block;
+}
+
+.sub a {
+    display: block;
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
 h2 {
     font-weight: 700;
     font-size: 40px;
@@ -62,7 +158,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     width: 100%;
-    z-index:9999;
+    z-index: 9999;
     padding: 30px;
 }
 
@@ -70,7 +166,7 @@ header {
 .box_inner {
     width: 1050px;
     margin: 0 auto;
-    
+
 }
 
 /* 섹션1 pc 메인 롤링*/
@@ -97,7 +193,7 @@ header {
     height: 500px;
 }
 
-.about_area h3{
+.about_area h3 {
     font-size: 18px;
     font-weight: 700;
     padding-top: 16px;
@@ -107,6 +203,7 @@ header {
     padding: 10px 0 24px 0;
     margin: 0;
 }
+
 .about_area a {
     border-top: 2px solid var(--color-gray333);
     padding-top: 4px;
@@ -157,7 +254,7 @@ footer {
     font-size: 13px;
 }
 
-footer h3{
+footer h3 {
     padding: 0;
     font-size: 14px;
     font-weight: normal;
@@ -181,7 +278,7 @@ footer .box_inner {
     margin-bottom: 25px;
 }
 
-.foot_list li:first-of-type::after{
+.foot_list li:first-of-type::after {
     content: "|";
     padding: 0 10px;
 }
@@ -196,7 +293,7 @@ footer .box_inner {
     height: 50px;
     width: 50px;
 
-    background:  no-repeat 0 0/ 100px cover;
+    background: no-repeat 0 0/ 100px cover;
 }
 
 .snslink li:nth-of-type(1) a {

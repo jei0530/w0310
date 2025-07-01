@@ -15,44 +15,45 @@
                 데이터는 '이름:값'의 쌍으로 이루어져 있다
                 -> 이것을 속성이라고 한다
 
-            1. 사용자 정의 객체
-                객체 리터럴
-                객체 생성자 함수
-                클래스
+            객체의 유형
+                1. 사용자 정의 객체
+                    객체 리터럴
+                    객체 생성자 함수
+                    클래스
 
-            2. 내장 객체 
-                window, document, console, ...
+                2. 내장 객체 
+                    window, document, console, ...
 
-                형식:
-                    {이름: 값, 이름: 값, 이름: 값, ...}
+            형식:
+                {이름: 값, 이름: 값, 이름: 값, ...}
                   = {변수: 값, 변수: 값, 변수: 값, ...}
 
-                //객체 리터럴 방식
-                    const 변수 = {
-                        이름: 값, 
-                        이름: 값, 
-                        메서드: fuction(){}
-                        ...
-                        }
-
-                객체생성 - person 객체
-                    const person = {
-                    name: '홍길동',
-                    age: 20,
-                    nationality: '한국',
+            //객체 리터럴 방식
+                const 변수 = {
+                    이름: 값, 
+                    이름: 값, 
+                    메서드: fuction(){}
                     ...
-                    hello: fuction(){alert('헬로우');}
                     }
 
-                객체 사용
-                    console.log(변수.속성);
-                    consloe.log(person.name); // 홍길동
-                    console.log(객체.메서드);
-                    console.log(person.hello()); //경고창 실행
+            객체생성 - person 객체
+                const person = {
+                name: '홍길동',
+                age: 20,
+                nationality: '한국',
+                ...
+                 hello: fuction(){alert('헬로우');}
+                }
 
-                객체 참조
-                    객체.속성;
-                    객체.메서드();
+            객체 사용
+                console.log(변수.속성);
+                consloe.log(person.name); // 홍길동
+                console.log(객체.메서드);
+                console.log(person.hello()); //경고창 실행
+
+            객체 참조
+                객체.속성;
+                객체.메서드();
         }
         */
 
@@ -83,8 +84,22 @@
         console.log(info.credit); //1
         console.log(info.printout()); //css, 1학점
 
+        // 속성 추가
+        info.days = 20;
+        console.log(info.days);
+        // 객체 다 만들고나서 직접 써서 속성을 추가할 수 있음
 
+        // 속성 삭제
+        delete info.credit;
+        // delete 객체.속성
 
+        // 속성 변경
+        info.printout = function(){
+           return this.subject + ',' + this.days + '날짜'; 
+        }
+        console.log(info.printout()); //css, 20일
+
+    
     </script>
 </body>
 
