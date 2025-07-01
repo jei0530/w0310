@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRT</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../nav/css/nav.css">
+    <link rel="stylesheet" href="./css/mypage.css">
+    <script src="../script/jquery-3.7.1.js"></script>
+    <script src="../nav/script/nav.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="../nav/image/language.png" alt="언어설정 아이콘">
+                        <!-- <img src="../nav/image/language_btn.png" alt=""> -->
+                        <p>Language</p>
+                        <img class="language_btn" src="../nav/image/language_btn.png" alt="아래화살표">
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li><a href="#"> <span>KR</span> 한국어 </a></li>
+                        <li><a href="#"><span>EN</span> English</a></li>
+                        <li><a href="#"><span>JP</span> 日本語
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="../nav/image/logo.png" alt="상단로고"></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="../nav/image/login.png" alt="로그인 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/guest.png" alt="회원가입 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/Search.png" alt="검색 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="../nav/image/hamburger_btn.png" alt="사이트맵 아이콘"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_out">
+            <div class="nav">
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="#">승차권예약</a></li>
+                                <li><a href="#">승차권확인</a></li>
+                                <li><a href="#">비회원승차권</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역안내</a></li>
+                                <li><a href="#">노선안내</a></li>
+                                <li><a href="#">운임안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">자주찾는질문</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">SRT베스트 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <h2>마이페이지</h2>
+    </div>
+
+    <div class="menu_out">
+        <div class="menu_bt">
+            <div class="menu1">
+                <a href="#"><img src="../join/image/home.png" alt="홈버튼 메뉴"></a>
+                <p>홈</p> |
+            </div>
+            <div class="menu2">
+                <p>SR회원 <img src="../join/image/bt.png" alt="메뉴 버튼"></p> |
+            </div>
+            <div class="menu3">
+                <p>회원가입 <img src="../join/image/bt.png" alt="메뉴 버튼"> </p> |
+            </div>
+        </div>
+    </div>
+
+    <div class="contents">
+        <h3>마이페이지</h3>
+        <div class="container">
+            <div class="form-row">
+                <div class="name">
+                    <div class="label">이름</div>
+                </div>
+                <div class="content">홍길동</div>
+            </div>
+
+            <div class="form-row">
+                <div class="label">아이디</div>
+                <div class="content">gildong123</div>
+            </div>
+
+            <div class="form-row">
+                <div class="label">비밀번호</div>
+                <div class="content">
+                    <button class="gray-btn">비밀번호 변경</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="label">이메일</div>
+            <div class="content">
+                <div class="flex-row">
+                    <input type="text" value="gildong123@gmail.com" readonly>
+                    <button class="gray-btn">이메일 변경</button>
+                </div>
+                <div class="radio-group">
+                    <label>이메일 수신여부</label>
+                    <label><input type="radio" name="emailAgree"> 예</label>
+                    <label><input type="radio" name="emailAgree" checked> 아니오</label>
+                </div>
+                <ul class="desc">
+                    <li>• 이메일 미 등록시 승차권 예약완매 내역 메일 서비스에 제한 될 수 있습니다.</li>
+                    <li>• 이메일 미 등록시 휴면고객 사전 알림 서비스에 제한 될 수 있습니다.</li>
+                    <li>• 이메일 인증을 받으시면 SR 홈페이지 및 앱에서 이메일로 로그인하실 수 있습니다.</li>
+                    <li>• 이메일 변경 시 인증을 통해서만 변경이 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="label">휴대전화번호</div>
+            <div class="content">
+                <div class="flex-row">
+                    <input type="text" value="010-1234-5678" readonly>
+                    <button class="gray-btn">휴대전화 인증</button>
+                </div>
+                <ul class="desc">
+                    <li>• 휴대전화번호를 등록하시면 SR 홈페이지 및 앱에서 휴대전화번호로 로그인할 수 있습니다.</li>
+                    <li>• 휴대전화번호 변경 시 인증을 통해서만 변경이 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="label">생년월일</div>
+            <div class="content">
+                <select>
+                    <option>년도</option>
+                    <option>1970</option>
+                    <option>1971</option>
+                    <option>1972</option>
+                    <option>1973</option>
+                    <option>1974</option>
+                    <option>1975</option>
+                    <option>1976</option>
+                    <option>1977</option>
+                    <option>1978</option>
+                    <option>1979</option>
+                    <option>1980</option>
+                    <option>1981</option>
+                    <option>1982</option>
+                    <option>1983</option>
+                    <option>1984</option>
+                    <option>1985</option>
+                    <option>1986</option>
+                    <option>1987</option>
+                    <option>1988</option>
+                    <option>1989</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                    <option>1999</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                </select>
+                <select>
+                    <option>월</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select>
+                    <option>일</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="label">자택주소</div>
+            <div class="content">
+                <div class="flex-row">
+                    <input type="text">
+                    <button class="gray-btn">주소 검색</button>
+                </div>
+                <input type="text" class="full-input">
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="confirm">확인</button>
+            <button class="cancel">취소</button>
+        </div>
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>
