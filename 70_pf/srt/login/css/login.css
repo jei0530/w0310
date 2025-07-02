@@ -49,12 +49,12 @@
 .contents {
     width: 1200px;
     margin: 0 auto;
-    height: 600px;
+    height: 800px;
 }
 
 .login {
     width: 700px;
-    height: 500px;
+    height: 460px;
     background: #F0F0F0;
     margin: 0 auto;
     margin-top: 70px;
@@ -166,3 +166,28 @@
     text-decoration: none;
     margin: 0 10px;
 }
+
+.policy{
+    width: 1200px;
+    height: 180px;
+    border: 1px solid #d2d0d0;
+    border-radius: 20px;
+    margin-top: 50px;
+    line-height: 2;
+}
+.policy_inner{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.policy h4{
+    font-size: 15px;
+}
+
+.policy li{
+    list-style: disc;
+    margin-left: 30px;
+    font-size: 13px;
+}
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체</title>
+
+</head>
+
+<body>
+    <script>
+        /*
+            객체 리터럴
+                const obj = {
+                    속성: 값;
+                    메서드: fuction(){},
+                    ...
+                }
+
+            Array 객체
+                객체 리터럴처럼 변수에 데이터 값을 필요한대로 
+                저장할 수 있다
+                객체 리터럴은 데이터 값을 '이름:값',으로 저장하는 반면
+                저장된 값에 자동으로 index[0,1,2]를 부여한다
+
+            const arr = [
+                10,
+                '값',
+                true,
+                fuction(){},
+                {},
+                [],
+                ....
+            ]
+        */
+
+        /*
+            //배열 생성 
+                const subject = [10, 20, 'javascript', 'jquery'];
+  
+            //배열 참조 
+                변수[index]
+                ->index는 0,1,2
+          
+      */
+
+        //숫자 생성
+        const num1 = new Number(10);
+        const num2 = 10;
+
+        //문자열 생성
+        const str1 = new String('javascript');
+        const str2 = 'javascript';
+
+        //배열 생성 
+        const arr1 = new Array(10, 20, 'javascript', 'jquery');
+        const arr2 = [10, 20, 'javascript', 'jquery'];
+        console.log(arr1); //Array(4)
+        console.log(arr2); // Array(4)
+
+        //배열 참조(사용)
+        console.log(arr2[0]); //10
+        console.log(arr2[1]); //20
+        console.log(arr2[2]); //javascript
+        console.log(arr2[3]); //jquery
+
+        /* 
+            속성
+                length
+                    -> 배열 값의 개수
+
+            메서드
+                slice()
+                join()
+                concat()
+                toString()
+                shift()
+                unshift()
+                pop()
+                push()
+                splice()
+                reverse()
+                sort()
+         */
+
+         const info = [45, 11, 7, 32, 20, 19];
+         info.sort(function(a, b){
+            return a - b;
+            // <0이면 a가 앞으로
+            // >0이면 b가 앞으로
+            // ===0이면 위치변경 없음
+            // step1 a=11, b=45이면 a-b=-34 -> [11,45]
+            // step2 a=7, b=45이면 a-b=-38 -> [11,7,45]
+            // step2 a=7, b=11이면 a-b=-4 -> [7,11,45]
+         });
+
+         //오름차순 정렬 
+         console.log(info.toString());
+         //7,11,19,20,32,45
+    </script>
+</body>
+
+</html>
