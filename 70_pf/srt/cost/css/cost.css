@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .menu {
+    margin-top: 140px;
     width: 1920px;
     height: 100px;
     background: #4B2F48;
@@ -44,15 +45,14 @@
     padding-top: 20px;
     margin: 0 auto;
     width: 1200px;
-
+    /* background: rgba(146, 59, 190, 0.5); */
+    height: 1700px;
 }
 
 .tabs {
     width: 1200px;
     position: relative;
     display: block;
-    overflow: visible;
-    transition: height 0.3s;
 }
 
 input[type="radio"] {
@@ -60,6 +60,7 @@ input[type="radio"] {
 }
 
 label {
+    margin-top: 20px;
     display: inline-block;
     padding: 2px 40px;
     cursor: pointer;
@@ -84,6 +85,8 @@ label {
 }
 
 .back {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     height: 230px;
     background: rgba(181, 181, 182, 0.2);
@@ -145,12 +148,13 @@ h3 {
     font-size: 23px;
     padding: 20px 0;
     margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 .box1 {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     line-height: 6;
 }
 
@@ -161,6 +165,7 @@ h3 {
     box-shadow: #8E8E8E;
     border-radius: 25px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .station {
@@ -241,6 +246,10 @@ h3 {
     color: #4B2F48;
 }
 
+.cost{
+    margin-top: 30px;
+}
+
 .cost1 {
     margin: 0 auto;
     width: 350px;
@@ -279,10 +288,13 @@ h3 {
     width: 1200px;
 }
 
+.ticket{
+    margin-top: 10px;
+}
+
 .ticket p {
     font-size: 15px;
     line-height: 200%;
-
 }
 
 .ticket li {

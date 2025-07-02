@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .menu {
+    margin-top: 140px;
     width: 1920px;
     height: 100px;
     background: #4B2F48;
@@ -122,5 +123,5 @@
 
 .agree_btn {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
 }

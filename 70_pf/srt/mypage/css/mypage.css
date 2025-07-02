@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .menu {
+    margin-top: 140px;
     width: 1920px;
     height: 100px;
     background: #4B2F48;
@@ -50,7 +51,7 @@
     width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
-    height: 1200px;
+    height: 1080px;
 }
 
 .contents h3 {
@@ -126,7 +127,7 @@ select {
 }
 
 .btn-group {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
 }
 
