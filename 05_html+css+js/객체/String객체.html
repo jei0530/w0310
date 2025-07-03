@@ -41,17 +41,29 @@
                 substr(a,b)
                     -> a부터 b개의 문자 반환
 
-                split()
+                split('구분자')
+                    -> 구분자를 이용해서 출력되는 결과물은 배열로 나온다  
+                    -> 아무것도 넣지 않으면 공백으로 문자열 분할 
+                    -> 로그인 창에서 'user_id=hong&user_pw=1234' ]
+                    -> spilt('&')
+                    -> ['user_id=hong', 'user_pw=1234']
+                    -> [0].toString() -> 'user_id=hong'
+                    -> spilt('=') -> ['user_id', 'hong']
 
-                replace()
+                replace('원래문자열', '바꿀문자열')
+                    -> 원래문자열이 바꿀 문자열로 교체
 
                 concat()
+                    -> :문자를 연결해줌
 
                 trim()
+                    -> 문자열 앞뒤 공백 제거
 
                 toLowerCase()
+                    -> 소문자로 변환
 
                 toUpperCase()
+                    -> 대문자로 변환
 
             
         */
@@ -102,20 +114,36 @@
         //split
         const str4 = 'javascript_jquery';
         //'-'을 기준으로 나눠라
-
         /* 
             배열 선언 방식
                 const 변수 = [값1, 값2, ..]
         */
-       
-
-        const division = str4.split('-')
+        const division = str4.split('_')
         //const division = [javascript, jquery]
-
-        //
         console.log(division[0] + ',' + division[1]);
+        //javascript, jquery
+
+        //replace():문자를 교체해줌
+        const str5 = 'm_out.png';
+        console.log(str5.replace('out', 'over'));
+
+        //concat():문자를 연결해줌
+        const str6 = 'nav';
+        const str7 = '_bg';
+        console.log(str6.concat(str7));//nav_bg
+
+        //trim(): 문자열 앞뒤 공백을 제거함
+        let str8 = '    remove ';
+        console.log(str8);
+        console.log(str8.length);
+        console.log(str8.trim().length);
+
+        //toUpperCase
+        console.log(str8.toLocaleUpperCase());
 
 
+        //toLowerCase
+        console.log(str8.toLocaleLowerCase());
 
     </script>
 </body>
