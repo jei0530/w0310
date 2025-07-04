@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-/* cdn방식 */
-@import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
-
-body{
-    font-family: "Noto Sans KR" sans-serif;
-}

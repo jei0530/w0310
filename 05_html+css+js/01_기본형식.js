@@ -1,1 +1,0 @@
-document.write("외부스크립트")
