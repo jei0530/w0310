@@ -32,6 +32,7 @@ body {
 }
 
 header {
+    height: 100px;
     z-index: 9999;
     position: absolute;
     width: 100%;
@@ -41,17 +42,26 @@ header {
 
 header a {
     color: #fff;
+    display: block;
+    margin-bottom: -50px;
 }
 
 /* Util Nav */
 .util {
     text-align: right;
-    font-size: 14px;
+    margin-top: -20px;
+}
+
+.util a {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .util a:first-of-type::after {
     content: '|';
-    margin: 0 8px;
+    padding: 0 30px;
 }
 
 
@@ -63,8 +73,8 @@ header a {
 
 /* logo */
 .logo {
-    width: 270px;
-    height: 40px;
+    text-align: center;
+    align-items: center;
 }
 
 /* GNB */
@@ -75,7 +85,7 @@ header a {
 .nav_bg {
     position: fixed;
     left: 0;
-    top: 110px;
+    top: 100px;
     width: 100%;
     height: 60px;
     opacity: 0;
@@ -90,12 +100,11 @@ header a {
 /* 1depth */
 .main>li {
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .main>li>a {
     display: block;
-    height: 80px;
-    line-height: 80px;
     padding-left: 100px;
     text-align: right;
     font-size: 18px;
@@ -132,6 +141,72 @@ h2 {
     font-size: 40px;
     margin: 0;
     padding: 48px;
+}
+
+.bx-wrapper {
+    border: none;
+}
+
+.bxSlider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    /* pager위치는 포지션 바텀으로 바꿈 */
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    padding-top: 0px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #ffffff;
+    width: 14px;
+    height: 14px;
+    margin: 0px 8px;
+    outline: 0;
+    border-radius: 15px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #ffffff;
+    width: 34px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #ffffff;
+}
+
+#slider_wrap {
+    position: relative;
+}
+
+#slider_wrap .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    /* 문구가 가운데로 가게 하는 신형방법 */
+    transform: translate(-50%, -50%);
+
+    /* 
+                문구가 가운데로 가게 하는 올드 방법 
+                각 w,h 절반의 음수값 줌
+                width: 300px;
+                height: 150px;
+                margin-top: -75px;
+                margin-left: -150px; 
+            */
 }
 
 h3 {
@@ -171,8 +246,7 @@ header {
 
 /* 섹션1 pc 메인 롤링*/
 .main_rolling_pc {
-    height: 650px;
-    background: lightgoldenrodyellow;
+    height: 530px;
 }
 
 /* 섹션2 인기 여행지*/
@@ -212,6 +286,7 @@ header {
 /* 섹션3 */
 .appbbs_area {
     padding: 56px 0 136px;
+    height: 400px;
 }
 
 .notice h3 {
@@ -250,7 +325,7 @@ header {
 /* 푸터 */
 footer {
     border-top: 1px solid #ddd;
-    height: 300px;
+    height: 170px;
     font-size: 13px;
 }
 

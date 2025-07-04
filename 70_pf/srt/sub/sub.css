@@ -20,6 +20,7 @@
 
 .submenu_bar {
     border-bottom: 1px solid #ddd;
+    height: 50px;
 }
 
 .sub_inner {
@@ -77,8 +78,3 @@
     background-color: #333;
 }
 
-/* 서브페이지 내용 */
-#contents {
-    width: 1200px;
-    margin: 0 auto;
-}

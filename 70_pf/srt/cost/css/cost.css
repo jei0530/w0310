@@ -1,52 +1,11 @@
 @charset "utf-8";
 
-.menu {
-    margin-top: 140px;
-    width: 1920px;
-    height: 100px;
-    background: #4B2F48;
-    text-align: center;
-}
-
-.menu h2 {
-    color: #fff;
-    font-size: 32px;
-    line-height: 100px;
-}
-
-.menu_out {
-    height: 50px;
-    border-bottom: 1px solid #B5B5B6;
-}
-
-.menu_bt {
-    height: 50px;
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.menu1,
-.menu2,
-.menu3 {
-    display: flex;
-}
-
-.menu1 img {
-    margin-right: 6.4px;
-}
-
-.menu1 p {
-    margin-right: 14.37px;
-}
-
 .contents {
     padding-top: 20px;
     margin: 0 auto;
+    margin-top: 300px;
     width: 1200px;
-    /* background: rgba(146, 59, 190, 0.5); */
-    height: 1700px;
+    height: 1730px;
 }
 
 .tabs {
