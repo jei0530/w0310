@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+
+<!-- 
+    <ol> 
+        <li>
+    <ul>
+        <li>
+    <dl>
+        <dt>
+        <dd>
+        
+    ul의 자식은 li만 사용
+    ol의 자식은 li만 사용 
+    di의 자식은 dd,dt만 사용    -->
+<body>
+    <!-- shitf + alt + f: 자동정렬 들여쓰기, 코드 다 쓰고 누를것 -->
+    <!-- alt + 위아래방향키: 선택한 영역의 위치 바꾸기 -->
+
+    <h2>목록</h2>
+   <h2>음료 메뉴</h2>
+   <ul>
+        <li>커피
+            <p>아래는 우리 회사에서 판매되는 커피 목록입니다.</p>
+            <ul>
+                <li>아이스 아메리카노</li>
+                <li>카페모카</li> 
+                <li>카라멜 마끼아토</li>
+            </ul>
+        </ul>
+   </li>  
+
+    <!-- ul: 순서 없는 목록 -->
+    <h3>커피 메뉴</h3>
+    <ul>
+        <li>아이스 아메리카노</li>
+        <li>카페모카</li>
+        <li>카라멜 마끼아토</li>            
+    </Ul>
+    <!-- ctrl+x: 한줄삭제 -->
+
+    <h3>인기커피메뉴</h3>
+    <Ol>
+        <li>아이스 아메리카노</li>
+        <li>카페모카</li>
+        <li>카라멜 마끼아토</li>            
+    </Ol>
+
+    <!-- 
+    dl: 정의 목록 
+    dt: 설명 항목
+    dd: 설명 항목의 설명
+    -->
+
+    <h3>약어 정의</h3>
+
+    <dl>
+
+        <dt>HTML</dt>
+        <dd>hyper text markup language의 약자로 웹페이지의 
+        <b>구조와 내용</b>을 정의하는 언어이다.</dd>
+        
+        <dt>css</dt>
+        <dd>cascading style sheet의 약자로 html, xml등의 문서의 
+        <i>스타일을 지정(디자인)</i>하는 언어이다.</dd>
+    </dl>
+
+    <!-- 
+            div로 그룹핑할때는 
+            dt와 dd를 한세트로 그룹핑한다
+
+            그럼 왜 div로 묶냐? 
+            -> css 적용할때 스타일 예쁘게하려고
+    -->
+
+    <div>
+        <dl>
+            <dt>HTML</dt>
+            <dd>hyper text markup language의 약자로 웹페이지의
+            <b>구조와 내용</b>을 정의하는 언어이다.</dd>
+        
+            <dt>css</dt>
+            <dd>cascading style sheet의 약자로 html, xml등의 문서의
+            <i>스타일을 지정(디자인)</i>하는 언어이다.</dd>
+        </dl>
+    </div>
+
+
+
+</body>
+
+</html>

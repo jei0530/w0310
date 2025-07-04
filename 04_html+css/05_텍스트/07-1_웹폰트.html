@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        /* 글꼴: ttf/otf, woff, woff2, eot(안 씀) */
+        /* 구글 폰트: https://fonts.google.com/ */
+
+        /* 외부 폰트 가져오기 */
+
+        /* 
+            제주 한라산체 구글폰트임
+            @import url('글꼴주소');
+         */
+
+        @import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
+       
+
+        /* 
+            제주 돌담체는 구글에서 지원을 안해서 font-face로 써야함 
+            @font-face {
+                font-family:폰트이름; -> 사용자가 임의로 정함
+                src: url('글꼴주소') format은 생략가능
+            }
+        */
+        
+        @font-face {
+            font-family: 'EF_jejudoldam';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 현재 문서에 폰트 적용하기 */
+        .p2 {
+            font-family: 'Jeju Hallasan';
+        }
+
+        .p1 {
+            font-family: 'EF_jejudoldam';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>웹폰트</h1>
+    <p class="p1"> 구글 폰트로 지정했다. 웹폰트는 컴퓨터에 기본적으로 설치되어있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미합니다.</p>
+    <p class="p2">웹폰트는 컴퓨터에 기본적으로 설치되어있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미합니다.</p>
+</body>
+
+</html

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+
+<body>
+    <!-- 
+        method를 생략하면 get, 보안이 필요한거나 정보가 많을때 post(아이디, 회원가입, 비번) -->
+    <form action="member.jsp" method="get">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>가입목적: <br> <textarea name="purpose" id="purpose" rows="5" cols="100"></textarea></p>
+            <p>전화번호: <select name="tell" id="tell">
+                    <option value="seoul">02</option>
+                    <option value="gyeonggi">031</option>
+                    <option value="sejong">044</option>0
+                </select>
+            </p>
+        </fieldset>
+        <button type="submit">가입하기</button>
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        /* 
+            ~child -> 타입을 구별하지 않는다.
+            ::nth-child()
+            ::nth-last-child
+            ::first-child
+            ::last-child
+
+            ~of-type -> 타입을 구별하여 선택한다.
+            ::nth-of-type()
+            ::nth-last-of-type()
+            ::first-of-type()
+            ::last-of-type()
+        */
+
+        div>p:nth-child(1) {
+            color: blue;
+        }
+
+        /* first-of-type은 nth-of-type(1)과 같다 */
+        div>p:nth-of-type(2) {
+            background: #454522;
+        }
+        /* 부모의 2번째 자식이면서 <p> 태그인 것 */
+
+        .box2 p:first-of-type {
+            border: 3px solid #ff0101;
+        }
+
+        /* last-of-type는 nth-last-of-type와 같다 */
+        .box2 p:last-of-type {
+            border: 3px dotted #fff000;
+        }
+
+        /* n은 숫자, 수열(2n, 2n+1, 3n+2) */
+        .box2 p:nth-of-type(3) {
+            border: 3px dashed #191701;
+        }
+
+        .box1 p:nth-of-type(2n) {
+            background: #aab2cd;
+        }
+
+        .box1 p:nth-of-type(odd) {
+            background: #ffa8a8;
+        }
+
+        /* 
+            공백은 자식과 손자를 모두 포함하고 
+            >은 자식만 포함한다.
+         */
+
+        /* 
+         :nth-child(n)	
+         부모의 모든 자식 중 n번째
+         태그 상관 없음  
+
+         :nth-of-type(n) 
+         같은 태그 중 n번째	
+         같은 타입끼리 순서 비교함
+         */
+    </style>
+</head>
+
+<body>
+    <h1>가상 클래스 선택자</h1>
+    <h2>~child</h2>
+    <div class="box1">
+        <h3>난 h3으로 내가 첫번째 자식이야!</h3>
+        <p>box 1의 첫번째 자식p</p>
+        <p>box 1의 두번째 자식p</p>
+        <p>box 1의 세번째 자식p</p>
+        <p>box 1의 네번째 자식p</p>
+        <p>box 1의 첫번째 자식p</p>
+        <p>box 1의 두번째 자식p</p>
+        <p>box 1의 세번째 자식p</p>
+        <p>box 1의 네번째 자식p</p>
+    </div>
+
+    <h2>~of-type</h2>
+    <div class="box2">
+        <p>box 1의 첫번째 자식p</p>
+        <p>box 1의 두번째 자식p</p>
+        <p>box 1의 세번째 자식p</p>
+        <p>box 1의 네번째 자식p</p>
+    </div>
+</body>
+
+</html>

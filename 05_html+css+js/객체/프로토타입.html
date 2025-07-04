@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            객체지향 프로그래밍의 특징
+                1. 상속
+                2. 추상화
+                3. 다형성
+                4. 캡슐화 
+
+            프로토타입
+                생성자 함수로 생성된 객체들은 
+                '생성자 함수'에서 정의한 속성을
+                그대로 상속받는다
+        */
+
+        function Triangle(b, h) {
+            this.base = b;
+            this.height = h;
+        };
+      
+        Triangle.prototype.area = function () {
+            return this.base * this.height / 2
+        };
+
+        Triangle.prototype.printout = function () {
+            return '밑변:'+this.base+'높이:'+this.height+'넓이:'+this.area();
+        };
+
+        // 객체 생성
+        // 객체의 사본 인스턴스 생성 - 피그마와 같음
+        const triangle1 = new Triangle(30,20);
+        const triangle2 = new Triangle(80,40);
+
+        // 출력
+        console.log(triangle1.base); //30 
+        console.log(triangle1.height);//20
+        console.log(triangle1.area());//300
+        
+        console.log(triangle2.base);//80
+        console.log(triangle2.height);//40
+        console.log(triangle2.area());//1600
+
+    </script>
+</body>
+
+</html>

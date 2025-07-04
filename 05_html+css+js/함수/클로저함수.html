@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+</head>
+<body>
+    <script>
+        /* 
+            클로저
+                일반적으로 함수 내 지역 변수는 함수 밖에서 참조할 수 없지만,
+                클로저는 함수 내 지역변수를 함수 밖에서 참조할 수 있게 해준다
+                용도 -> 콜백함수, 정보은닉
+
+        */
+
+        /* 
+            제이쿼리 
+                객체.animate({css속성:값, ...}, 시간, 콜백함수);
+            즉, 클로저는 제이쿼리의 콜백함수이다
+            
+            //객체 만드는법
+            객체명 = {
+                속성:값,
+                속성: 값,
+                속성: fuction(){}, -> 객체의 속성이 함수이면 메서드이다
+                ...
+            }
+        */
+
+        function add(){
+            let n = 0;
+            return ++n;
+        };
+
+        console.log(add());//1
+
+        function add(){
+            let m = 0;
+            return function(){
+                return ++m;
+            }
+        };
+        // return 안에 들어있는 함수가 콜백함수
+
+        const increase = add(); 
+        //익명함수 형태 const increase = fuction (){return ++n};
+        console.log(increase()); // 1
+        console.log(increase()); // 2
+        // console.log(m); // 정보은닉
+
+        //또 다른 예시
+        function multiply(n){
+            return function(){
+                return n *= n;
+            }
+        };
+
+        const num1 = multiply(10);
+        console.log(num1); //fuction(){return 100;}
+        console.log(num1()); //10*10=100
+        console.log(num1())//100*100
+
+        const num2 = multiply(20);
+        console.log(num2()); //20*20 = 400
+        console.log(num2()); //400*400
+    </script>
+</body>
+</html>

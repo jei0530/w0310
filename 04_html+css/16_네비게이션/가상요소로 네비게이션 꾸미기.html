@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소선택자</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        a {
+            display: inlne-block;
+            text-decoration: none;
+            color: #333;
+             border-bottom: 3px solid transparent; /* transparent:투명하게 */
+             transition:.3s;
+             
+             /* transition:시간차를 두고 서서히 나타나게 */
+        }
+
+        a::after{
+            display: block;
+            width: 0px;
+            content: "";
+            border-bottom: 3px solid red;
+        }
+        a:hover::after{
+            width: 30px;
+
+        }
+
+        /* hover로도 네비를 꾸밀 수 있지만 after로도 네비를 만들 수 있다 */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리터럴 함수</title>
+</head>
+<body>
+    <script>
+        // 리터럴로 객체 생성하기
+            const circle = {
+                color: 'yellow',
+                diameter: 100,
+                radius: function(){
+                    return this.diamter
+                }
+            };
+
+            console.log(circle.color);
+            console.log(circle.diameter);
+            console.log(circle.radius());
+
+        //생성자 함수로 객체 생성하기
+            function Triangle(b,h){
+                this.base = b;
+                this.height = h;
+                this.area = function(){
+                    return this.base* this.height/2;                }
+            }
+
+            const triangle1 = new Triangle(15,15);
+            const triangle2 = new Triangle(25,10);
+            
+            console.log(triangle1.base);
+            console.log(triangle1.height);
+            console.log(triangle1.area());
+            console.log(triangle2.base);
+            console.log(triangle2.height);
+            console.log(triangle2.area());
+
+    </script>
+</body>
+</html>

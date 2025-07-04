@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+</head>
+<body>
+    <script>
+        /* 
+            객체 생성자 함수로 객체 생성
+                fuction 함수명(매개변수1, 매개변수2, ...){
+                    this.속성1 = 매개변수1;
+                    this.속성2 = 매개변수2;
+                    ...
+                    this.메서드  = fuction(){};
+                }
+
+                //함수호출
+                const 변수 = new 함수명(인자1=매개변수1로 들어감, 인자2=매개변수2로 들어감, ...);
+                -> 일반함수와 차이점을 주기위해 함수호출법이 좀 다름
+                -> 클래스가 생긴 후 거의 안 씀
+        */
+
+        // 생성자 함수로 객체 생성
+        // 생성자 함수의 첫글자는 대문자로 쓴다 -> 소문자로 해도 동작은 됨
+        // 일반 함수와 구별하기 위해
+
+        // 생성자 함수 선언
+        function Info(subject, credit){
+            // this는 Info 함수를 통해 생성되는 객체
+            this.subject = subject;
+            this.credit = credit;
+            this.printout = function(){
+                return this.subject + ',' + this.credit + '학점';
+            }
+        }
+
+        // 함수호출
+        // 객체 생성
+        const sub1 = new Info('html',1);
+        const sub2 = new Info('css',2);
+
+        // 객체 참조
+        console.log(sub1.subject); // html
+        console.log(sub1.credit); // 1
+        console.log(sub1.printout());// html, 1학점
+        console.log(sub2.subject); // css
+        console.log(sub2.credit); // 2
+        console.log(sub2.printout());// css, 2학점
+
+        // 속성 추가
+        sub1.days = 20;
+
+        // 속성 삭제
+        delete sub1.credit;
+        
+        // 속성 변경
+        sub1.printout = function(){
+            return this.subject + ',' + this.days +'일';
+        }
+        console.log(sub1.printout());
+
+        /* 
+            sub1 객체에 추가 제거 변경된 속성들은 sub1 객체에만 적용되고
+            sub2 객체의 속성에는 영향을 주지 않는다
+            속성의 추가 제거 변경을 모든 객체에 적용하려면
+            Info 생성자 함수 안에 속성들을 수정해야한다.
+        */
+
+        
+
+
+    </script>
+</body>
+</html>

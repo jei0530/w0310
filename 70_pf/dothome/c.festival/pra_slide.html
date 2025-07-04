@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pra-slide</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        img{
+            vertical-align: top;
+        }
+
+       ul{
+        list-style: none;
+       }
+
+        .slide{
+            width: 800px;
+            overflow: hidden;
+        }
+        
+        .slide ul{
+            position: relative;
+            width: 400%;
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        .slide li{
+            width: 25%;
+        }
+
+        @keyframes slide {
+            0%{left: 0%;}
+            10%{left: -100%;}
+            33%{left: -100%;}
+            43%{left: -200%;}
+            66%{left: -200%;}
+            76%{left: -300%;}
+            99.99%{left: -300%;}
+            0%{left: 0%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드1"></a></li>
+            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
+            <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
+            <li><a href="#"><img src="./asset/slide1.png" alt="슬라이드1"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

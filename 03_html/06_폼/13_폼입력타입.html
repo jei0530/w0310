@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+<body>
+    <h1>폼</h1>
+    
+    <form action="form.jsp">
+        한 줄 기본 입력상자면 <input type="text"> <br>
+        여러줄 입력하는 입력상자면 <textarea name="" id=""></textarea> <br>
+        이건 글쓰기 <textarea name="user_write" id=""></textarea> <br>
+        이건 회칙 (사람들이 보기만 해야함=readonly)
+        <textarea name="" id="" cols="30" rows="5" readonly style="width: 300px; height: 150px; resize: none;" > 회칙을 여기에 기록한다.</textarea> <br>
+        <!--
+            cols는 글자수(칸)를 얘기하고 한글은 2비트라서 공백+글자수에 두배 해야함
+            rows는 줄수를 얘기한다.
+            크기 조절 못하게 하는건 resize로
+            id는 생략가능하고
+            name은 글쓰기에서는 써야하고 회칙은 안 써도 됨
+            왜냐면 글쓰기는 전송을 해야하지만 회칙은 전송을 할 필요가 없음
+        -->
+        비밀번호면 <input type="password"> <br>
+        DB용 히든박스 (개발자들이 씀) <input type="hidden"> <br>
+        
+        <!-- 의미에 맞게 써야함 -->
+         <label for="user_search">검색이면 </label>
+         <input type="search" id="user_search"> <br>
+         <!-- 글 눌러서 상자클릭되게 하려면 label로 묶고 for와 id 값이 같아야함 -->
+        전화번호면 <input type="tel"> <br>
+        이메일주소면<input type="email"> <br>
+        웹주소면<input type="url"> <br>
+        이미지 <input type="image"> <br>
+        파일첨부 <input type="file"> <br>
+
+        <!-- 예제 -->
+        주소
+        <select>
+            <option value="seoul">서울특별시</option>
+            <option value="gyeong-gi">경기도</option>
+            <option value="gang-won" selected>강원도</option>
+            <option value="chungcheong">충청도</option>
+            <option value="jeonla">전라도</option>
+            <option value="gyeongsang">경상도</option>
+        </select> <br>
+        <!-- select의 value는 서버로 전송되는 값임 
+             selected는 맨 처음에 올라와 있는 값
+        -->
+
+        <!-- 버튼 -->
+        전송 버튼을 만들고 싶으면 <input type="submit" value="전송"> <br>
+        취소 버튼을 만들고 싶으면 <input type="reset" value="취소"> <br>
+        일반 버튼을 만들고 싶으면 <input type="button" value="버튼"> <br>
+        전송버튼- 로그인, 회원가입시 확인버튼 <br>
+        <!-- 인풋 말고 버튼 태그가 따로 있음 -->
+        <button type="submit">전송</button> <br>
+        <button type="reset">취소</button> <br>
+        <button type="button">버튼</button> <br>
+        위에 인풋 태그랑 둘 중 아무거나 써도 상관없음
+        
+        여러개 중에 하나만 선택하는 동그라미 버튼을 만들고 싶으면 <input type="radio"> <br>
+        동그라미 1 <input type="radio">
+        동그라미 2 <input type="radio">
+        동그라미 3 <input type="radio"> <br>
+        <!-- name= "" 컴마안의 내용은 자유롭게 단, 의미있게 -->
+        동의함 <input type="radio" name= "radiogroup">
+        동의하지않음 <input type="radio" name= "radiogroup">
+        무효 <input type="radio" name= "radiogroup"> <br>
+        
+        여러개 중에 여러개를 선택하는 버튼을 만들고 싶으면 <input type="checkbox"> <br>
+        <h2>위 사항을 모두 확인 후 선택</h2>
+        <label><input type="checkbox" name="gr"> 버튼1</label>
+        <label><input type="checkbox" name="gr"> 버튼2</label>
+        <input type="checkbox" name="gr"> 버튼3
+        <input type="checkbox" name="gr"> 버튼4 <br>
+        <!-- 날짜/시간 -->
+        데이트 <input type="date"> <br>
+
+        <!-- datme time-local을 사용하고 datetime은 사용하지 않음 -->
+        데이트타임 <input type="datetime"> <br>
+        데이트타임 로컬 <input type="datetime-local"> <br>
+        타임 <input type="time"> <br>
+        위크 <input type="week"> <br>
+        먼쓰 <input type="month"> <br> <!-- 파이어폭스는 안됨 -->
+        
+        <!-- 색 -->
+        컬러 <input type="color"> <br>
+        <!-- 범위 -->
+        영화에 대한 인기도 조사할때?, 통계낼때..? <input type="range"> <br>
+        <!-- 스핀버튼 -->
+        쇼핑몰에서 상품 갯수 누를때 <input type="number"> <br>
+    </form>
+
+</body>
+</html>

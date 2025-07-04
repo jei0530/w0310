@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup창 만들기</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font: 15px / 1.6 '돋움';
+            background: #fff;
+            color: #333;
+        }
+
+        img{
+            text-align: top;
+        }
+
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        #popup{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* 팝업이 타겟을 가지면 즉, 팝업 누르면 */
+        #popup:target{
+            display: block;
+        }
+
+        /* 팝업창 */
+        .pop-con{
+            /* position: relative; */
+            margin: 10% auto;
+            padding: 20px;
+            background: #e8d2d2;
+            width: 500px;
+        }
+
+        .out{
+            text-align: right;
+        }
+
+        /* 닫기버튼 */
+        .close{
+            background: #333;
+            color: #fff;
+            padding: 4px 12px;
+            display: inline-block;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>공지사항 상세페이지</h1>
+    <a href="#popup" class="open">팝업열기</a>
+
+    <!-- 팝업창 -->
+     <div id="popup">
+        <div class="pop-con">
+            <h2>레이어 팝업</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, inventore. Id cupiditate nihil optio, illum laboriosam dolores voluptatum eligendi! Iste doloremque beatae ratione esse et molestias voluptates expedita sint odit.</p>
+
+            <div class="out"><a href="#" class="close">닫기</a></div>
+        </div>
+     </div>
+</body>
+</html>

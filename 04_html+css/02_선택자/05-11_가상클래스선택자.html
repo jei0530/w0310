@@ -1,0 +1,62 @@
+<html lang="ko">
+    <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자</title>
+
+    <style>
+        /* 태그(요소)선택자 : a, ul, li, body */
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin: 0 8px;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            /* 스무스하게 됨 */
+        }
+
+        a:hover {
+            color: rgb(55, 53, 53);
+            font-size: 24px;
+        }
+
+        /* 사용자가 a태그에 마우스를 올렸을때 빨간색으로 바뀜 */
+        /* 하이라이트 효과는 글자색, 배경색, 라인 등등이 바뀌는 것 */
+    </style>
+    <!-- 
+            가상클래스 (:)  - 사용자 인터랙션
+            a:link          -> 아직 방문하지 않은 링크에 적용
+            a:visited       -> 사용자가 방문한 링크에 적용
+            선택자:hover    -> 마우스 커서를 요소 위에 올렸을때 
+            선택자:active   -> 요소가 활성화되었을때 (클릭 중인 상태)
+            선택자:focus    -> 요소에 포커스가 있을때(예: input 박스에 클릭한 상태)
+
+
+            가상 요소 선택자 (::)
+            ::first-letter -> 요소의 첫 글자
+            ::first-line   -> 요소의 첫 줄
+            ::before       -> 요소 안 맨 앞에 배치될 요소 
+            ::after        -> 요소 안 맨 뒤에 배치될 요소 
+            원칙상으로는 콜론이 2개 붙지만, 1개로도 쓸 수 있음 
+        -->
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</body>
+</html>

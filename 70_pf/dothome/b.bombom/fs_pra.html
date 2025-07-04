@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패밀리사이트 연습해요</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px /1.6 '굴림';
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        header{
+            height: 100px;
+            width: 100%;
+            background: lightgoldenrodyellow;
+        }
+
+        .hi{
+            display: flex;
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .gnb{
+            position: absolute;
+            z-index: 1;
+            top: 60px;
+            right: 0;
+            text-align: center;
+        }
+        
+        .main{
+            display: flex;
+        }
+
+        .main li{
+            width: 150px;
+        }
+
+        .main>li>a{
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            background: darkseagreen;
+            color: #fff; 
+        }
+
+        .gnb .sub{
+            background: lightblue;
+            height: 0;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .main:hover .sub{
+            height: 135px;
+            display: block;
+        }
+
+        .gnb .sub a{
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .sub li:hover{
+            background: lightgreen;
+        }
+
+        .slide{
+            margin: 0 auto;
+            width: 1200px;
+            overflow: hidden;
+        }
+
+        .slide ul{
+            display: flex;
+            width: 400%;
+            position: relative;
+            animation: slide 8s infinite;
+        }
+
+        @keyframes slide {
+            0%{left:0%}
+            10%{left:-100%}
+            33%{left:-100%}
+            43%{left:-200%}
+            66%{left:-200%}
+            76%{left:-300%}
+            99.99%{left:-300%}
+            0%{left:0%}
+        }
+
+        .contents{
+            width: 1200px;
+            display: flex;
+            height: 200px;
+           margin: 0 auto;
+           background: lemonchiffon;
+        }
+        .notice{
+            width: 400px;
+        }
+
+        .notice h2{
+            margin: 10px;
+        }
+
+        .notice a{
+            margin-left: 10px;
+            display: inline-block;
+            width: 320px;
+            line-height: 2;
+        }
+        .notice a:hover{
+            text-decoration: underline;
+        }
+
+        .gal{
+            width: 400px;
+        }
+
+        .gal h2{
+            margin: 10px;
+        }
+
+        .gal a{
+            display: inline-block;
+            margin-right: 7px;
+        }
+
+        .gal img:hover{
+            opacity: 0.5;
+        }
+
+        footer{
+            background: darkkhaki;
+            height: 100px;
+            width: 100%;
+        }
+
+        .fi{
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .copy{
+            width: 1000px;
+            font-size: 12px;
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .sns{
+            width: 200px;
+        }
+
+        .sns a{
+            font-size: 12px;
+            color: #fff;
+            margin-right: 5px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="hi">
+            <h1 class="logo"><a href="#"><img src="./asset/logo.png" alt="상단로고"></a></h1>
+            <div class="gnb">
+                <ul class="main">
+                    <li><a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴소개</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">매장안내 </a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">가맹안내</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+            <li><a href="#"><img src="./asset/slide2.jpg" alt="슬라이드2"></a></li>
+            <li><a href="#"><img src="./asset/slide3.jpg" alt="슬라이드3"></a></li>
+            <li><a href="#"><img src="./asset/slide1.jpg" alt="슬라이드1"></a></li>
+        </ul>
+    </div>
+
+    <div class="contents">
+        <div class="notice">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="#">2025 카페봄봄 어린이 그림그리기 대회 (~ 5.16) </a>
+                    <span>04-30</span>
+                </li>
+                <li>
+                    <a href="#">카페봄봄 35초 영상제 수상작 발표 </a>
+                    <span>07-08</span>
+                </li>
+                <li><a href="#">
+                        카페봄봄 35초 영상제 (~ 6.30) </a>
+                    <span>05-16</span>
+                </li>
+                <li><a href="#">
+                        '아동이 안전한 세상을 그려 봄' 공모전 수상작 모음 </a>
+                    <span>06-30</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="gal">
+            <h2>갤러리</h2>
+            <a href="#"><img src="./asset/g1.jpg" alt="갤러리1"></a>
+            <a href="#"><img src="./asset/g2.jpg" alt="갤러리2"></a>
+            <a href="#"><img src="./asset/g3.jpg" alt="갤러리3"></a>
+        </div>
+
+        <div class="link">
+            <a href="#"><img src="./asset/link.jpg" alt="바로가기"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fi">
+            <div class="copy">
+                <p>
+                    대표 이승은 <br>
+                    사업자등록 805-81-01591 <br>
+                    본사 : 대구광역시 중구 동덕로 125(삼덕동 2가 101-1번지) 5, 6층 <br>
+                    copyright (c) bombom. all right reserved.
+                </p>
+            </div>
+
+            <div class="fmenu">
+                <div class="sns">
+                    <a href="#">인스타그램</a>|
+                    <a href="#">유튜브</a>|
+                    <a href="#">블로그</a>|
+                </div>
+
+                <div class="fs">
+                    <form action="#">
+                        <select name="fs" id="fs">
+                            <option value="">--패밀리사이트--</option>
+                            <option value="fs1">역전우동</option>
+                            <option value="fs2">새마을식당</option>
+                            <option value="fs3">미정국수</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font: 15px/1.6 '굴림';
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+.wrap{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 120px);
+}
+
+header{
+    background: darkgrey;
+    height: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+.popup{
+    background: lightgray;
+    width: 600px;
+    height: 500px;
+    margin: 10% auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.popup p{
+    padding-top: 20px;
+}
+
+.button{
+    text-align: right;
+    padding-top: 30px;
+}
+
+.button a{
+    padding: 6px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.logo{
+    width: 200px;
+    text-align: center;
+}
+
+.gnb{
+    padding: 50px 20px;
+}
+
+.main li{
+    position: relative;
+}
+
+.main>li>a{
+    font-weight: bold;
+    font-size: 20px;
+    background: darkblue;
+    color: #fff;
+    padding: 4px;
+    display: block;
+}
+
+.sub{
+    position: absolute;
+    top: 0;
+    left: 160px;
+    background: rgba(84, 106, 47, 0.5);
+    width: 200px;
+    z-index: -1;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+}   
+
+.main>li:hover .sub{
+    height: 160px;
+    z-index: 1;
+}
+
+.sub li:hover{
+    background: darkblue;
+}
+
+.main>li>a:hover{
+    background: darkgreen;
+}   
+
+.spotmenu{
+    text-align: center;
+    font-size: 18px;
+}
+
+.spotmenu a:hover{
+    text-decoration: underline;
+}
+
+.contents{
+    width: 400px;
+    height: 100%;
+    background: darkkhaki;
+}
+
+.banner{
+    display: flex;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    padding-left: 18px;
+    border-bottom: 1px dashed #ffffff;
+}
+
+.bw{
+    display: flex;
+    font-size: 13px;
+}
+
+.write{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.right{
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.notice{
+    height: calc(100% - 500px);
+    padding: 10px;
+    border-bottom: 1px dashed #ffffff;
+}
+
+.notice a{
+    display: inline-block;
+    width: 290px;
+    line-height: 2;
+    padding-top: 10px;
+}
+
+.notice a:hover{
+    text-decoration: underline;
+}
+
+.gal{
+    height: 300px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px dashed #ffffff;
+}
+
+.gal img{
+    width: 170px;
+    object-fit: cover;
+    padding-top: 30px;
+}
+
+.galin span{
+    display: block;
+}
+
+.galin{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.gal img:hover{
+    opacity: 0.5;
+}
+
+.slide{
+    width: calc(100% - 600px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide ul{
+    position: relative;
+    height: 100%;
+    width: 400%;
+    display: flex;
+    animation: slide 8s infinite;
+}
+
+.slide li{
+    width: 25%;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+@keyframes slide {
+    0%{left: 0%;}
+    10%{left: -100%;}
+    33%{left: -100%;}
+    43%{left: -200%;}
+    66%{left: -200%;}
+    76%{left: -300%;}
+    99.99%{left: -300%;}
+    100%{left: 0%;}
+}
+
+footer{
+    background: rgb(185, 185, 184);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.copy{
+    width: calc(100% - 400px);
+}
+
+
+
+

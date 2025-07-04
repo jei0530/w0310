@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+    <style>
+    .vid1{
+        width: 600px;
+    }
+    iframe{
+        border: none;
+        width:600px; height:338px;
+    }
+    </style>
+</head>
+<body>
+    <h1>비디오</h1>
+    <video class="vid1" src="./assets/260397_tiny.mp4" loop autoplay muted ></video>
+    <!-- autoplay를 하려면 muted와 함께 써야한다 -->
+    <video controls width="600" >
+        <source src="./assets/260397_tiny.mp4" type="video/mp4">
+        <source src="./assets/260397_tiny.webm" type="video/webm">
+        <source src="./assets/260397_tiny.ogg" type="video/ogg">
+        your browser dose not support the video element(당신의 브라우저는 비디오 요소를 지원하지 않습니다)
+    </video>
+    <!-- 
+        소스?파라미터1&파라미터2...
+        autoplay=1       자동재생
+        mute=1           음소거 (autoplay시 함께 사용)
+        loop=1           반복 재생
+        controls=0       컨트롤바 숨김
+        start=30         시작위치를 30초부터 재생으로 
+        modestbranding   유튜브 로고 최소화
+        rel=0            영상 종료시 다른 채널 영상 표시 방지 (같은 채널만 노출)
+        
+        
+        -->
+    <iframe src="https://www.youtube.com/embed/GSWavfzSVnE?autoplay=1&mute=1&controls=0&loop=1" title="강아지 북북 만지는 영상"></iframe>
+
+
+
+
+
+
+
+
+</body>
+</html>

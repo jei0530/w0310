@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* 
+            display 속성 : 화면 표시 방식
+                값:block, inline, lnline-block, none, .... (html요소의 성격을 바꿔준다)
+                   table-cell
+                   flex
+                   grid
+
+            visbilty : 가시성 
+             값: visbilty (기본값)
+                 hidden: none와 다름 none는 흔적도 자리도 차지하지 않지만, hidden은 자리는 차지함 
+
+            opacity: 불투명도 (0~1 사이의 값)
+            값: 1(기본값)
+
+            overflow: 넘침
+                값: hidden, auto, visble, scroll,
+
+            말줄임효과(...)
+            width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        */
+
+        li{
+            list-style: none;
+        }
+
+        .gnb li {display: inline;}
+        .gnb li a{
+            display: inline-block;
+            background: brown;
+            color: #fff;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center; /* 블록레벨요소에 적용 */
+            text-decoration: none;
+        }
+
+        .gnb li a:hover{
+            text-decoration: underline;
+            background: #369;
+        }
+</style>
+</head>
+<body>
+    <ul class="gnb">
+        <li><a href="#">company</a></li>
+        <li><a href="#">prduct</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">community</a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

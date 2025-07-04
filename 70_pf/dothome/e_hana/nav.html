@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        body {
+            font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            border: 1px solid;
+            text-align: center;
+        }
+        
+        /* 네비게이션 */
+        .gnb {
+            margin: 20px;
+        }
+
+        /* 1depth 메인 */
+
+        .main li{
+            position: relative;
+        }
+
+        .main>li>a {
+            display: block;
+            text-align: center;
+            font-size: 18px;  
+            color: #ffffff;   
+            border-bottom: 1px solid #ffffff;
+            background: #0d6827;
+            padding: 8px 0;
+            font-weight: bold;
+        }
+
+        .main>li:hover>a {
+            color: #b1f4be;
+        }
+
+        .main li:hover .sub {
+            z-index: 1;
+            left: 160px;
+            opacity: 1;
+        }
+
+        /* 2depth 서브 */
+        .sub {
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+            left: 100px;
+            width: 120px;
+            background: rgba(187, 244, 161, 0.5);
+            transition:.5s;
+            line-height: 2;
+        }
+
+        .sub li a {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .sub li:hover a {
+            color: #fc5353;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="#"><img src="./esset/logo.jpg" alt="상단로고"></a>
+        </h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">일본</a></li>
+                        <li><a href="#">유럽/아프리카</a></li>
+                        <li><a href="#">동남아/대만</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">제주여행</a></li>
+                        <li><a href="#">내륙여행</a></li>
+                        <li><a href="#">울릉도</a></li>
+                        <li><a href="#">섬여행</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">테마여행</a>
+                    <ul class="sub">
+                        <li><a href="#">해외골프</a></li>
+                        <li><a href="#">허니문</a></li>
+                        <li><a href="#">크루즈</a></li>
+                        <li><a href="#">밍글링투어</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">호텔</a>
+                    <ul class="sub">
+                        <li><a href="#">해외호텔</a></li>
+                        <li><a href="#">국내숙박</a></li>
+                        <li><a href="#">프로모션</a></li>
+                        <li><a href="#">추천숙소</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

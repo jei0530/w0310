@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        p{
+            color: orange;
+            background: beige;
+           /* 
+                border 굵기의 기본값은 medium
+                border: width 1px;
+                border의 기본 색은 글자색과 같다
+           */
+           border-style: solid;
+           border-color: tomato;
+           outline: 5px solid lime;
+           text-shadow: 1px 1px 1px red;
+           box-shadow: 10px 10px 10px 10px #000;
+        }
+
+        /*
+            색 표현 
+            1. 색상명 ->140개 영문 키워드 
+            2. hex값 16진수 
+                -> #333 = #333333
+                   #123 = #112233
+                   #123456 -> 3자로 표현 못함 
+                   #ff0000(red)
+                   #00ff00(lime)
+                   #008000(green)
+                   #0000ff(blue)
+                   #ffff00(yellow)
+                   #ff00ff(magenta)
+                   #00ffff(cyan)
+                   #000000(black) ~ #ffffff(white)
+            3. rgb
+                rgb(r,g,b) 
+                r,g,b는 각각 0~255까지 
+                예, rgb(255,0,0) =red
+            4. rgba
+                rbga(r,g,b,alpha)
+                r,g,b는 각각 0~255까지 
+                a는 0(투명)~1(불투명)
+                예, rgba(255,0,0,0.5);
+            5. hsl
+                (색상, 채도, 명도)
+            6. hsla
+              
+        */
+    </style>
+
+</head>
+<body>
+    <h1>색 지정</h1>
+    <p>글자 색, 배경 색, 테두리 색을 지정한다.</p>
+   
+</body>
+</html>

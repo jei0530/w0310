@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+
+    <style>
+        /*     선택자 {선언부} 
+               선택자 {선언; 선언; 선언; ....}
+               선택자 {속성: 속성값; 속성: 속성값;}
+            
+                h1 {color:red; background: yellow;}
+                
+                속성의 순서는 서로 다른 속성간에는 순서가 없고
+                같은 속성의 경우 아래에 기록된 것이적용된다.   
+        */  
+        body {
+            margin: 0;
+        }
+
+        p {
+            width: 50%;
+            color: rebeccapurple;
+            background: yellow;
+        }
+
+        h1 {color: #123456; background-color: aqua;}
+        
+    </style>
+</head>
+
+<body>
+    <!-- 
+        블록레벨요소의 가로 크기는 100%
+        %는 상대적 크기로 
+        부모가로크기의 100%임    
+        양옆에 조금 남는거 없애려면 body 마진을 0으로
+    -->
+    <h1>css의 기본형식</h1>
+    <p>블록레벨요소의 가로 크기는 부모 크기의 100%이다.</p>
+    <p>%단위는 상대적 단위이다.</p>
+    <p>즉 기준이 필요함</p>
+</body>
+
+</html>

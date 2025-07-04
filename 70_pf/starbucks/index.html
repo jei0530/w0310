@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타벅스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font: 15/1.6 "Noto Sans KR", sans-serif;
+        }
+
+        header {
+            background: lightpink;
+        }
+
+        .sec {
+            height: 800px;
+        }
+
+        .s1 {
+            background: darkcyan;
+        }
+
+        .s2 {
+            background: darkgray;
+        }
+
+        .s4 {
+            background: darkturquoise;
+        }
+
+        footer {
+            background: lightgoldenrodyellow;
+        }
+
+        /* 
+            섹션 3번
+        */
+        .s3 {
+            background: url(./image/bg.png) no-repeat 50% 50%/cover fixed;
+            display: flex;
+            /* 
+                flex-direction: row;
+                주축: justify-content
+                    flex-start
+                    flex-end
+                    center
+                    교차축: align-items
+                    flex-start
+                    flex-end
+                    center
+                    
+                    flex-direction: column;
+                    주축:  align-items
+                    교차축: justify-content
+                    */
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        .s3 .txt {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 90px;
+        }
+
+        .s3 .txt a{
+            display: inline-block;
+            width: 126px;
+            height: 38px;
+            line-height: 2;
+            border-radius: 3px;
+            border: 2px solid #fff;
+            color: #fff;
+            transition: .5s;
+            text-align: center;
+            margin-right: 8px;
+        }
+
+        .s3 .txt p {
+            margin-top: 48px;
+            margin-bottom: 36px;
+        }
+
+        .s3 .txt a:hover{
+            color: #333;
+            text-decoration: underline;
+            background: #fff;
+        }
+
+        </style>
+</head>
+
+<body>
+    <header>헤더</header>
+    <section class="sec s1">
+        <h2>첫 번째 섹션</h2>
+    </section>
+
+    <section class="sec s2">
+        <h2>두 번째 섹션</h2>
+    </section>
+
+    <section class="sec s3">
+        <!-- 제목과 설명 -->
+        <div class="txt">
+            <h2><img src="./image/title.png" alt="제목"></h2>
+            <p><img src="./image/description.png" alt="설명"></p>
+            <!-- 고스트 버튼 -->
+            <a href="#">자세히 보기</a>
+        </div>
+
+        <div class="cont">
+            <img src="./image/contents.png" alt="콘텐츠">
+        </div>
+
+    </section>
+    <section class="sec s4">
+        <h2>네 번째 섹션</h2>
+    </section>
+    <footer>푸터</footer>
+
+</body>
+
+</html>

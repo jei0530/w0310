@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        p{
+            border: 1px solid #000;
+        }
+
+        .valing img{
+            vertical-align: middle;
+        }
+        /* 
+            vertical-align: 수직 맞춤
+                기본값: baseline(기준선)
+                값: top, bottom, middle
+            사용태그: 인라인요소 (img, imput, selet, label), 테이블 셀, flexbox, grid
+        */
+    </style>
+</head>
+<body>
+    <p>
+        나는 자유다
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/00/a8/36/00a83660-a09c-6844-9f28-68b7ae99d417/source/512x512bb.jpg" width="150" alt="자유">
+    </p>
+    <p class="valing">
+        나는 자유다
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/00/a8/36/00a83660-a09c-6844-9f28-68b7ae99d417/source/512x512bb.jpg" width="150" alt="자유">
+    </p>
+</body>
+</html>

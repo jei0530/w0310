@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        /* 
+            width 
+            min-width
+            max-width
+            height
+            min-height
+            max-height
+            margin 
+            padding 
+            border 
+        */
+        body *{
+            outline: 1px solid lime;
+        }
+
+        p{
+            background: rgba(255, 0, 0, 0.5);
+            width: 1000px;
+            border: 20px solid rgba(0, 255, 0, 0.5);
+            min-width: 800px;
+            /* 
+                mh를 쓸거면 일반 높이도 써야 효과가 있음
+                mw는 상관없음 (기본적으로 부모 크기의 100%라서)
+                최소 가로크기가 500px보다 작아지지 않는다 
+            */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- width: auto; (기본값) -> 100% -->
+    <h1>박스모델</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorum velit vero? Neque a quam voluptate error dolor explicabo placeat repellat quidem. Tempore, nisi? Accusamus fuga distinctio cum harum facere?</p>
+</body>
+</html>

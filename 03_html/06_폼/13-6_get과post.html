@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+
+<body>
+    <h1>폼</h1>
+    <h2>get vs post</h2>
+    <h3>get</h3>
+    <!-- 
+        <get 방식>
+        method를 생략하면 get방식
+        전송된 데이터가 주소창에 노출됨 
+        북마크 기능 
+        데이터 길이 제한 있음 
+        보안에 약하므로 회원가입이나 로그인할땐 post방식으로 해야함 
+    -->
+    <form action="method.jsp">
+        <!-- text는 autocomplete가 on인 상태가 기본값 -->
+        아이디<input type="text" name="user_id" id="user_id" autocomplete="off"><br>
+        <!-- password는 autocomplete가 off인 상태가 기본값 -->
+        패스워드<input type="password" name="user_pw" id="user_pw"><br>
+        <input type="submit" value="로그인">
+
+        <!-- 
+            post방식 
+            데이터가 주소창에 노출되지 않음 
+            데이터 길이의 제한이 없음 
+            북마크 불가능 
+            캐싱 안됨
+            보안에 비교적 유리 
+        -->
+
+
+        <h3>post</h3>
+        <form action="method.jsp" method="post">
+            <!-- text는 autocomplete가 on인 상태가 기본값 -->
+            아이디<input type="text" name="user_id" id="user_id" autocomplete="off"><br>
+            <!-- password는 autocomplete가 off인 상태가 기본값 -->
+            패스워드<input type="password" name="user_pw" id="user_pw"><br>
+            <input type="submit" value="로그인">
+
+        </form>
+</body>
+
+</html>

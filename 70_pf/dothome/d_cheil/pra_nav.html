@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오른쪽으로 100% 나타나는 네비게이션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 '굴림';
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .wrap{
+            display: flex;
+        }
+         
+        header{
+            background: darkgray;
+            height: 850px;
+            width: 200px;
+        }
+
+        .gnb{
+            margin: 50px 20px;
+        }
+
+        .main li{
+            display: flex;
+            position: relative;
+        }
+
+        .main>li>a{
+            padding: 8px;
+            width: 160px;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            background: #000;
+            color: #fff;
+        }
+
+        .sub{
+            display: flex;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            left: 160px;
+            top: 0;
+            z-index: 1;
+            width: calc(100vw - 160px);
+            opacity: 0;
+        }
+
+        .sub a{
+            padding: 12px;
+            width: 120px;
+        }
+
+        .main:hover .sub{
+            opacity: 1;
+        }
+
+        .sub a:hover{
+            color: red;
+        }
+
+        .container{
+            width: 100%;
+        }
+
+        .slide{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slide ul{
+            position: relative;
+            height: 400%;
+            width: 100%;
+        }
+
+        .slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide li{
+            height: 25%;
+        }
+        @keyframes slide {
+            0%{top: 0%;}
+            10%{top: -100%;}
+            33%{top: -100%;}
+            43%{top: -200%;}
+            66%{top: -200%;}
+            76%{top: -300%;}
+            99.99%{top: -300%;}
+            0%{top: 0%;}
+        }
+
+        .link{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: lightblue;
+            width: 160px;
+            height: 270px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .link span{
+            display: block;
+        }
+
+        .banner{
+            height: 200px;
+            background: rgb(190, 246, 190);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bw{
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        .bw img{
+            width: 200px;
+            margin-left: 70px;
+        }
+
+        .write{
+            margin-left: 50px;
+        }
+
+        .button{
+            margin-right: 50px;
+        }
+
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="./asset/LOGO.png" alt="상단로고"></a></h1>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">사업소개</a></li>
+                            <li><a href="#">제일제당 소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DELIVERY</a>
+                        <ul class="sub">
+                            <li><a href="#">비비고</a></li>
+                            <li><a href="#">햇반</a></li>
+                            <li><a href="#">백설</a></li>
+                            <li><a href="#">고메</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">우리 이야기</a>
+                        <ul class="sub">
+                            <li><a href="#">기획칼럼</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">언론보도</a></li>
+                            <li><a href="#">소셜미디어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버쉽</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객의소리</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="spotmenu">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> 
+
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="slide">
+                <ul>
+                    <li><a href="#"><img src="./asset/slide1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./asset/slide2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./asset/slide3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./asset/slide1.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="#"><img src="./asset/link1.png" alt=""></a><span>블로그</span></li>
+                    <li><a href="#"><img src="./asset/link1.png" alt=""></a><span>블로그</span></li>
+                    <li><a href="#"><img src="./asset/link1.png" alt=""></a><span>블로그</span></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <div class="bw">
+                    <a href="#"><img src="./asset/banner.png" alt=""></a>
+                    <div class="write">
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime tempora dolores laborum ex, iure ut!
+                        </p>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="#"><img src="./asset/right.png" alt=""></a>
+                </div>
+            </div>
+            <div class="tabs">
+                <input type="radio" name="tab" id="tab1">
+                <label for="tab1">공지사항</label>
+                <div class="tab1 tab-con">
+                    <ul>
+                        <li><a href="#">공지사항입니다 <span>2025-06-07</span></a></li>
+                        <li><a href="#">공지사항입니다 <span>2025-06-07</span></a></li>
+                        <li><a href="#">공지사항입니다 <span>2025-06-07</span></a></li>
+                        <li><a href="#">공지사항입니다 <span>2025-06-07</span></a></li>
+                    </ul>
+                </div>
+                <input type="radio" name="tab" id="tab2">
+                <label for="tab2">갤러리</label>
+                <a href="#"><img src="./asset/gal1.png" alt=""></a>
+                <a href="#"><img src="./asset/gal1.png" alt=""></a>
+                <a href="#"><img src="./asset/gal1.png" alt=""></a>
+            </div>
+                </div>
+        </div>
+
+    <footer>
+        <h1 class="blogo"><a href="#"><img src="./asset/BLOGO.png" alt=""></a></h1>
+        <div class="fmenu">
+            <div class="fi">
+                <a href="#">하단메뉴</a> |
+                <a href="#">하단메뉴</a> |
+                <a href="#">하단메뉴</a> |
+                <a href="#">하단메뉴</a> |
+                <a href="#">하단메뉴</a> |
+            </div>
+            <div class="copy">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, id.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

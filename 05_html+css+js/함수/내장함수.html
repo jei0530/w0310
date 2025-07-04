@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+</head>
+<body>
+    <script>
+        /* 
+            내장함수 -> 전역함수
+                자바스크립트에서 기본적으로 내장되어 있는 함수 
+
+            //인코딩, 디코딩 함수
+            -> URL에 한글과 같은 유니코드가 있으면 
+                오류가 나기 때문에 인코딩 디코딩 필요
+            encodeURIComponent()
+                URI() 인코딩
+                : 문자 부호화로 오류 안나게
+
+            decodeURIComponent()
+                URI 디코딩
+                : 인코딩한걸 다시 되돌리게
+
+            //숫자, 유/무한 값 판별 함수
+            isNaN()
+                Not a Number
+                숫자인지 아닌지 판별
+                숫자면 false 숫자가 아니면 true
+
+            isFinite()
+                유한한지 아닌지 판별 
+                유한하면 true 무한하면 false
+
+            //숫자, 문자 변환 함수
+            Number()
+                숫자로 변환 
+
+            parseInt()
+                숫자와 문자가 포함되어 있을 경우 
+                정수 부분만 숫자로 변환
+
+            parseFolat()
+                숫자와 문자가 포함되어 있을 경우
+                소수 부분까지 숫자로 변환
+
+            String()
+                문자열로 변환
+
+            //자바스크립트 코드 변경 함수
+            eval()
+                문자열를 자바스크립트 코드로 변경
+        */
+
+        //인코딩, 디코딩 함수
+        const encode = '자바스크립트';
+        console.log(encodeURIComponent(encode));
+        // %EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+
+        const decode = encodeURIComponent(encode);
+
+        console.log(decodeURIComponent(decode));
+
+        //숫자, 유한무한 값 판별 함수
+        const num1 = '8';
+        if(!isNaN(num1)){
+            console.log(`숫자${num1}입니다`);
+        }else{
+            console.log('숫자아님');
+        }
+
+        const num2 = 1/0; //값이 무한임
+        if(isFinite (num2)){
+            console.log('유한값');
+        }else{
+            console.log('무한값');
+        }
+
+        //숫자, 문자 변환 함수
+        const num3 = '10';
+        console.log(Number(num3)); //10
+
+        const num4 = '100px';
+        console.log(parseInt(num4)); //100
+
+        const num5 = '33.3%'
+        console.log(parseFloat(num5)); //33.3
+
+        const num6 = 10;
+        console.log(typeof num6); //number
+        console.log(typeof String(num6)); //string
+        //parseInt가 활용성이 높음
+
+        //자바스크립트의 코드 변경 함수
+        const str1 ='var num7 = 10';
+        const str2 ='var num8 = 20';
+
+        eval(str1);
+        eval(str2);
+        console.log(num7 + num8);
+
+
+
+    </script>
+</body>
+</html>

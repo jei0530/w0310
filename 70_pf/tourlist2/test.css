@@ -1,0 +1,384 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+:root {
+    --color-gray111: #111;
+    --color-gray333: #333;
+    --color-gray555: #555;
+}
+
+body {
+    margin: 0;
+    font: 16px/1.6 'Roboto';
+    color: var(--color-gray555);
+}
+
+header {
+    height: 100px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 8px;
+}
+
+header a {
+    color: #fff;
+    display: block;
+    margin-bottom: -50px;
+}
+
+/* Util Nav */
+.util {
+    text-align: right;
+    margin-top: -20px;
+}
+
+.util a {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.util a:first-of-type::after {
+    content: '|';
+    padding: 0 30px;
+}
+
+
+/* logo+GNB common */
+.nav_outer_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo */
+.logo {
+    text-align: center;
+    align-items: center;
+}
+
+/* GNB */
+.gnb {
+    position: relative;
+}
+
+.nav_bg {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 60px;
+    opacity: 0;
+    background: rgba(250, 100, 0, 0.85);
+    transition: .5s;
+}
+
+.nav_bg.active {
+    opacity: 1;
+}
+
+/* 1depth */
+.main>li {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.main>li>a {
+    display: block;
+    padding-left: 100px;
+    text-align: right;
+    font-size: 18px;
+}
+
+/* 2depth */
+.sub {
+    position: absolute;
+    width: 40%;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    text-align: center;
+}
+
+.sub.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li {
+    display: inline-block;
+}
+
+.sub a {
+    display: block;
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    padding: 48px;
+}
+
+.bx-wrapper {
+    border: none;
+}
+
+.bxSlider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    /* pager위치는 포지션 바텀으로 바꿈 */
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    padding-top: 0px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #ffffff;
+    width: 14px;
+    height: 14px;
+    margin: 0px 8px;
+    outline: 0;
+    border-radius: 15px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #ffffff;
+    width: 34px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #ffffff;
+}
+
+#slider_wrap {
+    position: relative;
+}
+
+#slider_wrap .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    /* 문구가 가운데로 가게 하는 신형방법 */
+    transform: translate(-50%, -50%);
+
+    /* 
+                문구가 가운데로 가게 하는 올드 방법 
+                각 w,h 절반의 음수값 줌
+                width: 300px;
+                height: 150px;
+                margin-top: -75px;
+                margin-left: -150px; 
+            */
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 16px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-gray333);
+    font-size: 18px;
+}
+
+/* 헤더 */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    padding: 30px;
+}
+
+/* 공통 */
+.box_inner {
+    width: 1050px;
+    margin: 0 auto;
+
+}
+
+/* 섹션1 pc 메인 롤링*/
+.main_rolling_pc {
+    height: 530px;
+}
+
+/* 섹션2 인기 여행지*/
+.about_area {
+    background: linear-gradient(#fff 30%, #f4f0e9 30%);
+    height: 678px;
+    text-align: center;
+}
+
+.about_area ul {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.about_area li {
+    width: 340px;
+    height: 500px;
+}
+
+.about_area h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 16px;
+}
+
+.about_area p {
+    padding: 10px 0 24px 0;
+    margin: 0;
+}
+
+.about_area a {
+    border-top: 2px solid var(--color-gray333);
+    padding-top: 4px;
+}
+
+/* 섹션3 */
+.appbbs_area {
+    padding: 56px 0 136px;
+    height: 400px;
+}
+
+.notice h3 {
+    font-size: 26px;
+    font-family: 'GothicA1-Light';
+    margin-bottom: 8px;
+}
+
+.appbbs_area .box_inner {
+    display: flex;
+}
+
+.notice {
+    margin-left: 60px;
+    line-height: 2;
+}
+
+.notice ul {
+    list-style: disc;
+}
+
+.link {
+    background: url(https://picsum.photos/id/108/100) no-repeat 0 0/cover;
+    padding-top: 80px;
+}
+
+.link a {
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.link a:first-of-type {
+    margin-right: 7px;
+}
+
+/* 푸터 */
+footer {
+    border-top: 1px solid #ddd;
+    height: 170px;
+    font-size: 13px;
+}
+
+footer h3 {
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.space0 a {
+    font-size: 13px;
+    color: var(--color-gray555);
+}
+
+footer .box_inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 36px;
+}
+
+.foot_list {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.foot_list li:first-of-type::after {
+    content: "|";
+    padding: 0 10px;
+}
+
+.snslink {
+    display: flex;
+    gap: 24px;
+}
+
+.snslink a {
+    display: block;
+    height: 50px;
+    width: 50px;
+
+    background: no-repeat 0 0/ 100px cover;
+}
+
+.snslink li:nth-of-type(1) a {
+    background-image: url(https://picsum.photos/id/401/50/50);
+}
+
+.snslink li:nth-of-type(2) a {
+    background-image: url(https://picsum.photos/id/402/50/50);
+}
+
+.snslink li:nth-of-type(3) a {
+    background-image: url(https://picsum.photos/id/403/50/50);
+}

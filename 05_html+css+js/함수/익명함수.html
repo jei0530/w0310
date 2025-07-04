@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            익명(이름없는) 함수 생성 
+                const 변수 = fuction (){
+                    코드;
+                }
+
+            함수호출
+                변수();
+        */
+
+        /*      //클릭 메서드
+             객체.click(function(){});
+     
+             //on클릭 속성
+             객체.onclick=function(){};
+      */
+
+        const compute = function () {
+            console.log('익명함수');
+        };
+        compute(); //익명함수는 반드시 함수를 만든 후 호출해야한다!!
+
+        /* 
+            즉시 실행 함수 
+               ( fuction(){})();
+               호출문 x
+        */
+
+        (function(){
+            iife();
+        })();
+
+        function iife(){
+            console.log("즉시 실행 함수1");
+        }
+
+        const instant = (function(){
+            console.log('즉시 실행 함수2');
+        })();
+
+        console.log(instant);
+    </script>
+</body>
+
+</html>

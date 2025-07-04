@@ -1,0 +1,45 @@
+<html lang="ko">
+    <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자</title>
+
+    <style>
+        p{
+            background: lightgray;
+        }
+        p:first-child{
+            color: blue;
+        }
+        
+        p:last-child{
+            background: palegoldenrod;
+        }
+
+        p:nth-child(3){
+            color: red;
+        }
+
+
+    </style>
+    <!-- 
+            가상 요소 선택자 (::)
+            ::first-letter -> 요소의 첫 글자
+            ::first-line   -> 요소의 첫 줄
+            ::before       -> 요소 안 맨 앞에 배치될 요소 
+            ::after        -> 요소 안 맨 뒤에 배치될 요소 
+            원칙상으로는 콜론이 2개 붙지만, 1개로도 쓸 수 있음 
+        -->
+</head>
+
+<body>
+        <div class="box">
+            <p>company</p>
+            <p>product</p>
+            <p>service</p>
+            <p>community</p>
+        </div>
+</body>
+</html>

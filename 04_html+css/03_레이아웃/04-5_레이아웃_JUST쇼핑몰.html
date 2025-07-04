@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    
+    <style>
+        *{
+            margin: 0;
+        }
+        
+        body {
+            background-color: fff;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* auto가 가로중앙배치임 */
+        header {
+            height: 100px; 
+            display: flex;
+            /* 부모요소에 display flex 하면 자식요소 가로배치 */
+        }
+
+        .logo {
+            background: #eee; 
+            width: 200px;
+        }
+
+        .nav {
+            background: #ddd;
+            width: 1000px;
+        }
+
+        .slide {
+            height: 300px; background: #ccc;
+        }
+
+        .contents {
+            height: 200px; display: flex;
+           
+        }
+
+        .notice{
+            background: #bbb;
+            width: 400px;
+        }
+
+        .banner {
+            background: #aaa;
+            width: 400px;
+        }
+
+        .shortcut {
+            background: #999;
+            width: 400px;
+        }
+
+        footer {
+            height: 100px; display: flex;
+        }
+
+        .blogo {
+            background: #888;
+            width: 200px;
+        }
+
+        .copy {
+            background: #777;
+            width: 800px;
+        }
+
+        .sns{
+            background: #555;
+            width: 200px;
+    
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header>
+            <!-- 로고 -->
+            <h1 class="logo">로고</h1>
+            <!-- 내비게이션 -->
+            <nav class="nav">네비게이션</nav>
+        </header>
+
+        <div class="slide">슬라이드</div>
+
+        <div class="contents">
+            <!-- 공지사항 -->
+            <div class="notice">공지사항</div>
+            <!-- 배너 -->
+            <div class="banner">배너</div>
+            <!-- 바로가기 -->
+            <div class="shortcut">바로가기</div>
+        </div>
+
+        <footer>
+            <!-- 하단로고 -->
+            <div class="blogo">하단로고</div>
+            <!-- 주소 및 저작권  -->
+            <div class="copy">주소 및 저작권</div>
+            <!-- sns -->
+            <div class="sns">sns</div>
+        </footer>
+    </div>
+</body>
+
+</html>

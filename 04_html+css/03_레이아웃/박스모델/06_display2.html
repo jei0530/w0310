@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        div, span {
+            border: 1px solid #000;
+        }
+
+        .div1 {
+            display: block;
+            width: 200px;
+        }
+
+        .div2 {
+            display: inline;
+            width: 500px; /* width를 적용시켜봤자 적용이 안됨 인라인은 width 적용 x */
+        }
+
+        .div3 {
+            display: inline-block;
+            width: 200px;
+            /* 줄바꿈 안되는 상태로 width height 모두 적용됨 */
+        }
+
+        .div4 {
+            display: none;
+        }
+
+        .span1 {display: block;}
+        .span2 {display: inline;}
+        .span3 {display: inline-block;}
+        .span4 {display: none;}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="div1">div1박스</div>
+    <div class="div2">div2박스</div>
+    <div class="div3">div3박스</div>
+    <div class="div4">div4박스</div>
+    
+    <span class="span1">span1박스</span>
+    <span class="span2">span2박스</span>
+    <span class="span3">span3박스</span>
+    <span class="span4">span4박스</span>
+</body>
+
+</html>

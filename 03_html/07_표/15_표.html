@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+    <!-- style 태그는 head 사이에 기록한다. -->
+     <style>td {border:1px solid black;} td
+
+     /*css 주석
+     내부스타일: <style>태그 안에 기록하는 방식
+     선택자 {속성;값,값,값;}
+     본문(body)에 있는 td 태그에 테두리를 선 두께 1px, 선종류 실선
+     선 색은 검정으로 지정한다는 뜻 */
+     </style>
+</head>
+
+<body>
+    <h1>표(table, 테이블)</h1>
+    <h2>1행1열</h2>
+    <!-- 주로 공지사항 페이지 등 만들때 사용 -->
+     <table>
+        <tr><td>1행 1열의 표</td></tr>
+     </table>
+
+     <h2>1행 2열</h2>
+     <table>
+        <tr>
+            <!-- tr(row)은 행, td는 열 -->
+            <td>1행1열</td>
+            <td>1행2열</td>
+        </tr>
+
+    </table>
+     <h2>1행 2열</h2>
+     <table  border-collapse: collapse;">
+        <tr>
+            <!-- tr(row)은 행, td는 열 -->
+            <td>1행1열</td>
+            <td>1행2열</td>
+        
+        </tr>
+    </table>
+
+
+    <h2>2행1열</h2>
+    <!-- table 안에는 자식으로 반드시 하나 이상의 tr이 있어야 한다.
+         tr은 자식으로 하나 이상의 td가 있어야한다. -->
+    <!-- 인라인스타일: html의 style 속성으로 기록하는 방식 -->
+    <table  border-collapse: collapse;">
+        <tr><td>1행1열</td></tr>
+        <tr><td>2행1열</td></tr>
+
+
+    </table>
+
+    <h2>2행 2열</h2>
+    <table>
+        <tr><td>1행1열</td></tr> <tr><td>1행2열</td></tr>
+        <tr><td>2행1열</td></tr> <tr><td>2행2열</td></tr>
+
+    </table>
+ <h1>표</h1>              
+    <!-- 하나의 표에서는 table 태그는 하나
+         tr과 td는 여러 개 사용할 수 있다 -->
+
+    <table>
+        <tr>
+            <td> 기본 표 </td>
+        </tr>
+    </table>
+
+    <h2>확장 표</h2>
+        <colgroup>
+            <col class="cl">
+            <col class="c2">
+        </colgroup>
+
+        <!--th의 부모인 tr을 그룹핑-->
+        <thead>
+            <tr>
+                <td>교과목</td> <!-- 1행 1열 -->
+                <td>점수</td> <!-- 1행 2열 -->
+            </tr> <!-- 1행 끝 -->
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>html</td> <!-- 2행 1열 -->
+                <td>93</td> <!-- 2행 2열 -->
+            </tr><!-- 2행 끝 -->
+            <tr>
+                <td>css</td> <!-- 3행 1열 -->
+                <td>92</td> <!-- 3행 2열 -->
+            </tr><!-- 3행 끝 -->
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>평균</td> <!-- 4행 1열 -->
+                <td>92.5</td> <!-- 4행 2열 -->
+            </tr><!-- 4행 끝 -->
+        </tfoot>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
