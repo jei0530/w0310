@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본이벤트모델</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <button onclick="sum(10);" , id="bt">클릭</button>
+    <!-- 마우스를 올릴때 동작 -->
+    <button onmouseover="console.log('over ok');">mouseover</button>
+    <!-- 마우스가 내려갈때 동작 -->
+    <button onmouseout="console.log('out ok');">mouseout</button>
+
+    <script>
+        /*
+            기본 이벤트 모델 
+                html 요소를 취득한 후 
+                    document.getElementById('아이디')
+                    document.getElementsByClassName('클래스')
+                    document.getElementsByTagName('태그명')
+                    document.querySelector('선택자')
+                    document.querySelectorAll('선택자')
+                이벤트를 '객체의 메서드' 형식으로 연결
+                    객체.메서드() = fuction(){};
+
+                    //익명함수이므로 화살표 함수로도 가능
+                    객체.메서드() = ()=>{};
+
+                제이쿼리
+                    html 요소를 취득한 후 
+                        $('선택자')
+                    이벤트를 '객체의 메서드' 형식으로 연결
+                    객체.메서드(fuction(){});
+                    객체.메서드(()=>{});
+
+            //바닐라 스크립트
+            window.onload = fuction(){};
+            //제이쿼리
+            $(fuction(){});
+        */
+        function sum(n) {
+            alert(n);
+        };
+
+        document.getElementById('bt').onclick = function () {
+            sum(10);
+        };
+
+    </script>
+</body>
+
+</html>

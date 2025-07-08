@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준이벤트모델</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 표준이벤트모델 -->
+    <button id="bt">버튼</button>
+    <button id="bt2">버튼2</button>
+    <button id="bt3">제이쿼리 버튼3</button>
+    <script>
+        /* 
+            표준 이벤트 모델 
+                객체.addEventListener('이벤트', 함수);
+        */
+
+        //표준이벤트
+        const bt = document.getElementById('bt');
+        const bt2 = document.getElementById('bt2');
+
+        bt.addEventListener('click', function () {
+            console.log('ok');
+        });
+
+        function view() {
+            console.log('view');
+        };
+
+        bt2.addEventListener('click', view);
+
+
+        // /기본이벤트
+        // -> 객체에 동일한 이벤트가 한 번 적용되는 반면
+        window.onload = function () {
+            console.log('ok1');
+        };
+        window.onload = function () {
+            console.log('ok2');
+        };
+        // 맨 마지막인 ok2만 찍힘
+
+        //표준이벤트
+        function win1(){
+            console.log('ok3');
+        };
+        function win2(){
+            console.log('ok4');
+        };
+
+        //window는 생략가능
+        addEventListener('load', win1); //ok3
+        window.addEventListener('load', win2); //ok4
+    </script>
+</body>
+
+</html>
