@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인이벤트모델</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- 인라인 이벤트 모델 -->
+
+    <!-- onclick은 html의 이벤트 속성 -->
+    <button onclick="console.log('click ok');">onclick</button>
+    <!-- 마우스를 올릴때 동작 -->
+    <button onmouseover="console.log('over ok');">mouseover</button>
+    <!-- 마우스가 내려갈때 동작 -->
+    <button onmouseout="console.log('out ok');">mouseout</button>
+
+    <!-- 내부스크립트 -->
+    <button onclick="sum(10);">클릭</button>
+    <!-- 클릭 버튼을 누르면 경고창이 뜸 -->
+
+    <script>
+        function sum(n){
+            alert(n);
+        }
+    </script>
+</body>
+</html>

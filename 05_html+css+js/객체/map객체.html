@@ -22,17 +22,34 @@
             }
         */
 
+        /* 
+            Map 객체의 속성 
+                size : 객체의 속성 수
+            
+            Map 객체의 메서드 
+                set(키, 값) : 객체에 값을 추가
+                get(키) : 객체의 키에 해당하는 값을 가져옴
+                has(키) : 키 값의 존재 여부를 확인 (있으면 true, 없으면 false)
+                keys() : 객체의 모든 키를 가져옴
+                values() : 객체의 모든 값을 가져옴
+                entries() : 객체의 모든 키와 값을 가져오기
+                delete() : 객체의 키를 삭제
+                clear() : 모든 요소 삭제
+        */
+
         //객체.set(키, 값); -> myMap 객체에 값 추가
         myMap.set('name', 'alice');
         myMap.set(1, 'one');
         myMap.set(true, 'yes');
         console.log(myMap);
 
-        //객체.get(key); -> 값 가져오기
-        console.log(myMap.get('name')); //alice
+        console.log(myMap);//Map(3) {'name' => 'alice', 1 => 'one', true => 'yes'}
 
         //size:요소 개수 확인
-        console.log(myMap);//Map(3) {'name' => 'alice', 1 => 'one', true => 'yes'}
+        console.log(myMap.size); //3
+
+        //객체.get(key); -> 값 가져오기
+        console.log(myMap.get('name')); //alice
 
         //객체.has(값) -> 존재 유무 확인
         //값을 갖고 있으면 true, 없으면 false
@@ -42,10 +59,21 @@
             console.log(`없습니다`);
         }
 
+        //key()
+        console.log('=======keys()=======');
+        for (const key of myMap.keys()) {
+            console.log(key); //name, 1, true
+        };
+
+        //values
+        console.log('=======values()=======');
+        for (const key of myMap.values()) {
+            console.log(key);//alice, one, yes
+        };
+
         //특정 값 삭제 : 객체.delete(값)
         myMap.delete(1);
         console.log(myMap);//1삭제로 Map(2) {'name' => 'alice', true => 'yes'}
-
 
         //모든 값 제거 : 객체.clear() 
         myMap.clear();

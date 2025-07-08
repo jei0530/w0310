@@ -17,6 +17,11 @@
         mySet.add(3); 
         console.log(mySet); //Set(3)-> 개수가 나옴
 
+        //Set객체 생성 및 할당
+        const mySet2 = new Set (['a', 'b', 'c']);
+        console.log('mySet='+mySet);
+        //mySet=[object Set]
+
         //size:요소 개수 확인
         console.log(mySet.size);
 
@@ -28,10 +33,15 @@
             console.log(`없습니다`);
         }
 
+        //values()
+        console.log('=====values()=======')
+        for (let val of mySet.values()){
+            console.log(val); //1,2,3
+        };
+
         //특정 값 삭제 : 객체.delete(값)
         mySet.delete(1);
         console.log(mySet);//1이 빠지고 Set(2) {2, 3}
-
 
         //모든 값 제거 : 객체.clear() 
          mySet.clear();
