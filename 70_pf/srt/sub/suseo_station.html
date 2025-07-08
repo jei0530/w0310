@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수서역안내</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/ticket-1.css" />
+    <link rel="stylesheet" href="../css/stationstyle.css" />
+    <link rel="stylesheet" href="../css/footerstyle.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script/sub.js"></script>
+    <script src="../script/station.js"></script>
+  </head>
+
+  <body>
+<!--    헤더  -->
+    <header id="header">
+      <div class="header_inner">
+        <div class="first">
+          <div class="language">
+            <div class="lbtn" id="lbtn">
+              <img src="../images/nav/language.png" alt="언어설정 아이콘" />
+              <p>Language</p>
+              <img
+                class="language_btn"
+                src="../images/nav/language_btn.png"
+                alt="아래화살표"
+              />
+            </div>
+            <ul class="language_list" id="language_list">
+              <li>
+                <a href="#"> <span>KR</span> 한국어 </a>
+              </li>
+              <li>
+                <a href="#"><span>EN</span> English</a>
+              </li>
+              <li>
+                <a href="#"><span>JP</span> 日本語 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="logo">
+            <a href="../index.html"
+              ><img src="../images/nav/logo.png" alt="상단로고"
+            /></a>
+          </div>
+          <div class="icons">
+            <a href="#"
+              ><img
+                src="../images/nav/login.png"
+                alt="로그인 페이지 이동 아이콘"
+            /></a>
+            <a href="#"
+              ><img
+                src="../images/nav/guest.png"
+                alt="회원가입 페이지 이동 아이콘"
+            /></a>
+            <a href="#"
+              ><img
+                src="../images/nav/Search.png"
+                alt="검색 페이지 이동 아이콘"
+            /></a>
+            <a href="#"
+              ><img src="../images/nav/hamburger_btn.png" alt="사이트맵 아이콘"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav_out">
+        <div class="nav">
+          <div class="nav_bg"></div>
+          <nav class="gnb">
+            <ul class="main">
+              <li>
+                <a href="#">승차권</a>
+                <ul class="sub">
+                  <li><a href="#">승차권예약</a></li>
+                  <li><a href="#">승차권확인</a></li>
+                  <li><a href="#">비회원승차권</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">이용안내</a>
+                <ul class="sub">
+                  <li><a href="#">역안내</a></li>
+                  <li><a href="#">노선안내</a></li>
+                  <li><a href="#">운임안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">고객서비스</a>
+                <ul class="sub">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#">자주찾는질문</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">여행상품</a>
+                <ul class="sub">
+                  <li><a href="#">SRT베스트 여행상품</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div> 
+    </header>
+
+    <!-- 정차역 안내 서브 페이지 -->
+    <div class="station_container">
+      <div class="bar_title">역 안 내</div>
+      <h1>수서역</h1>
+      <div class="station_tab">
+        <ul>
+          <li class="on"><a href="suseo_station.html">수서역</a></li>
+          <li><a href="dongtan_station.html">동탄역</a></li>
+          <li><a href="jije_station.html">평택지제역</a></li>
+          <li><a href="https://www.korail.com/ticket/train/stationGuide/station?pageId=TK0403010400">공용역</a>(KTX바로가기)</li>
+        </ul>
+      </div>
+      <!-- end of station_tab -->
+
+      <!-- slide division -->
+      <div class="slide-container">
+        <div class="nav-btn prev">
+          <img src="../images/station/arrow2left.png" />
+        </div>
+        <!-- end of prev nav-btn -->
+        <div class="slide_inner">
+          <div class="slider-track" id="sliderTrack">
+            <div class="slide">
+              <img
+                src="../images/station/suseo_stn/suseostn_slide1.png"
+                alt="slide1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="../images/station/suseo_stn/suseostn_slide2.png"
+                alt="slide2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="../images/station/suseo_stn/suseostn_slide3.png"
+                alt="slide3"
+              />
+            </div>
+          </div>
+          <!-- end of .slider-track -->
+        </div>
+        <!-- end of .slide_inner -->
+        <div class="nav-btn next">
+          <img src="../images/station/arrow2right.png" />
+        </div>
+        <!-- end of next nav-btn -->
+      </div>
+      <!-- end of .slide-container -->
+
+      <div class="come2us">
+        <h2>오시는 길</h2>
+        <ul>
+          <li>
+            <div class="tbox box1">
+              <p>버스이용시</p>
+              <img src="../images/station/vaadin_buss.png" alt="bus" />
+            </div>
+            <div class="tcontext">
+              [일반] 101 , [간선] 402 , [지선] 2412, 3416, 3425, 3426, 4419 ,
+              [마을] 강남03, 강남06, 강남06-1
+              <p>※탑승 후 ‘쟁골마을’ 정류장 하차</p>
+              [일반] 101 , [지선] 2412, 3416 , [직행] 1007, 1007-1, 5600, 5700,
+              6900,
+            </div>
+          </li>
+          <li>
+            <div class="tbox box2">
+              <p>지하철이용시</p>
+              <img src="../images/station/tram.png" alt="train" />
+            </div>
+            <div class="tcontext">
+              수인분당선-3호선 수서역에서 하차 후 환승통로 이용
+            </div>
+          </li>
+          <li>
+            <div class="tbox box3">
+              <p>자가용이용시</p>
+              <img src="../images/station/car.png" alt="car" />
+            </div>
+            <div class="tcontext">
+              수서IC에서 밤고개로(0.6km)→광평로(0.2km)→광평로56길(0.2km) &lt;약
+              4분 소요&gt;
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- end of .come2us -->
+
+      <div class="park_info">
+        <h2 class="parkn">주차장 이용안내</h2>
+        <div class="parkingFEE">
+          <table>
+            <thead>
+              <tr>
+                <th>주차공간</th>
+                <th>주소</th>
+                <th colspan="3">주차요금</th>
+                <th>공공할인(50% 할인)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="4">595면</td>
+                <td rowspan="4">서울 강남구 수서동 199-3</td>
+                <th>구분</th>
+                <th>원 요금</th>
+                <th>SRT 이용고객 할인요금</th>
+                <td rowspan="4">
+                  경차, 장애인, 국가유공자, 다둥이 2자녀 이상, 저공해 차량
+                </td>
+              </tr>
+
+              <tr>
+                <th>일 주차 요금</th>
+                <td>40,000원</td>
+                <td>36,000원</td>
+              </tr>
+              <tr>
+                <th>기본 30분</th>
+                <td>3,000원</td>
+                <td>2,100원</td>
+              </tr>
+              <tr>
+                <th>추가 10분당</th>
+                <td>1,000원</td>
+                <td>700원</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            * 요금 결제 : 신용카드, 모바일 페이, 주차요금 모바일 자동
+            결제(카카오 T, 티맵 시스템 연동)<br />
+            * 공공할인 : 행정안전부 시스템 연계를 통해 출차 정산 시 자동 할인
+            적용 가능(2024. 12. 20.(금)부터 정식 도입 전까지 출차 정산 시 대상
+            여부 확인 후 할인 적용)
+          </p>
+        </div>
+
+        <div class="park_heavy">
+          <h2>주차장 혼잡시간안내</h2>
+          <img
+            src="../images/station/suseo_stn/Suseo_parking1.png"
+            alt="suseo_P"
+          />
+          <p>
+            * 주차장 혼잡시간에는 가급적 대중교통 이용을 권해드립니다.(공휴일,
+            명절, 휴가철은 상시 혼잡)<br />
+            * 인근 주차장 안내 : 지하철 수서역 1번 출구 앞 공영주차장
+          </p>
+        </div>
+      </div>
+      <!-- end of .park_info -->
+    </div>
+    <!-- end of .station_container -->
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="fupper">
+        <!-- footer 윗부분 -->
+        <div class="inner">
+          <div class="rule">
+            <ul>
+              <li>
+                <a
+                  href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000"
+                  >개인정보처리방침</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000"
+                  >고객서비스헌장</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000"
+                  >여객운송약관/부속약관</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="sns">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="../images/footer/facebook.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="../images/footer/instagram.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../images/footer/line.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="../images/footer/kakao_channel.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../images/footer/band.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+          <!-- end of .sns -->
+        </div>
+        <!-- end of .fupper .inner -->
+      </div>
+      <!-- end of .fupper -->
+
+      <div class="flower">
+        <div class="inner">
+          <div class="left">
+            <div class="blogo">
+              <img src="../images/footer/blogo.png" alt="blogo" />
+            </div>
+            <!-- end of .blogo -->
+            <p>
+              대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ 사업자등록:
+              305-86-31590 ㅣ 통신판매업신고: 2016-서울강남-03705호<br />
+              (우: 06367) 서울특별시 강남구 광평로 56길 12 희림빌딩 | TEL.
+              1800-1472 l FAX. 6484-4093<br />
+              Copyright 2018. SR Inc. All rights reserved.
+            </p>
+          </div>
+          <!-- end of left -->
+
+          <div class="right">
+            <div class="fs">
+              <form action="#">
+                <select name="fs" id="fs">
+                  <option value="">유관기관 바로가기</option>
+                  <option value="">코레일</option>
+                  <option value="">국토교통부</option>
+                </select>
+              </form>
+            </div>
+            <!-- end of .fs -->
+
+            <div class="ads">
+              <ul>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"
+                    ><img src="../images/footer/ad1.png" alt="ad1"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"
+                    ><img src="../images/footer/ad2.png" alt="ad2"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../images/footer/ad3.png" alt="ad3"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://partners.srail.or.kr/login.do"
+                    ><img src="../images/footer/ad4.png" alt="ad4"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"
+                    ><img src="../images/footer/ad5.png" alt="ad5"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"
+                    ><img src="../images/footer/ad6.png" alt="ad6"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"
+                    ><img src="../images/footer/ad7.png" alt="ad7"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"
+                    ><img src="../images/footer/ad8.png" alt="ad8"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"
+                    ><img src="../images/footer/ad9.png" alt="ad9"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- end .ads -->
+          </div>
+          <!-- end of right -->
+        </div>
+        <!-- end of .flower .inner -->
+      </div>
+      <!-- end of .flower -->
+    </footer>
+  </body>
+</html>
