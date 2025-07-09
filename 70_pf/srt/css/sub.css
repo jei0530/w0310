@@ -1,6 +1,4 @@
 @charset "utf-8";
-@import url("header.css");
-@import url("footer.css");
 
 /* 서브페이지 타이틀 */
 #title {
@@ -22,7 +20,7 @@
     border-bottom: 1px solid #ddd;
 }
 
-.sub_inner {
+.submenu_bar .sub_inner {
     position: relative;
     width: 1200px;
     height: 50px;
@@ -32,21 +30,21 @@
     font-size: 16px;
 }
 
-.sub_inner img {
+.submenu_bar .sub_inner img {
     width: 20px;
     padding-top: 2px;
 }
 
-.sub_inner .home img {
+.submenu_bar .sub_inner .home img {
     margin-right: 10px;
 }
 
-.sub_inner .home {
+.submenu_bar .sub_inner .home {
     position: relative;
     padding-right: 15px;
 }
 
-.sub_inner .home::after {
+.submenu_bar .sub_inner .home::after {
     content: "";
     position: absolute;
     right: 0;
@@ -57,18 +55,18 @@
     background-color: #333;
 }
 
-.sub_inner div a {
+.submenu_bar .sub_inner div a {
     display: flex;
     justify-content: space-between;
     width: 130px;
 }
 
-.sub_inner .menu {
+.submenu_bar .sub_inner .menu {
     position: relative;
     padding: 0 15px;
 }
 
-.sub_inner .menu::after {
+.submenu_bar .sub_inner .menu::after {
     content: "";
     position: absolute;
     right: 0;
@@ -77,10 +75,4 @@
     width: 1px;
     height: 16px;
     background-color: #333;
-}
-
-/* 서브페이지 내용 */
-#contents {
-    width: 1200px;
-    margin: 0 auto;
 }

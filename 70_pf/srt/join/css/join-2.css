@@ -2,7 +2,7 @@
 .step {
   display: flex;
   width: 830px;
-  margin: 330px auto 0;
+  margin: 50px auto;
   text-align: center;
   height: 50px;
 }
@@ -62,7 +62,7 @@
 
 .information {
   width: 600px;
-  height: 1200px;
+  height: 850px;
   margin: 0 auto;
 }
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window객체</title>
+    <style>
+    
+        #popup{
+            position: fixed;
+            top: 95px;
+            left: 520px;
+            width: 400px;
+            height: 500px;
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #popup iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #popup button{
+            position: absolute;
+            right: 30px;
+            bottom: 40px;
+            padding: 4px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popup">
+        <iframe src="https://jei0530.github.io/w0310/" frameborder="0"></iframe>
+        <button type="button" id="popup_btn">닫기</button>
+    </div>
+    <script>
+        /* 
+            BOM(browser objcet model)
+                window 객체 
+                    location
+                    screen
+                    history
+                    navigation
+                    document
+
+                window 객체 메서드
+                    alert()
+                        경고창
+                    prompt()
+                        입력창
+                    confirm()
+                        확인창
+                    open()
+                        새로운 창을 만든다
+                        팝업창
+                    setInterval(함수,시간)
+                        시간 간격으로 함수를 반복
+        */
+
+        //window.open('url', '창이름', 옵션=숫자);
+        /* 
+            옵션
+            width=숫자
+            height=숫자
+            left=숫자
+            top=숫자
+            
+            아래옵션은 모던 브라우저에서는 무시됨
+            location=yes|no
+            scrollbars=yes|no
+            menubar=yes|no
+            toolbar=yes|no
+            status=yes|no
+        */
+
+        window.open('https://jei0530.github.io/w0310/', 'pf', 'width=400, height=500, left=100, top=150, location=no scrollbars=no menubar=no, toolbar=no, status=no');
+
+        //요소 찾기 
+        const popup = document.getElementById('popup');
+        const btn = document.getElementById('popup_btn');
+
+        //이벤트
+        btn.onclick = ()=>{
+            popup.style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>

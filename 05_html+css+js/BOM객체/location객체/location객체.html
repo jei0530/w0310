@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location객체</title>
+    <style>
+        span{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">임시링크, 현재 페이지 위로 이동</a>
+    <a href="https://jei0530.github.io/w0310/">나의사이트로 이동하기</a>
+    <span id="site">href이용</span>
+    <span id="site2">replace 이용</span>
+    <span id="site3">reload 새로고침</span>
+    <script>
+        /* 
+            location객체 
+                웹브라우저 주소 url관련 객체이다
+            
+            url
+                인터넷 상에서 웹페이지, 이미지, 파일 등
+                리소스의 위치를 나타내는 주소
+
+            속성
+                http://icoxpublish.com:8080/search?book=5#icox
+                프로토콜://도메인:포트번호/경로?쿼리문자열#해시
+
+                href 
+                    url로 이동
+                    히스토리가 남아서 뒤로가기가 가능
+                    -> http://icoxpublish.com:8080/search?book=5#icox
+
+                protocol 
+                    주소의 프로토콜명을 반환
+                    -> http:, https:
+
+                host 
+                    주소의 호스명과 포트 번호 반환
+                    -> http://icoxpublish.com:8080
+
+                port  
+                    주소의 포트번호 반환
+                    -> 8080
+
+                pathname 
+                    주소의 패스명 반환
+                    -> /search
+
+                search 
+                    주소의 쿼리 문자열을 반환
+                    -> ?book=5   
+
+            메서드
+                reload()
+                    현재 페이지를 다시 로드
+
+                replace(url)   
+                    기존 url을 괄호 안 url로 교체
+                    히스토리가 안 남아서 뒤로가기 불가능
+                    로그인 후 이동
+        */
+       const site = document.getElementById('site');
+       const site2 = document.getElementById('site2');
+       const site3 = document.getElementById('site3');
+
+       site.onclick = ()=> location.href="https://jei0530.github.io/w0310/";
+       site2.onclick = ()=> location.replace("https://jei0530.github.io/w0310/");
+       site3.onclick = ()=> location.reload()
+    </script>
+</body>
+</html>

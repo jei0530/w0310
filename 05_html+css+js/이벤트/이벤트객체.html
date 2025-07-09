@@ -19,6 +19,7 @@
 
 <body>
     <button id="bt">클릭</button>
+    <button id="bt2">화살표함수 클릭</button>
     <div id="area">여기에 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>
     <script>
         /*
@@ -33,22 +34,47 @@
             };
 
             속성
-                target
-                type
-                clientX
-                clientY
-                screenX
-                screenY
-                button
+                event.target
+                    이벤트를 발생시킨 객체를 반환
+
+                event.type
+                    이벤트의 이름을 반환
+
+                event.clientX
+                    브라우저 기준으로 이벤트가 발생한 x좌표 값을 반환
+
+                event.clientY
+                    브라우저 기준으로 이벤트가 발생한 y좌표 값을 반환
+
+                event.screenX
+                    모니터 기준으로 이벤트가 발생한 x좌표 값을 반환
+
+                event.screenY
+                    모니터 기준으로 이벤트가 발생한 y좌표 값을 반환
+
+                event.button
+                    마우스 왼쪽(0), 가운데(1), 오른쪽 버튼(2) 값을 반환
 
             메서드
-                preventDefault()
-                stopPropagation()
+                event.preventDefault()
+                    기본 이벤트의 실행을 막아준다
+                    기본 이벤트란? html 요소 자체가 갖고 있는 이벤트
+                    a태그나 버튼 태그처럼 페이지가 이동하거나 폼 값을 전송하는 요소 자체의 이벤트
+
+                event.stopPropagation()
+                    이벤트 버블링을 방지한다
+                    이벤트 버블링이란? 자식에서 부모로 이벤트가 전파되는것
+                    이벤트 캡처링이란? 부모에서 자식으로 이벤트가 전파되는것
+
         */
+       //예제 해보기
         const bt = document.getElementById('bt');
+        const bt2 = document.getElementById('bt2');
         const area = document.getElementById('area');
 
         bt.onclick = function (event) {
+            console.log(this);//<button id="bt">클릭</button>
+            //this와 event.target은 같음
             console.log(event.target);//<button id="bt">클릭</button>
             console.log(event.type); //click
             console.log(event.clientX);//19
@@ -57,10 +83,43 @@
             console.log(event.screenY);//103
         };
 
+        // 화살표함수에서 this는 사용하지 않는다
+        // 화살표함수에서의 this는 window이다
+        bt2.onclick = event=> {
+            console.log(this);//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+            console.log(event.target);//<button id="bt">클릭</button>
+        };
+
         //mousedown=마우스를 누르고 있다
         area.onmousedown = function (event) {
             console.log(event.button);
         };
+
+    </script>
+
+    <div>
+        <a href="https://jei0530.github.io/w0310/" id="pf">포트폴리오</a>
+    </div>
+    <script>
+        const pf=document.getElementById('pf');
+
+        pf.onclick= function(){
+            alert('포트폴리오');
+            event.preventDefault();
+        };
+
+        //같은 뜻
+        pf.onclick= function(){
+            alert('포트폴리오');
+            return false;
+        };
+
+        //역시 같은 뜻
+       /*  pf.onclick= function(e){
+            alert('포트폴리오');
+            e.preventDefault();
+        }; */
+        
     </script>
 </body>
 
