@@ -32,18 +32,26 @@
                         브라우저 코드명과 버전 반환
         */
 
-        const browser = navigator.userAgent;
+       //제이쿼리 버전
+      /*  const user = $('#user');
+       user.text(browser); */
 
-        console.log(browser);
-        //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
-
-        //제이쿼리 버전
-        const user = $('#user');
-        user.text(browser);
-        
+        const browser = navigator.userAgent
         //자바스크립트 버전
-        /* const user = document.getElementById('user');
-        user.textContent = browser; */
+        const user = document.getElementById('user');
+        const small = browser.toLowerCase();
+
+        user.textContent = browser.toLowerCase();
+        
+        if(small.includes('win')){
+            // user.textContent = '출력되나';
+            location.href="desktop.html";
+            //데스크탑으로 접속했으면 desktop.html로 감
+        }else{
+            location.href="mobile.html";
+            //폰으로 접속했으면 mobile.html로 감
+        }
+
     </script>
 </body>
 </html>
