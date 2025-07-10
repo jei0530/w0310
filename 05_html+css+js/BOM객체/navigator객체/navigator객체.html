@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navigator객체</title>
     <script src="../../jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
     <h1>장치 구분하기</h1>
     <p id="user">여기에 표시됩니다</p>
@@ -32,9 +34,9 @@
                         브라우저 코드명과 버전 반환
         */
 
-       //제이쿼리 버전
-      /*  const user = $('#user');
-       user.text(browser); */
+        //제이쿼리 버전
+        /*  const user = $('#user');
+         user.text(browser); */
 
         const browser = navigator.userAgent
         //자바스크립트 버전
@@ -42,16 +44,29 @@
         const small = browser.toLowerCase();
 
         user.textContent = browser.toLowerCase();
-        
-        if(small.includes('win')){
+
+        //직접 링크이동
+        if (small.includes('win')) {
             // user.textContent = '출력되나';
-            location.href="desktop.html";
+            location.href = "desktop.html";
             //데스크탑으로 접속했으면 desktop.html로 감
-        }else{
-            location.href="mobile.html";
+        } else {
+            location.href = "mobile.html";
             //폰으로 접속했으면 mobile.html로 감
         }
 
+        //경고창뜨기
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        };
+
+        if (isMobile()) {
+            alert("모바일 디바이스입니다.");
+        } else {
+            alert("데스크탑 디바이스입니다.");
+        };
+
     </script>
 </body>
+
 </html>
