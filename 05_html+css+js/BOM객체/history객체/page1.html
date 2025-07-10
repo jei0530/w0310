@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지1</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>page1</h1>
+    <button type="button" id="page2">2페이지로 이동</button>
+    <button type="button" onclick="javascript:history.back()">back</button>
+    <button type="button" onclick="javascript:history.forward()">forward</button>
+    <button type="button" onclick="javascript:history.go(2)">go(2)</button>
+    <button type="button" onclick="javascript:history.go(-2)">go(-2)</button>
+    
+    <script>
+        const page2 = document.getElementById('page2');
+
+        page2.onclick=()=>location.href='page2.html';
+    </script>
+</body>
+
+</html>

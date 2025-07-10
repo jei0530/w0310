@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen객체</title>
+</head>
+<body>
+    <script>
+        /* 
+            screen 객체 
+                모니터 화면 정보 관련 객체
+
+                속성
+                    width
+                        화면의 너비 반환
+                    height
+                        화면의 높이 반환
+                    avaiWidth
+                        작업표시줄을 제외한 너비
+                    avaiHeight
+                        작업표시줄을 제외한 높이
+                    colorDepth
+                        화면에서 사용가능한 색상 수 반환
+                    pixelDepth
+                        화면의 색상해상도 반환
+        */
+
+        const w = screen.width; //1920
+        const h = screen.height; //1200
+        const aw = screen.availWidth; //1920
+        const ah = screen.availHeight; //1160
+        const cd = screen.colorDepth
+        const pd = screen.pixelDepth
+
+        console.log("해상도 가로" + w + "세로" +h);
+        console.log("해상도 가로" + aw + "세로" +ah);
+        console.log("화면의색상수:" + cd + "화면의 색상해상도:" +pd);
+    </script>
+</body>
+</html>
