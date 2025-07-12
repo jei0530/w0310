@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 .step {
   display: flex;
   width: 830px;
@@ -138,7 +139,8 @@
   box-sizing: border-box;
 }
 
-.agree_btn a {
+.agree_btn #next,
+#cancle {
   display: inline-block;
   border-radius: 50px;
   padding: 10px 60px;
@@ -146,9 +148,10 @@
   color: #fff;
   font-size: 15px;
   font-weight: bold;
+  border: none;
 }
 
 .agree_btn {
   text-align: center;
-  padding-top: 30px;
+  margin-top: 30px;
 }
