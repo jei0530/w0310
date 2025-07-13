@@ -4,7 +4,7 @@
     width: 1200px;
     margin: 0 auto;
     margin-top: 50px;
-    height: 1200px;
+    height: 1020px;
 }
 
 .contents h3 {
@@ -27,6 +27,21 @@
     background: #f3f3f3;
     font-weight: bold;
     color: #333;
+}
+
+#addr input {
+    margin: 7px 7px;
+    padding: 8px;
+    width: 300px;
+}
+
+#addr #postcode,
+#addr #detailAddress {
+  margin-left: 30px;
+}
+
+#addr button {
+    padding: 8px 12px;
 }
 
 .content {

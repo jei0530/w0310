@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/w0310/70_pf/srt/mypage/css/mypage.css">
     <link rel="stylesheet" href="/w0310/70_pf/srt/footer/css/footerstyle.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="/w0310/70_pf/srt/mypage/js/mypage.js"></script>
     <script src="/w0310/70_pf/srt/nav/script/nav.js"></script>
 </head>
 
@@ -37,7 +39,8 @@
                 </div>
                 <div class="icons">
                     <a href="#"><img src="/w0310/70_pf/srt/images/mypage/charm_person.png" alt="마이 페이지 이동 아이콘"></a>
-                    <a href="#"><img src="/w0310/70_pf/srt/images/mypage/material-symbols_logout-rounded.png" alt="로그아웃 아이콘"></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/mypage/material-symbols_logout-rounded.png"
+                            alt="로그아웃 아이콘"></a>
                     <a href="#"><img src="/w0310/70_pf/srt/images/nav/Search.png" alt="검색 페이지 이동 아이콘"></a>
                     <a href="#"><img src="/w0310/70_pf/srt/images/nav/hamburger_btn.png" alt="사이트맵 아이콘"></a>
                 </div>
@@ -98,7 +101,7 @@
 
     <div class="contents">
         <h3>개인정보수정</h3>
-        <form action="#" , method="post">
+        <form action="" , method="post">
             <div class="container">
                 <div class="form-row">
                     <div class="name">
@@ -265,12 +268,12 @@
             </div>
             <div class="form-row">
                 <div class="label">자택주소</div>
-                <div class="content">
-                    <div class="flex-row">
-                        <input type="text">
-                        <button class="gray-btn">주소 검색</button>
-                    </div>
-                    <input type="text" class="full-input">
+                <div id="addr">
+                    <input type="text" id="postcode" placeholder="우편번호" readonly>
+                    <input type="text" id="address" placeholder="주소" readonly>
+                    <button type="button" onclick="execDaumPostcode()" class="gray-btn">주소
+                        검색</button> <br>
+                    <input type="text" id="detailAddress" placeholder="상세주소 입력">
                 </div>
             </div>
             <div class="btn-group">
@@ -278,7 +281,10 @@
                 <a href="#">취소</a>
             </div>
         </form>
+
     </div>
+
+
 
     <footer>
 
