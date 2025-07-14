@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 속성추가 제거</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: -170px;
+            background: #718c00;
+            transition: .3s;
+        }
+
+        .active {
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>html속성 set</button>
+    <button>html속성 get</button>
+    <button>html속성 remove</button>
+    <div class="div">
+        <a>웹사이트로 이동하기</a>
+    </div>
+
+    <script>
+        /* 
+            제이쿼리에서 setAttribute, getAttribute는 attr이되고 
+            removeAttribute는 removeAttr가 된다
+
+            setAttribute('속성', '값')
+            getAttribute('속성')
+            removeAttribute('속성', 값)
+
+            attr('속성', '값')
+            attr('속성')
+
+            //제이쿼리는 객체형식으로도 쓸 수 있음
+            attr({속성:값, 속성:값, ...})
+            -> 속성에 ''생략가능
+
+            removeAttr('속성', '값')
+        */
+        //DOM 객체 선택
+        const bt0 = $('button').eq(0);
+        const bt1 = $('button').eq(1);
+        const bt2 = $('button').eq(2);
+        const div = $('div');
+        const a = $('a');
+
+        //이벤트
+        bt0.click(() => {
+            div.attr('class', 'div active');
+            a.attr('href', 'https://naver.com');
+            a.attr('target', '_blank');
+            a.attr('title', '사이트로 이동합니다');
+
+            //위에 줄을 이렇게도 표현 가능
+            a.attr({
+                href: 'https://naver.com',
+                target: '_blank',
+                title: '사이트로 이동합니다'
+            });
+        });
+
+        bt1.click = () => {
+            const result = div.getAttribute('class');
+            console.log(result);
+        };
+
+        bt2.click(() => {
+            div.removeAttr('class');
+            removeAttr('class', 'div');
+        });
+
+    </script>
+</body>
+
+</html>

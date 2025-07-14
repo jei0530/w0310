@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 속성추가 제거</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+
+        .ml{
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script>
+        /* 
+            text(값)
+                -> 태그 인식 x
+            html(값)
+                문자 방식으로 요소를 생성
+                -> 태그 인식
+
+        */
+        function createEle(){
+            const content= document.getElementById('content');
+            content.innerHTML='<p class = "ml"> 자바스크립트 </p>';
+        };
+        addEventListener('load', createEle);
+    </script>
+</body>
+
+</html>

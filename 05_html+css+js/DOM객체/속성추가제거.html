@@ -20,6 +20,7 @@
 
 <body>
     <button id="bt">요소생성</button>
+
     <script>
         /*
             DOM 요소 속성 추가 및 제거
@@ -50,13 +51,15 @@
 
                 //속성추가 
                 a.setAttribute('href', 'https://naver.com');
-                // a.setAttribute('target', '_blank');
+                a.setAttribute('target', '_blank');
                 a.setAttribute('title', '개인사이트로 이동합니다');
+                div.appendChild(a);
+                document.body.appendChild(div);
             }
             //이벤트
             bt.onclick = popup;   
         }
-        addEventListener('load', createEle);
+        createEle();
     </script>
 </body>
 

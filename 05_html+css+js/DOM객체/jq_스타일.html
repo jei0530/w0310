@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="content">내용</div>
+    <script>
+        /* 
+            css변경
+                요소.css(속성, 값); 
+                요소.css({속성: 값, 속성: 값 ....}); 
+        */
+        //객체 찾기
+        const content = $('#content');
+
+        //스타일 지정
+        content.css ({
+            width: '200px',
+            height: '200px',
+            textAlign: 'center',
+            lineHeight: '200px',
+            border: '2px solid red'
+        });
+        
+    </script>
+</body>
+</html>

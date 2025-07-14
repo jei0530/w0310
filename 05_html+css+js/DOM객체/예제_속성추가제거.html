@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 속성추가 제거</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: -170px;
+            background: #718c00;
+            transition: .3s;
+        }
+
+        .active {
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>html속성 set</button>
+    <button>html속성 get</button>
+    <button>html속성 remove</button>
+    <div>
+        <a>웹사이트로 이동하기</a>
+    </div>
+
+    <script>
+        //DOM 객체 선택
+        const bt0 = document.querySelectorAll('button')[0];
+        const bt1 = document.querySelectorAll('button')[1];
+        const bt2 = document.querySelectorAll('button')[2];
+        const div = document.querySelector('div');
+        const a = document.querySelector('a');
+
+        //이벤트
+        bt0.onclick = () => {
+            div.setAttribute('class', 'div active');
+            a.setAttribute('href', 'https://naver.com');
+            a.setAttribute('target', '_blank');
+            a.setAttribute('title', '사이트로 이동합니다');
+        };
+
+        bt1.onclick = () => {
+            const result = div.getAttribute('class');
+            console.log(result);
+        };
+
+        bt2.onclick = () => {
+            div.removeAttribute('class');
+            removeAttribute('class', 'div ');
+        };
+
+    </script>
+</body>
+
+</html>
