@@ -7,8 +7,17 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-p, footer a {
+p,
+footer a {
     font-family: 'Pretendard-Regular', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 940px;
+}
+
+img {
+    max-width: 100px;
 }
 
 
@@ -28,15 +37,18 @@ nav li:nth-of-type(1) a::after {
     margin: 0 16px;
 }
 
-footer li:nth-of-type(1) a::after {
-    content: "|";
-    font-size: 20px;
-    color: #ccc;
-    vertical-align: middle;
-    margin: 0 20px;
+@media (min-width:768px) {
+    footer li:nth-of-type(1) a::after {
+        content: "|";
+        font-size: 20px;
+        color: #ccc;
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+
 }
 
 /* Background Image Parallex Scrolling */
 header {
-    background: url(/w0310/70_pf/mysite/imgs/bg-light.png) no-repeat 50% 50%/cover fixed;
+    background: url(/imgs/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
