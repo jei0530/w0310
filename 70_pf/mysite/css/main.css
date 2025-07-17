@@ -50,5 +50,5 @@ nav li:nth-of-type(1) a::after {
 
 /* Background Image Parallex Scrolling */
 header {
-    background: url(/imgs/bg-light.png) no-repeat 50% 50%/cover fixed;
+    background: url(../imgs/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
