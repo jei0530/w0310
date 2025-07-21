@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* color */
+:root{
+    font-size: 10px;
+    --gray1:#111;
+    --gray5:#555;
+    --main:#ffdb00;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font: 1.6rem/1.5 'Noto Sans KR';
+    color: var(--gray1);
+}
+
+/* section들 */
+#container>div {
+    height: 100vh;
+}
