@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html css 관련 메서드</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="m1">jquery</div>
+    <div id="m2">
+        <div>html</div>
+        <div>css</div>
+        <div>js</div>
+    </div>
+
+    <script>
+        /*
+           html css 메서드 
+
+            1. 콘텐츠 조작 메서드
+                요소.text()
+                    -> 요소의 콘텐츠를 가져오기 
+
+                요소.text(text)
+                    -> 요소의 콘텐츠를 text로 지정한다 
+                    -> text는 'string', number, boolean
+                    ->html 인식 x
+
+                text([값])
+                    -> 값을 가져오거나 지정한다
+                    -> html을 태그가 아닌 문자열로 처리한다
+
+                html([값])
+                    -> 값을 가져오거나 지정한다 
+                    -> html을 태그로 인식한다
+
+                val()
+
+            2. 속성 조작 메서드
+                attr()
+                prop()
+                removeAttr()
+
+            3. 스타일 조작 메서드
+                css()
+                offset()
+                position()
+                scrollTop()
+                scrollLeft()
+
+            4. 클래스 조작 메서드
+                addClass()
+                removeClass()
+                toggleClass()
+                hasClass()      
+        */
+
+        $(()=>{
+            //get(가져오기)
+            const txt =$('#m1').text();
+            console.log(txt);
+
+            //set(지정하기)
+            $("#m1").text('jquery');
+            //text()는 태그도 문자열로 처리
+
+            console.log($('#m1').html());
+            $('#m1').html('자바스크립트');
+            // html()은 태그를 html 태그로 처리
+
+            $("#m2>div").text(function(index, text){
+                return 'div의 요소의 텍스트는' + text + ', index는' + index;
+            });
+        });
+       
+    </script>
+</body>
+
+</html>
