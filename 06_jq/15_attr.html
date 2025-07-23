@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div:nth-child(1){
+            background: red;
+        }
+
+        div:nth-child(2){
+            background: green;
+        }
+
+        div:nth-child(3){
+            background: blue;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <div>내용3</div>
+
+    <div id="site">
+        <a href="https://www.daum.net" target="_blank">다음</a>
+        <a href="https://www.naver.com" target="_blank">네이버</a>
+        <a href="https://www.nate.com" target="_blank">네이트</a>
+    </div>
+
+
+
+    <script>
+        /* 
+            선택자 {속성:값;}
+
+           <태그 clas="클래스명">콘텐츠</태그>
+
+           attr('속성')
+                값을 가져오기
+
+           attr('속성', '값')
+                값으로 지정하기
+
+           attr('속성', function(index, attr){})
+
+           attr({속성:값, 속성:값})
+
+           css('속성')
+                값을 가져오기
+
+           css('속성', '값')
+                값으로 지정하기
+
+           css('속성', function(index, property){})
+
+           css({속성:값, 속성:값})
+        */
+        $(() => {
+            console.log($('#site>a:eq(0)').attr('href'));
+            $('#site>a:eq(1)').attr("href", "https://m.naver.com").text("네이버모바일");
+            $('#site a').attr("title", function () {
+                return "새창";
+            });
+
+            $('div').eq(0).css({padding:10, 'text-align':'center'})
+
+            $('div').css('width', function(index){
+                return index * 100 + 100
+            });
+        });
+
+    </script>
+</body>
+
+</html>

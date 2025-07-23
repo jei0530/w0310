@@ -23,5 +23,5 @@ img {
      - cover: 박스 크기에 맞게 처리 -> 빈 공간이 생기지 않지만 이미지 일부는 잘릴 수 있다.
      - contain: 박스 크기에 맞게 이미지 잘림 없이 표시되지만 빈 공간이 생길수 있다.
      -> background-size도 동일! */
-    object-fit:cover;
+    object-fit:contain;
 }

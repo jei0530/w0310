@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTopLeft</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+      
+        *{
+           margin: 0px;
+           padding: 0px;  
+        }
+
+        #wrap{
+            height: 2000px;
+        }
+
+        #up{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            transition: all .5s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #up.on{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #up a{
+            display: block;
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap"></div>
+    <div id="up">
+        <a href="#">TOP</a>
+    </div>
+
+    <div id="info">
+        <span></span>
+        <button type="button">클릭</button>
+    </div>
+
+    <script>
+        /* 
+            스크롤 모션
+
+            위치
+                scrollTop()
+                scrollLeft()
+
+            이벤트
+                click()
+                scroll()
+
+        */
+        $(() => {
+           
+            $(document).scroll(function(){
+                if($(this).scrollTop() > 100){
+                    $('#up').addClass('on');
+                }
+            });
+
+            $('#up a').click(function(e){
+                $(window).scrollTop(0);
+                event.preventDefault();
+            });
+            
+        });
+
+    </script>
+</body>
+
+
+</html>
