@@ -2,8 +2,8 @@
 @import url("reset.css");
 @import url("common.css");
 
-/* section2 area */
-#section2 {
+/* sec2 area */
+#sec2 {
     position: relative;
     padding: 80px;
 }
@@ -14,11 +14,11 @@
     transform: translate(-50%, -50%);
 }
 
-#section2 h2 {
+#sec2 h2 {
     text-align: center;
 }
 
-#section2 p {
+#sec2 p {
     text-align: center;
     color: var(--gray2);
     margin: 36px 0 60px 0;

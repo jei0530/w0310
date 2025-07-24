@@ -1,0 +1,547 @@
+@charset "utf-8";
+
+@font-face {
+
+    font-family: 'Pretendard';
+
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+
+    font-weight: 400;
+
+    font-style: normal;
+
+}
+
+/* 리셋 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* 전체 스크롤 방지 */
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
+    position: relative;
+    /* 오버레이 z-index 기준점으로 사용 */
+}
+
+.header {
+    position: fixed;
+    /* 뷰포트에 고정 */
+    top: 0;
+    /* 상단에 붙임 */
+    left: 0;
+    /* 왼쪽에 붙임 */
+    width: 100%;
+    /* 너비 100% */
+    height: 100px;
+    /* 헤더 높이 고정 */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    z-index: 1000;
+    /* 오버레이(1001)보다 낮지만 섹션(1)보다는 높게 */
+
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 30px;
+}
+
+.full-page-wrapper {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+/* 각 섹션 (full-page-wrapper의 자식) */
+.slide-section {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.slide-section.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* jQuery fadeIn/fadeOut을 사용한다면 이 상태를 유지 */
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    /* 헤더(1000)보다 높게 설정하여 헤더 위로 메뉴가 올라오도록 */
+}
+
+.side-nav {
+    width: 800px;
+    height: 100%;
+    background: white;
+    position: absolute;
+    right: -800px;
+    /* 또는 right: -100%; */
+    top: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 50px 0 0 50px;
+    z-index: 1002;
+    transition: right 0.5s ease;
+    /* transition 속성 추가 */
+}
+
+.side-nav.open {
+    right: 0;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 50px 0 50px;
+}
+
+.logo1 img {
+    width: 150px;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+.close-btn img {
+    width: 30px;
+}
+
+.nav-list {
+    margin-bottom: 500px;
+}
+
+.nav-list>li {
+    position: relative;
+}
+
+.nav-list>li>a {
+    margin-left: 40px;
+    display: block;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #000;
+    width: fit-content;
+    margin-top: 30px;
+}
+
+.nav-list>li:hover>a {
+    color: #c00000;
+    border-bottom: 2px solid #000;
+}
+
+.sub-list {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 250px;
+
+    opacity: 0;
+
+    /* ★ 오류 수정: z-index를 0으로 설정하고 pointer-events 추가 */
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    /* 클릭 이벤트 방지 */
+
+    width: 150px;
+
+    border-left: 3px solid #c00000;
+
+    padding: 10px;
+
+    font-size: 18px;
+
+    transition: opacity 0.4s ease;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.sub-list>li>a {
+
+    display: inline-block;
+
+    padding-top: 15px;
+
+}
+
+
+
+.sub-list a:hover {
+
+    border-bottom: 1px solid #000;
+
+}
+
+
+
+.nav-list li:hover .sub-list {
+
+    opacity: 1;
+
+    z-index: 1;
+
+    pointer-events: auto;
+
+    /* 호버 시 클릭 이벤트 허용 */
+
+}
+
+
+
+.pill {
+
+    position: absolute;
+
+    right: -250px;
+
+    /* 이 값은 .side-nav의 right 값에 따라 달라질 수 있음 */
+
+    bottom: -20px;
+
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+/* slides-wrapper (sec1 내부 슬라이드 컨테이너) */
+
+.slides-wrapper {
+
+    display: flex;
+
+    width: 300vw;
+
+    height: 100%;
+
+    /* ★ 중요: 부모인 .slide-section의 높이를 100% 채움 */
+
+    transition: transform 0.7s ease-in-out;
+
+}
+
+
+
+/* group1 (slides-wrapper의 각 개별 슬라이드) */
+
+.group1 {
+
+    width: 100vw;
+
+    height: 100%;
+
+    /* ★ 중요: 부모인 slides-wrapper의 높이를 100% 채움 */
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    /* 내부 콘텐츠 (main, des) 가로 정렬 */
+
+    align-items: center;
+
+    /* 수직 중앙 정렬 */
+
+    justify-content: center;
+
+    /* 수평 중앙 정렬 */
+
+    background-color: white;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/* .main (이미지 컨테이너) */
+
+.group1 .main {
+
+    height: 100%;
+
+    /* ★ 중요: 부모 group1의 높이를 채움 */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+/* .main 내부 이미지 */
+
+.group1 .main img {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    /* 비율 유지하며 콘텐츠 박스에 맞춤 */
+
+    display: block;
+
+}
+
+
+
+/* .des, .des1 (텍스트 컨테이너) */
+
+.des,
+
+.des1 {
+
+    height: 100%;
+
+    /* ★ 중요: 부모 group1의 높이를 채움 */
+
+    display: flex;
+
+    flex-direction: column;
+
+    /* 텍스트 콘텐츠 내부에서 세로 정렬 */
+
+    justify-content: center;
+
+    /* 수직 중앙 정렬 */
+
+    align-items: flex-start;
+
+    /* 왼쪽 정렬 (필요시 center) */
+
+    padding-right: 200px;
+
+}
+
+
+
+/* 기존 콘텐츠 스타일 */
+
+h1 {
+
+    font-size: 40px;
+
+}
+
+
+
+h2 {
+
+    font-size: 60px;
+
+}
+
+
+
+p {
+
+    font-size: 20px;
+
+    margin: 15px 0;
+
+    font-weight: 200;
+
+}
+
+
+
+.product {
+
+    font-size: 17px;
+
+}
+
+
+
+.product img {
+
+    vertical-align: bottom;
+
+}
+
+
+
+/* 푸터 섹션 스타일 */
+
+.footer-section {
+
+    /* .slide-section의 기본 스타일을 따름 */
+
+}
+
+
+
+footer {
+
+    width: 100%;
+
+    height: 100%;
+
+    /* ★ 중요: 부모 .footer-section의 높이를 100% 채움 */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background-color: #eee;
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+}
+
+
+
+.footer_menu {
+
+    border-top: 1px solid #D8CECE;
+
+    padding: 20px 50px;
+
+    font-weight: 700;
+
+}
+
+
+
+.info {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    width: 100%;
+
+    align-items: center;
+
+}
+
+
+
+.logo2 {
+
+    padding: 20px 0;
+
+}
+
+
+
+.logo2 img {
+
+    width: 160px;
+
+}
+
+
+
+.info p {
+
+    font-size: 11px;
+
+    margin: 5px 0;
+
+}
+
+
+
+.write {
+
+    flex-grow: 1;
+
+    margin: 0 20px;
+
+}
+
+
+
+.icon {
+
+    display: flex;
+
+    font-size: 30px;
+
+    margin-left: auto;
+
+    margin-top: 20px;
+
+}
+
+
+
+.icon a {
+
+    margin-right: 20px;
+
+}

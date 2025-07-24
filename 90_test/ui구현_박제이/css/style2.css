@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@charset "UTF-8";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.logo img,
+.logo1 img,
+.logo2 img {
+  width: 150px;
+}
+
+.menu-icon img,
+.close-btn img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.3);
+  z-index: 1100;
+}
+
+.side-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-list > li {
+  margin-bottom: 20px;
+}
+
+.nav-list > li > a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.sub-list > li > a {
+  font-size: 1rem;
+  padding-left: 10px;
+  display: block;
+  color: #666;
+}
+
+.pill img {
+  width: 80px;
+  margin-top: 30px;
+}
+
+.full-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: calc(100vw * 4); /* 3 슬라이드 + 푸터 */
+  height: 100vh;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide-section {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+.main img {
+  max-width: 300px;
+}
+
+.des, .des1 {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 2rem
+}
