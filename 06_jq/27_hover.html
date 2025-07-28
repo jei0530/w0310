@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .pic{
+            background: #ccc;
+        }
+
+        .pic img{
+            transform: translate(-200px);
+            transition: all 0.5 ease;
+            vertical-align: top;
+        }
+
+        .pic img.on{
+            transform: translateX(0);
+        }
+
+        button{
+            width: 200px;
+            height: 50px;
+            border: none;
+            background: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic">
+        <img src="./images/1.jpg" alt="">
+    </div>
+    <button type="button">호버 이벤트</button>
+
+
+    <script>
+        $('button').mouseenter(function () {
+            $('.pic img').toggleClass('on');
+        });
+
+        $('button').mouseleave(function () {
+            $('.pic img').toggleClass('on');
+        });
+
+        //이벤트연결
+        $('button').on('mouseenter', ()=>{
+            $('.pic img').toggleClass('on');
+        });
+        
+        $('button').on('mouseenter', ()=>{
+            $('.pic img').toggleClass('on');
+        });
+    </script>
+</body>
+
+</html>

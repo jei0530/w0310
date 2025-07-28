@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
+    <style>
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        복제/감싸기
+            요소.clone()
+                요소 복제
+
+            요소.wrap('부모요소')
+                요소를 개별적으로 부모 요소를 감싼다 
+
+            요소.wrapAll('부모요소')
+                요소 전체를 하나의 부모 요소로 감싼다
+
+            요소.wrapInner('요소2')
+                요소의 내용을 요소2로 감싼다
+
+            replaceWith()
+
+            replaceAll()
+    -->
+    <ul class="m1">
+        <li><img src="./images/1.jpg" alt=""></li>
+        <li><img src="./images/2.jpg" alt=""></li>
+        <li><img src="./images/3.jpg" alt=""></li>
+        <li><img src="./images/4.jpg" alt=""></li>
+    </ul>
+    <div id="m2">
+        <strong>내용1</strong>
+        <strong>내용2</strong>
+    </div>
+
+    <div id="m3">
+        <strong>내용3</strong>
+        <strong>내용4</strong>
+    </div>
+
+    <div id="m4">
+        <strong>내용5</strong>
+        <strong>내용6</strong>
+        <strong>내용7</strong>
+    </div>
+
+    <script>
+       $(()=>{
+        $('.m1').clone().insertAfter(".m1");
+        $('#m2 strong').wrap('<div></div>');
+        $('#m3 strong').wrapAll('<div></div>');
+        $('#m4').wrapInner('<p>변경</p>');
+       });
+    </script>
+</body>
+</html>
